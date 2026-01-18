@@ -263,6 +263,15 @@ ORCHESTRATION & MANAGEMENT
 "Hand off a session"
 → NS Section 23 + NS Section 0.6 (Handoff Protocols)
 
+"Work effectively with AI agents"
+→ NS Part XIV (Human-Agent Collaboration) — Complete operational guide
+
+"Optimize agent efficiency"
+→ NS Part XIV Section 14.5 (Tool Call Efficiency)
+
+"Enable agent self-healing"
+→ NS Part XIV Section 14.6 (Self-Healing Implementation)
+
 
 WHEN STUCK
 ─────────────────────────────────────────────────────────────────────────────
@@ -411,6 +420,22 @@ NS Part XI: DevOps & Deployment       ←→  MBF Tier 7 (Automation)
 ├─ NS Section 51: Environment Mgmt    ←→  MBF 13: Infrastructure as Code
 ├─ NS Section 52: Monitoring          ←→  MBF 55: Monitoring & Observability
 └─ NS Section 53: Deployment Strategy ←→  MBF 44: Workflow Orchestration
+
+
+HUMAN-AGENT COLLABORATION
+─────────────────────────────────────────────────────────────────────────────
+NS Part XIV: Human-Agent Collaboration ←→  (Bootstrap Section 14 condensed)
+├─ NS Section 14.1: Autonomy Dial     ←→  Bootstrap S14.2 (Agent Operation)
+├─ NS Section 14.2: Confidence Calib  ←→  Bootstrap S5 (Confidence)
+├─ NS Section 14.3: Thread Management ←→  NS Part V (Agent Composition)
+├─ NS Section 14.4: Checkpoints       ←→  Bootstrap S7 (Handoffs)
+├─ NS Section 14.5: Tool Efficiency   ←→  NS Part VI (MCP & Tools)
+├─ NS Section 14.6: Self-Healing      ←→  Bootstrap S14.4 (Self-Healing)
+├─ NS Section 14.7: Operations        ←→  Bootstrap S13 (Deviation Protocol)
+└─ NS Section 14.8: Quick Reference   ←→  Bootstrap S4 (Emergency Reference)
+
+Note: Part XIV is HUMAN-FACING operational guidance.
+      Bootstrap Section 14 is AGENT-FACING condensed version.
 
 
 CONTENT GENERATION (MBF Only)

@@ -5953,169 +5953,360 @@ Error message generation           │ Speed
 
 Every AI interaction can be decomposed into four fundamental capabilities. Understanding these enables effective orchestration.
 
-### 14.1 The Four Primitives
+## 14.1 THREE-LEVEL RULES INHERITANCE
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                          THE CORE 4 PRIMITIVES                               │
+│                      RULES HIERARCHY (RAPS Model)                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
-│  ┌─────────────────────────────────────────────────────────────────────┐    │
-│  │                         1. RETRIEVE                                  │    │
-│  │              "Find and access relevant information"                  │    │
-│  │                                                                      │    │
-│  │  • Search through files and documents                               │    │
-│  │  • Access external knowledge bases                                   │    │
-│  │  • Query databases                                                   │    │
-│  │  • Fetch from APIs                                                   │    │
-│  │  • Load context into memory                                          │    │
-│  │                                                                      │    │
-│  │  TOOLS: File readers, search, RAG, MCP file tools                   │    │
-│  └─────────────────────────────────────────────────────────────────────┘    │
+│  LEVEL 1: GLOBAL RULES                                                       │
+│  ═══════════════════════════════════════════════════════════════════════    │
+│  Location: ~/.config/[ide]/global-rules.md or equivalent                    │
+│  Scope: ALL projects, ALL sessions                                          │
+│  Contains:                                                                   │
+│    • Universal coding standards                                              │
+│    • Default confidence/autonomy settings                                    │
+│    • Cross-project tool configurations                                       │
+│    • Personal preferences and communication style                            │
 │                                                                              │
-│  ┌─────────────────────────────────────────────────────────────────────┐    │
-│  │                         2. REASON                                    │    │
-│  │              "Analyze, plan, and make decisions"                     │    │
-│  │                                                                      │    │
-│  │  • Understand requirements                                           │    │
-│  │  • Analyze problems                                                  │    │
-│  │  • Generate solutions                                                │    │
-│  │  • Make trade-off decisions                                          │    │
-│  │  • Plan multi-step approaches                                        │    │
-│  │                                                                      │    │
-│  │  TOOLS: Model inference, chain-of-thought, planning prompts         │    │
-│  └─────────────────────────────────────────────────────────────────────┘    │
+│  LEVEL 2: WORKSPACE RULES                                                    │
+│  ═══════════════════════════════════════════════════════════════════════    │
+│  Location: /workspace/.rules or workspace-level config                      │
+│  Scope: All projects within workspace/organization                          │
+│  Contains:                                                                   │
+│    • Team conventions                                                        │
+│    • Shared tool configurations (MCP servers, APIs)                          │
+│    • Organization-specific patterns                                          │
+│    • Compliance requirements                                                 │
 │                                                                              │
-│  ┌─────────────────────────────────────────────────────────────────────┐    │
-│  │                         3. CREATE                                    │    │
-│  │              "Generate new content and artifacts"                    │    │
-│  │                                                                      │    │
-│  │  • Write code                                                        │    │
-│  │  • Generate documentation                                            │    │
-│  │  • Create configurations                                             │    │
-│  │  • Produce test cases                                                │    │
-│  │  • Draft communications                                              │    │
-│  │                                                                      │    │
-│  │  TOOLS: Code generation, text generation, file writers              │    │
-│  └─────────────────────────────────────────────────────────────────────┘    │
+│  LEVEL 3: PROJECT RULES                                                      │
+│  ═══════════════════════════════════════════════════════════════════════    │
+│  Location: /project/claude.md, .cursorrules, etc.                           │
+│  Scope: Single project only                                                  │
+│  Contains:                                                                   │
+│    • Project-specific stack decisions                                        │
+│    • Current phase and state                                                 │
+│    • Fix Ledger references                                                   │
+│    • Deviation log                                                           │
 │                                                                              │
-│  ┌─────────────────────────────────────────────────────────────────────┐    │
-│  │                         4. VERIFY                                    │    │
-│  │              "Check correctness and quality"                         │    │
-│  │                                                                      │    │
-│  │  • Run tests                                                         │    │
-│  │  • Check syntax                                                      │    │
-│  │  • Validate output                                                   │    │
-│  │  • Review for errors                                                 │    │
-│  │  • Compare against requirements                                      │    │
-│  │                                                                      │    │
-│  │  TOOLS: Linters, test runners, validators, diff tools               │    │
-│  └─────────────────────────────────────────────────────────────────────┘    │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  INHERITANCE RULE: Project > Workspace > Global                              │
+│  (More specific rules override more general rules)                           │
+│                                                                              │
+│  CONFLICT RESOLUTION:                                                        │
+│  • If conflict detected, PROJECT rules win                                   │
+│  • Log deviation from Global/Workspace in project's Deviation Log            │
+│  • Never silently override—always document                                   │
 │                                                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 14.2 Primitive Composition Patterns
+---
+
+## 14.2 FOUR AGENT ARCHETYPES
+
+When operating in multi-agent or parallel workflows, recognize these role patterns:
 
 ```
-PRIMITIVE COMPOSITION PATTERNS
+AGENT ARCHETYPES (for P-Thread / Multi-Agent Scenarios)
 ─────────────────────────────────────────────────────────────────────────────
 
-PATTERN 1: RETRIEVE-REASON-CREATE (Standard Development)
-─────────────────────────────────────────────────────────────────────────────
+┌─────────────────┐     ┌─────────────────┐
+│  DESIGN LEAD    │     │    BUILDER      │
+│  ─────────────  │     │  ─────────────  │
+│  • Architecture │     │  • Implements   │
+│  • Decisions    │     │  • Writes code  │
+│  • Trade-offs   │     │  • Creates PRs  │
+│  • Standards    │     │  • Executes     │
+└─────────────────┘     └─────────────────┘
 
-  ┌──────────┐    ┌──────────┐    ┌──────────┐
-  │ RETRIEVE │───►│  REASON  │───►│  CREATE  │
-  │          │    │          │    │          │
-  │ Read     │    │ Analyze  │    │ Write    │
-  │ existing │    │ approach │    │ new code │
-  │ code     │    │          │    │          │
-  └──────────┘    └──────────┘    └──────────┘
+┌─────────────────┐     ┌─────────────────┐
+│   QC / NERD     │     │   RESEARCH      │
+│  ─────────────  │     │  ─────────────  │
+│  • Reviews      │     │  • Investigates │
+│  • Tests        │     │  • Documents    │
+│  • Validates    │     │  • Explores     │
+│  • Quality gates│     │  • Options      │
+└─────────────────┘     └─────────────────┘
 
-  USE WHEN: Building new features based on existing patterns
+SINGLE-AGENT MODE:
+When operating alone, cycle through these roles:
+1. Research → Understand the problem space
+2. Design Lead → Make architectural decisions
+3. Builder → Implement the solution
+4. QC/Nerd → Verify and test
 
-
-PATTERN 2: RETRIEVE-REASON-CREATE-VERIFY (Full Cycle)
-─────────────────────────────────────────────────────────────────────────────
-
-  ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
-  │ RETRIEVE │───►│  REASON  │───►│  CREATE  │───►│  VERIFY  │
-  │          │    │          │    │          │    │          │
-  └──────────┘    └──────────┘    └──────────┘    └────┬─────┘
-                                                       │
-                       ┌───────────────────────────────┘
-                       │ If verification fails
-                       ▼
-                  Back to REASON
-
-  USE WHEN: Production code that must be correct
-
-
-PATTERN 3: REASON-CREATE-VERIFY-ITERATE (Exploratory)
-─────────────────────────────────────────────────────────────────────────────
-
-  ┌──────────┐    ┌──────────┐    ┌──────────┐
-  │  REASON  │───►│  CREATE  │───►│  VERIFY  │
-  │          │    │          │    │          │
-  └──────────┘    └──────────┘    └────┬─────┘
-       ▲                               │
-       │                               │
-       └───────────────────────────────┘
-              Iterate until correct
-
-  USE WHEN: Exploring solutions without existing patterns
-
-
-PATTERN 4: RETRIEVE-VERIFY (Audit Pattern)
-─────────────────────────────────────────────────────────────────────────────
-
-  ┌──────────┐    ┌──────────┐
-  │ RETRIEVE │───►│  VERIFY  │
-  │          │    │          │
-  │ Load     │    │ Check    │
-  │ code     │    │ quality  │
-  └──────────┘    └──────────┘
-
-  USE WHEN: Code review, security audit, quality checks
+MULTI-AGENT MODE:
+When parallelizing, assign archetypes explicitly:
+• P-Thread A: Builder (implements Feature X)
+• P-Thread B: Builder (implements Feature Y)
+• Supervisor: Design Lead (coordinates, resolves conflicts)
+• Final Pass: QC/Nerd (validates all outputs)
 ```
 
-### 14.3 Primitive Quality Requirements
+---
+
+## 14.3 THREAD-BASED THINKING MODEL
 
 ```
-PRIMITIVE QUALITY REQUIREMENTS
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         THREAD TYPES                                         │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  BASE THREAD (Single Prompt → Work → Review)                                 │
+│  ───────────────────────────────────────────────────────────────────────    │
+│  Prompt → Agent works → Human reviews → Done                                 │
+│  Use for: Simple, contained tasks                                            │
+│                                                                              │
+│  P-THREAD (Parallel)                                                         │
+│  ───────────────────────────────────────────────────────────────────────    │
+│       ┌─► Thread A ─┐                                                        │
+│  Start┼─► Thread B ─┼─► Merge → Done                                         │
+│       └─► Thread C ─┘                                                        │
+│  Use for: Independent tasks (e.g., multiple components)                      │
+│                                                                              │
+│  C-THREAD (Chained)                                                          │
+│  ───────────────────────────────────────────────────────────────────────    │
+│  Phase 1 → Checkpoint → Phase 2 → Checkpoint → Phase 3 → Done                │
+│  Use for: Sequential dependencies, quality gates between phases              │
+│                                                                              │
+│  F-THREAD (Fusion / Best-of-N)                                               │
+│  ───────────────────────────────────────────────────────────────────────    │
+│  Same prompt → N agents → Compare outputs → Select best → Done               │
+│  Use for: Creative tasks, critical decisions, architecture                   │
+│                                                                              │
+│  B-THREAD (Big / Meta with Sub-Agents)                                       │
+│  ───────────────────────────────────────────────────────────────────────    │
+│  Supervisor agent spawns sub-agents for sub-tasks                            │
+│  Sub-agents report back, supervisor synthesizes                              │
+│  Use for: Complex projects, multi-component systems                          │
+│                                                                              │
+│  L-THREAD (Long-Duration Autonomous)                                         │
+│  ───────────────────────────────────────────────────────────────────────    │
+│  Agent runs for extended period (hours/days)                                 │
+│  Checkpoints periodically, human reviews at milestones                       │
+│  Use for: Large codebases, extensive refactoring, migrations                 │
+│                                                                              │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  EFFICIENCY METRICS (What "Better" Means):                                   │
+│  • More threads = More parallelism                                           │
+│  • Longer threads = More work per human intervention                         │
+│  • Thicker threads = More tool calls per thread                              │
+│  • Fewer checkpoints = Higher autonomy (when appropriate)                    │
+│                                                                              │
+│  GOAL: Z-THREAD (Zero-Touch) for routine tasks                               │
+│  Human only involved at start (requirements) and end (acceptance)            │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 14.4 SELF-HEALING WORKFLOW PATTERN
+
+```
+SELF-HEALING LOOP (PCE Framework Integration)
 ─────────────────────────────────────────────────────────────────────────────
 
-RETRIEVE QUALITY
-─────────────────────────────────────────────────────────────────────────────
-□ Retrieved content is current (not stale cache)
-□ Retrieved content is complete (not truncated)
-□ Retrieved content is relevant (not noise)
-□ Source is identified and traceable
-□ No hallucinated file contents
+       ┌────────────────────────────────────────────────┐
+       │                                                │
+       ▼                                                │
+  ┌─────────┐     ┌─────────┐     ┌─────────┐    ┌─────┴─────┐
+  │ EXECUTE │────►│  CHECK  │────►│  FAIL?  │───►│ AUTO-FIX  │
+  └─────────┘     └─────────┘     └────┬────┘    └───────────┘
+                                       │ PASS
+                                       ▼
+                                  ┌─────────┐
+                                  │  DONE   │
+                                  └─────────┘
 
-REASON QUALITY
+IMPLEMENTATION:
 ─────────────────────────────────────────────────────────────────────────────
-□ Reasoning is explicit (chain-of-thought visible)
-□ Assumptions are stated
-□ Alternatives are considered
-□ Trade-offs are acknowledged
-□ Confidence level is indicated
+1. EXECUTE: Run the planned action (code, command, API call)
+2. CHECK: Verify outcome matches expectation
+3. IF FAIL:
+   a. Capture error context (message, stack trace, state)
+   b. Analyze error type (syntax, runtime, logic, external)
+   c. Generate fix hypothesis
+   d. Apply fix
+   e. RETURN TO EXECUTE (max 3 iterations per error type)
+4. IF PASS: Proceed to next action
 
-CREATE QUALITY
+CIRCUIT BREAKER:
 ─────────────────────────────────────────────────────────────────────────────
-□ Output matches requirements
-□ Output follows existing patterns
-□ Output is complete (not partial)
-□ Output is properly formatted
-□ Output is immediately usable
+After 3 failed fix attempts on same error:
+  □ STOP automated fixing
+  □ Document in Fix Ledger
+  □ Escalate to human (drop autonomy level)
+  □ This IS the Ilya's Loop prevention (NS Section 7)
 
-VERIFY QUALITY
+LOGGING REQUIREMENT:
 ─────────────────────────────────────────────────────────────────────────────
-□ Verification is comprehensive
-□ Verification is automated where possible
-□ Verification results are clear
-□ Failures include actionable information
-□ False positives/negatives are minimized
+Every self-healing cycle must log:
+  • Original error
+  • Fix attempted
+  • Outcome (success/fail)
+  • Iteration count
+```
+
+---
+
+## 14.5 PLAN MODE PROTOCOL
+
+```
+PLAN MODE (Question-Asking Before Building)
+─────────────────────────────────────────────────────────────────────────────
+
+PRINCIPLE: Asking good questions BEFORE building produces better outcomes
+           than fixing problems AFTER building.
+
+WHEN TO ENTER PLAN MODE:
+─────────────────────────────────────────────────────────────────────────────
+□ Starting a new feature or component
+□ Requirements are ambiguous
+□ Multiple valid approaches exist
+□ Stakes are high (architecture, security, data)
+□ Autonomy level is 1-4 (Suggest/Draft)
+
+PLAN MODE SEQUENCE:
+─────────────────────────────────────────────────────────────────────────────
+1. UNDERSTAND
+   • Restate the requirement in your own words
+   • Identify what you know vs. what you assume
+   • List explicit constraints
+
+2. QUESTION
+   • Ask clarifying questions (max 3-5)
+   • Prioritize questions that would change approach
+   • Don't ask questions you can answer from context
+
+3. PROPOSE
+   • Present 2-3 approaches with trade-offs
+   • State confidence level for each
+   • Recommend one with rationale
+
+4. CONFIRM
+   • Wait for human approval on approach
+   • Document decision (in claude.md or ADR)
+   • THEN proceed to execution
+
+SKIP PLAN MODE WHEN:
+─────────────────────────────────────────────────────────────────────────────
+• Autonomy level is 5-7 (Execute/Autonomous)
+• Task is well-understood and routine
+• Pattern exists in Fix Ledger or codebase
+• Human has pre-approved approach
+```
+
+---
+
+## 14.6 PERMISSION ARCHITECTURE AWARENESS
+
+```
+PERMISSION LAYERS (Cowork/Computer Use Readiness)
+─────────────────────────────────────────────────────────────────────────────
+
+As agents gain OS-level capabilities (file system, browser, applications),
+permission awareness becomes critical.
+
+PERMISSION CATEGORIES:
+─────────────────────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│  READ         │ View files, read configs, access docs                   │
+│  WRITE        │ Create/modify files, update configs                     │
+│  EXECUTE      │ Run commands, scripts, applications                     │
+│  NETWORK      │ Make HTTP requests, access external services            │
+│  SYSTEM       │ OS-level operations, install packages                   │
+└─────────────────────────────────────────────────────────────────────────┘
+
+SANDBOXING AWARENESS:
+─────────────────────────────────────────────────────────────────────────────
+• Assume sandboxed unless explicitly told otherwise
+• Request minimum permissions needed for task
+• Document permission requirements in task plan
+• Never assume credentials are available—use proxying patterns
+
+CONSEQUENTIAL ACTION GATES:
+─────────────────────────────────────────────────────────────────────────────
+Before executing consequential real-world actions:
+□ Confirm human approval (reduce autonomy to Level 3-4)
+□ Verify rollback path exists
+□ Log action intent before execution
+□ Capture before/after state
+
+CONSEQUENTIAL ACTIONS INCLUDE:
+  • Sending emails or messages
+  • Making purchases or financial transactions
+  • Modifying production systems
+  • Deleting data
+  • Publishing content
+  • Interacting with external APIs with side effects
+```
+
+---
+
+## 14.7 INTEGRATION WITH NS-MBF ECOSYSTEM
+
+```
+CROSS-REFERENCE: Agent Operation Patterns
+─────────────────────────────────────────────────────────────────────────────
+
+This Section 14 integrates with:
+
+NS SECTIONS:
+  • Section 17: Confidence Calibration → Use when reporting certainty
+  • Section 18: Autonomy Dial → Use when determining independence level
+  • Section 20: Memory Architecture → Use for context management
+  • Section 23: Handoff Protocols → Use when transitioning sessions
+
+MBF CATEGORIES:
+  • Category 30: Autonomous Agents → Agent framework options
+  • Category 31: MCPs & Tool Registries → Tool definition patterns
+  • Category 40: Code Generation → AI coding assistant patterns
+  • Category 45: Browser & Web Automation → Computer Use patterns
+
+BRIDGE.MD ROUTING:
+  "Need agent operation guidance" → This Section 14
+  "Need agent technology options" → MBF Categories 29-35
+  "Need orchestration methodology" → NS Part IV-V
+```
+
+---
+
+### 14.7.4 The Code Cleanup Protocol (Claude Code)
+
+```
+CODE SIMPLIFICATION — Post-Session Cleanup
+─────────────────────────────────────────────────────────────────────────────
+After completing significant coding work, run the code-simplifier agent:
+INSTALLATION (one-time):
+claude plugin install code-simplifier
+INVOCATION:
+"Use the code-simplifier agent to clean up the code I just wrote"
+WHEN TO RUN:
+✓ End of long coding sessions
+✓ Before merging complex PRs
+✓ After major feature implementations
+✓ Before code review
+WHY IT MATTERS:
+AI agents prioritize correctness, which often produces verbose code.
+The simplifier preserves functionality while improving clarity.
+• 20-30% reduction in token usage
+• Clearer, more maintainable code
+• Follows your CLAUDE.md conventions
+• Same tool Anthropic uses internally
+WHAT IT DOES:
+• Removes unnecessary complexity
+• Improves naming and organization
+• Eliminates over-engineering
+• Preserves exact functionality (NEVER changes what code does)
+BEST PRACTICE:
+Run in a git-tracked directory so you can review and revert if needed.
+Always review changes before committing.
 ```
 
 ---
@@ -15408,6 +15599,543 @@ PART XIII: QUICK REFERENCE
 │                                                                              │
 │  Special thanks to everyone who has contributed feedback,                   │
 │  identified issues, and helped refine these patterns.                      │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+
+
+---
+
+# PART XIV: HUMAN-AGENT COLLABORATION
+
+> **PURPOSE:** This part provides practical operational guidance for humans working alongside AI agents. While Parts IV-VI describe HOW agents work, Part XIV describes HOW TO WORK WITH THEM.
+
+> **AUDIENCE:** Developers, project managers, and anyone operating AI agents during development.
+
+> **RELATIONSHIP TO BOOTSTRAP:** Bootstrap Section 14 (Agent Operation Patterns) contains a condensed agent-facing version. This Part XIV is the expanded human-facing companion.
+
+---
+
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║              HOW TO OPERATE AGENTS WHILE BUILDING                            ║
+║                                                                              ║
+║                     Practical Collaboration Guide                            ║
+║                                                                              ║
+║                          ────────────────                                    ║
+║                                                                              ║
+║        "The agent is your amplifier, not your replacement."                  ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+```
+
+---
+
+## 14.1 THE AUTONOMY DIAL IN PRACTICE
+
+### 14.1.1 Choosing the Right Level
+
+```
+AUTONOMY LEVEL QUICK REFERENCE
+─────────────────────────────────────────────────────────────────────────────
+
+LEVEL 1-2: SUGGEST ONLY
+─────────────────────────────────────────────────────────────────────────────
+Agent explains, you decide and execute.
+
+USE WHEN:
+  • Learning a new codebase
+  • Critical architecture decisions
+  • Security-sensitive changes
+  • You want to understand WHY, not just WHAT
+
+YOUR ROLE: Active decision-maker
+AGENT ROLE: Advisor, educator
+
+PROMPT PATTERN:
+  "Explain how I should approach [X]. Don't write code yet—
+   just walk me through the options and trade-offs."
+
+
+LEVEL 3-4: DRAFT & WAIT
+─────────────────────────────────────────────────────────────────────────────
+Agent creates drafts, you review before applying.
+
+USE WHEN:
+  • Most feature development
+  • Moderate complexity tasks
+  • Building trust with new agent/tool
+  • You want quality but also speed
+
+YOUR ROLE: Reviewer, approver
+AGENT ROLE: Draft creator
+
+PROMPT PATTERN:
+  "Create a draft implementation of [X]. I'll review before
+   we commit. Show me the plan first."
+
+
+LEVEL 5-6: EXECUTE WITH CHECKS
+─────────────────────────────────────────────────────────────────────────────
+Agent executes and reports, pauses only on issues.
+
+USE WHEN:
+  • Well-understood patterns
+  • Repetitive tasks
+  • You trust the agent's judgment
+  • Time is more critical than review
+
+YOUR ROLE: Monitor, intervene when flagged
+AGENT ROLE: Executor with guardrails
+
+PROMPT PATTERN:
+  "Implement [X] using our established patterns. Run tests
+   after. Only pause if tests fail or you're uncertain."
+
+
+LEVEL 7: FULL AUTONOMOUS
+─────────────────────────────────────────────────────────────────────────────
+Agent completes entire workflow independently.
+
+USE WHEN:
+  • Routine maintenance tasks
+  • High trust, low risk
+  • You're multitasking
+  • Well-defined acceptance criteria
+
+YOUR ROLE: Start and accept
+AGENT ROLE: Independent executor
+
+PROMPT PATTERN:
+  "Complete [entire task]. Follow our conventions. Report
+   when done with summary of changes."
+```
+
+### 14.1.2 Dynamic Adjustment
+
+```
+WHEN TO RAISE AUTONOMY (Trust More):
+─────────────────────────────────────────────────────────────────────────────
+✓ Agent successfully completed similar tasks
+✓ Pattern is well-established in codebase
+✓ Tests provide safety net
+✓ Changes are easily reversible
+✓ Time pressure exists
+
+WHEN TO LOWER AUTONOMY (Control More):
+─────────────────────────────────────────────────────────────────────────────
+✓ Agent made unexpected changes
+✓ Entering unfamiliar territory
+✓ Stakes are high (production, data, security)
+✓ Multiple errors occurred
+✓ You're not confident in understanding
+```
+
+---
+
+## 14.2 CONFIDENCE CALIBRATION IN PRACTICE
+
+### 14.2.1 Reading Agent Confidence
+
+```
+AGENT SIGNALS AND YOUR RESPONSE
+─────────────────────────────────────────────────────────────────────────────
+
+AGENT SAYS              │ CONFIDENCE │ YOUR ACTION
+─────────────────────────────────────────────────────────────────────────────
+"This will work..."     │ CERTAIN    │ Trust, verify normally
+"This should work..."   │ HIGH       │ Trust, test thoroughly
+"I believe..." / "I     │ MEDIUM     │ Review carefully, test
+think..."               │            │ edge cases
+"I'm not sure..." /     │ LOW        │ Get second opinion,
+"My best guess..."      │            │ verify approach
+"I need more info..."   │ UNCERTAIN  │ Provide context,
+                        │            │ don't proceed
+```
+
+### 14.2.2 Prompting for Confidence
+
+```
+PROMPTS THAT ELICIT BETTER CONFIDENCE SIGNALS
+─────────────────────────────────────────────────────────────────────────────
+
+Instead of: "How do I do X?"
+Ask: "How confident are you about the approach to X?
+     What assumptions are you making?"
+
+Instead of: "Fix this bug."
+Ask: "What do you think is causing this bug? How certain
+     are you? What would you need to verify to be more sure?"
+
+Instead of: "Is this code secure?"
+Ask: "What security concerns do you see? What are you
+     uncertain about? What should I verify independently?"
+```
+
+---
+
+## 14.3 THREAD MANAGEMENT
+
+### 14.3.1 When to Parallelize (P-Thread)
+
+```
+PARALLELIZATION DECISION
+─────────────────────────────────────────────────────────────────────────────
+
+PARALLELIZE WHEN:
+  ✓ Tasks are independent (no shared state)
+  ✓ Results can be merged cleanly
+  ✓ Time savings justify coordination overhead
+  ✓ You can review multiple outputs
+
+EXAMPLES:
+  • Build 3 UI components simultaneously
+  • Research options while drafting implementation
+  • Run tests in parallel with documentation
+
+DON'T PARALLELIZE WHEN:
+  ✗ Tasks depend on each other's output
+  ✗ Working on same files
+  ✗ You can't review parallel outputs effectively
+```
+
+### 14.3.2 When to Chain (C-Thread)
+
+```
+CHAINING DECISION
+─────────────────────────────────────────────────────────────────────────────
+
+USE CHAINING WHEN:
+  ✓ Output of phase N is input to phase N+1
+  ✓ Quality gates must pass before proceeding
+  ✓ Each phase needs verification
+  ✓ Rollback points are valuable
+
+EXAMPLE CHAIN:
+  Phase 1: Design API schema        → Review → Approve
+  Phase 2: Implement endpoints      → Review → Approve
+  Phase 3: Write tests              → Review → Approve
+  Phase 4: Documentation            → Review → Accept
+
+CHECKPOINT PATTERN:
+  "Complete [Phase 1]. Stop and show me the result before
+   moving to [Phase 2]. I want to verify before continuing."
+```
+
+### 14.3.3 When to Fuse (F-Thread)
+
+```
+FUSION DECISION
+─────────────────────────────────────────────────────────────────────────────
+
+USE FUSION (Best-of-N) WHEN:
+  ✓ Creative output varies significantly
+  ✓ Multiple valid approaches exist
+  ✓ Quality matters more than speed
+  ✓ You have compute budget for N runs
+
+EXAMPLE:
+  "Generate 3 different approaches to this architecture.
+   I'll review all three and pick the best elements."
+
+PRACTICAL APPLICATION:
+  • Use different models for same prompt
+  • Use same model with temperature variation
+  • Use different framing of same problem
+```
+
+---
+
+## 14.4 HUMAN CHECKPOINT OPTIMIZATION
+
+### 14.4.1 Valuable vs. Wasteful Checkpoints
+
+```
+VALUABLE CHECKPOINTS (Keep These)
+─────────────────────────────────────────────────────────────────────────────
+✓ Before irreversible actions (delete, deploy, send)
+✓ After architecture decisions
+✓ When agent confidence is LOW
+✓ Before security-sensitive changes
+✓ After major milestones
+
+WASTEFUL CHECKPOINTS (Eliminate These)
+─────────────────────────────────────────────────────────────────────────────
+✗ Approving every small code change
+✗ Confirming well-established patterns
+✗ Reviewing auto-generated boilerplate
+✗ Validating obvious next steps
+```
+
+### 14.4.2 Reducing Checkpoint Overhead
+
+```
+STRATEGIES FOR FEWER, BETTER CHECKPOINTS
+─────────────────────────────────────────────────────────────────────────────
+
+1. BATCH REVIEWS
+   Instead of reviewing 10 changes individually,
+   have agent complete a coherent chunk, then review once.
+
+2. TRUST BUT VERIFY
+   Let agent execute, but require comprehensive test coverage.
+   Tests become automated checkpoints.
+
+3. DEFINE CLEAR CRITERIA
+   "Proceed without checking in unless:
+    - You're uncertain (confidence < MEDIUM)
+    - Tests fail
+    - Scope needs to change"
+
+4. USE SUMMARY REPORTS
+   "At the end, give me a summary of all changes made.
+    I'll do a single comprehensive review."
+```
+
+---
+
+## 14.5 TOOL CALL EFFICIENCY
+
+### 14.5.1 The Efficiency Equation
+
+```
+AGENT EFFICIENCY = (Tool Calls × Quality) / Human Time
+
+OPTIMIZE BY:
+─────────────────────────────────────────────────────────────────────────────
+
+MORE THREADS:       Do more things in parallel
+LONGER THREADS:     Do more before requiring human input
+THICKER THREADS:    More tool calls per thread (higher autonomy)
+FEWER CHECKPOINTS:  Reduce human interruptions
+
+PRACTICAL TRANSLATION:
+─────────────────────────────────────────────────────────────────────────────
+Instead of: "Create the button component."
+            "Now add click handler."
+            "Now add styling."
+            "Now add tests."
+
+Use: "Create the button component with click handler,
+     styling matching our design system, and unit tests.
+     Report when complete."
+
+     (Same outcome, 75% fewer checkpoints)
+```
+
+### 14.5.2 Prompting for Efficiency
+
+```
+EFFICIENT PROMPTS
+─────────────────────────────────────────────────────────────────────────────
+
+HIGH FRICTION (Multiple checkpoints):
+  "What testing library should we use?"
+  [wait for answer]
+  "Ok, set it up."
+  [wait for setup]
+  "Now write tests for the auth module."
+  [wait for tests]
+
+LOW FRICTION (Single context):
+  "Set up our testing infrastructure using [Jest/Vitest
+  based on our stack], then write comprehensive tests
+  for the auth module. Use our established patterns.
+  Report when complete with coverage summary."
+```
+
+---
+
+## 14.6 SELF-HEALING IMPLEMENTATION
+
+### 14.6.1 Enabling Self-Healing
+
+```
+PROMPT PATTERNS FOR SELF-HEALING
+─────────────────────────────────────────────────────────────────────────────
+
+EXPLICIT PERMISSION:
+  "Implement [X]. If you encounter errors:
+   1. Read the error carefully
+   2. Attempt to fix (max 3 tries per error type)
+   3. If still failing, stop and report what you tried"
+
+BOUNDED AUTONOMY:
+  "Fix the failing tests. Try up to 3 different approaches
+   if the first doesn't work. If all fail, document what
+   you tried and what you suspect is wrong."
+
+WITH LEARNING:
+  "Resolve this bug. Document in Fix Ledger format:
+   - What was tried
+   - What worked/failed
+   - Root cause identified"
+```
+
+### 14.6.2 Circuit Breakers
+
+```
+BUILT-IN STOP CONDITIONS
+─────────────────────────────────────────────────────────────────────────────
+
+INSTRUCT AGENT:
+  "Stop and ask me if:
+   - Same error occurs 3+ times
+   - You need to make changes outside [scope]
+   - Your confidence drops below MEDIUM
+   - Something feels wrong"
+
+AUTOMATIC ESCALATION:
+  "If you can't resolve in [3 attempts / 15 minutes]:
+   1. Document what you tried
+   2. State your current hypothesis
+   3. Ask for human guidance
+   
+   Do NOT keep trying the same approach."
+```
+
+---
+
+## 14.7 OPERATIONAL PATTERNS
+
+### 14.7.1 The Plan Mode Dance
+
+```
+WHEN AGENT ENTERS PLAN MODE
+─────────────────────────────────────────────────────────────────────────────
+
+AGENT: Restates understanding, asks clarifying questions
+
+YOU:
+  ✓ Answer questions directly
+  ✓ Correct misunderstandings immediately
+  ✓ Add constraints you forgot to mention
+  ✓ Approve approach or redirect
+
+ANTI-PATTERN:
+  ✗ "Just do what I asked" (leads to misalignment)
+  ✗ Ignoring questions (agent will assume)
+  ✗ Changing requirements mid-execution
+```
+
+### 14.7.2 The Handoff Protocol
+
+```
+ENDING A SESSION CLEANLY
+─────────────────────────────────────────────────────────────────────────────
+
+PROMPT:
+  "Let's wrap up this session. Please:
+   1. Summarize what we accomplished
+   2. List any incomplete items
+   3. Update claude.md with current state
+   4. Note any decisions that need follow-up
+   5. Commit your changes with proper messages"
+
+RESULT: Clean state for next session or another agent
+```
+
+### 14.7.3 The Debug Protocol
+
+```
+WHEN THINGS GO WRONG
+─────────────────────────────────────────────────────────────────────────────
+
+STEP 1: STOP THE LOOP
+  "Stop. We've tried this 3 times. Let's step back."
+
+STEP 2: GATHER INFORMATION
+  "Tell me:
+   - What exactly is the error?
+   - What have you tried?
+   - What assumptions are you making?"
+
+STEP 3: QUESTION ASSUMPTIONS
+  "Is the problem actually what we think it is?
+   What would we expect to see if our assumption is wrong?"
+
+STEP 4: FRESH APPROACH
+  "Let's try a completely different approach.
+   What else could cause this symptom?"
+```
+
+---
+
+## 14.8 QUICK REFERENCE CARD
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     AGENT OPERATION QUICK REFERENCE                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  BEFORE STARTING:                                                            │
+│  □ Set autonomy level based on task risk/familiarity                        │
+│  □ Provide complete context upfront                                          │
+│  □ Define clear acceptance criteria                                          │
+│                                                                              │
+│  DURING EXECUTION:                                                           │
+│  □ Let agent complete coherent chunks before reviewing                       │
+│  □ Answer questions directly, don't deflect                                  │
+│  □ Adjust autonomy if things go off track                                    │
+│  □ Watch for confidence signals                                              │
+│                                                                              │
+│  WHEN STUCK:                                                                 │
+│  □ Stop after 3 failed attempts                                              │
+│  □ Question assumptions                                                      │
+│  □ Try different framing or approach                                         │
+│  □ Consider if problem is elsewhere                                          │
+│                                                                              │
+│  ENDING SESSION:                                                             │
+│  □ Get summary of changes                                                    │
+│  □ Update project state files                                                │
+│  □ Commit with proper messages                                               │
+│  □ Note incomplete items                                                     │
+│                                                                              │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  EFFICIENCY MANTRAS:                                                         │
+│  • More context upfront = fewer corrections later                            │
+│  • Batch reviews > constant interruptions                                    │
+│  • Clear criteria = autonomous execution                                     │
+│  • Trust + Verify > Control + Approve                                       │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## PART XIV SUMMARY
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    PART XIV: KEY TAKEAWAYS                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  AUTONOMY: Start at Level 3, adjust based on trust and context              │
+│                                                                              │
+│  CONFIDENCE: Always ask for certainty signals on important decisions        │
+│                                                                              │
+│  THREADS: Match work structure to dependency pattern                         │
+│                                                                              │
+│  CHECKPOINTS: Fewer but more meaningful > many but shallow                  │
+│                                                                              │
+│  EFFICIENCY: Batch requests, provide context, reduce round-trips            │
+│                                                                              │
+│  SELF-HEALING: Enable for routine failures, cap attempts, escalate smart    │
+│                                                                              │
+│  OPERATIONS: Use plan mode for complexity, handoff for continuity           │
+│                                                                              │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  The best human-agent collaboration happens when:                           │
+│  • Humans set direction and verify quality                                  │
+│  • Agents execute and report with appropriate autonomy                      │
+│  • Both sides communicate uncertainty clearly                               │
+│  • Handoffs preserve context perfectly                                      │
 │                                                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```

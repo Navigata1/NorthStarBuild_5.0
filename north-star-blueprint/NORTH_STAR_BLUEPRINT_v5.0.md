@@ -7052,6 +7052,39 @@ Record:
 
 ---
 
+
+### Section 19B: RLM Context Management Patterns
+```
+#### The Load Balancing vs Token Burning Problem
+
+| Approach | Description | When to Use |
+|----------|-------------|-------------|
+| **Linear Consumption** | Standard prompt → response | Simple queries |
+| **Chunked Retrieval** | Break context into chunks | Long documents |
+| **Streaming Fetch** | Load on-demand from store | Unlimited context |
+| **Hierarchical Summary** | Summarize → detail when needed | Large codebases |
+
+#### Confidence Calibration
+
+```python
+CONFIDENCE_THRESHOLDS = {
+    "HIGH": 0.85,      # Auto-execute, notify
+    "MEDIUM": 0.65,    # Execute with review window
+    "LOW": 0.40,       # Pause, require approval
+    "ABORT": 0.25      # Stop, escalate
+}
+```
+
+#### Quality Gates for RLM
+
+```
+□ Context chunking strategy defined
+□ Confidence thresholds calibrated
+□ Runaway loop detection implemented
+□ State persistence verified
+```
+
+---
 ## PART IV SUMMARY
 
 ```
@@ -9149,6 +9182,30 @@ Use: Loading placeholders
 
 ---
 
+### Animation & Performance Patterns
+
+#### Recommended Animation Libraries
+| Library | Best For | Performance |
+|---------|----------|-------------|
+| **GSAP** | Complex timelines | Excellent |
+| **Framer Motion** | React | Very Good |
+| **Lenis** | Smooth scrolling | Excellent |
+
+#### UI Sniping Methodology
+1. **Identify**: Find exceptional UI (Apple, Linear, Vercel)
+2. **Analyze**: Understand the interaction pattern
+3. **Extract**: Document the core mechanic
+4. **Adapt**: Implement with your design system
+
+#### Speed Optimization Checklist
+```
+□ Core Web Vitals passing (LCP < 2.5s)
+□ Images optimized (WebP/AVIF)
+□ JS bundle < 200KB gzipped
+□ Animations GPU-accelerated
+```
+
+---
 ## 31. STANDARD EASINGS, DURATIONS & MOTION
 
 ### 31.1 Standard Easings

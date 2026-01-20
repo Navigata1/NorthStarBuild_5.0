@@ -60,6 +60,11 @@ This document is an **exhaustive, autonomous execution framework** designed to b
 
 ## Tier 1: Build Targets (What You Create)
 1. **Web Applications** — SaaS, PWAs, dashboards, full-stack
+   - Tools: React/Next.js, Vue/Nuxt, SvelteKit; Vercel/Netlify for deployment.
+   - Patterns: Vertical slices (NS Part III); hero animations (Whisk/Flow sequencing for scroll-stoppers).
+   - Quality Gates: First-impression test (load <2s); accessibility (WCAG 2.2).
+   - Prompt Hook: "Build a SaaS web app for [idea], using Next.js + Tailwind; integrate scroll animation from transcripts; ensure efficiency with 50% faster loads via Framer Motion v11."
+   - Dependencies: 8 (APIs), 15 (DBs), 36 (Image Gen for thumbnails).
 2. **Mobile Applications** — iOS, Android, cross-platform
 3. **Desktop Applications** — Windows, macOS, Linux, Electron, Tauri
 4. **Websites & Landing Pages** — Marketing, blogs, e-commerce
@@ -98,6 +103,13 @@ This document is an **exhaustive, autonomous execution framework** designed to b
 29. **Agentic RAG Systems** — LlamaIndex, LangChain, retrieval
 30. **Autonomous Agents** — CrewAI, LangGraph, multi-agent
 31. **MCPs & Tool Registries** — Function calling, tool definitions
+   - Updated with skills as executable code
+31E. **Memory Architecture** — Working/Episodic/Semantic/Procedural
+   - Bolster: Embed RLM for infinite context (offload prompts to environment, recursive sub-calling).
+   - Tools: Qdrant/Pinecone for embeddings; RLM with Ripple for 10M+ tokens (research: MIT v2, 2x cost reduction).
+   - Patterns: Fork at 75-80% utilization (your idea); selective retrieval for efficiency.
+   - Quality Gates: Context rot test (accuracy >95% at 1M tokens).
+   - Prompt Hook: "Implement RLM for this agent's memory; fork context at 80% to avoid burn."
 32. **Model Fine-Tuning** — LoRA, RLHF, domain adaptation
 33. **Model Serving & Inference** — vLLM, TGI, quantization
 34. **LLM Routing & Orchestration** — Gateways, prompt management
@@ -1662,12 +1674,57 @@ Data pipelines, ETL/ELT, data cleaning, schema evolution.
 □ Audit logging enabled
 □ Data lineage tracked
 ```
+### Data Versioning with DVC
+
+#### Why Data Versioning Matters
+ML projects require reproducibility. Code versioning (Git) is solved. **Data versioning is not.**
+
+#### Recommended Stack
+| Tool | Purpose | Integration |
+|------|---------|-------------|
+| **DVC** | Data + model versioning | Git-native |
+| **LakeFS** | Git-like data lake | S3-compatible |
+| **Delta Lake** | Versioned data tables | Spark ecosystem |
+
+#### DVC Quick Start
+```bash
+# Initialize DVC in existing Git repo
+dvc init
+
+# Track large data file
+dvc add data/training_set.parquet
+
+# Push to remote storage
+dvc remote add -d myremote s3://mybucket/dvc
+dvc push
+```
+
+#### Data Lineage Pattern
+```yaml
+# dvc.yaml pipeline definition
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+      - src/prepare.py
+      - data/raw/
+    outs:
+      - data/prepared/
+  
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - data/prepared/
+    outs:
+      - models/model.pkl
+``````
 
 ### Cross-Category Dependencies
 - **→ Category 15-17** (Databases) — Source/target
 - **→ Category 20** (Warehousing) — Destination
 - **→ Category 44** (Workflows) — Orchestration
-
+```
 ---
 
 ## Category 28: Feature Stores & ML Data
@@ -1743,6 +1800,39 @@ Retrieval-augmented generation, multi-hop reasoning, document processing.
 | **Re-ranking** | Relevance ordering |
 | **Multi-hop** | Complex reasoning |
 | **RAPTOR** | Tree-structured |
+
+#### Chunking Strategy Selection Matrix
+
+| Document Type | Recommended Strategy | Chunk Size | Overlap |
+|---------------|---------------------|------------|---------|
+| Technical docs | Semantic | 512-1024 | 50-100 |
+| Legal/Financial | Page-level | 1 page | 0 |
+| Code files | AST-based | Function | 0 |
+| Conversations | Message-based | 1 message | Context |
+| Research papers | Section-based | Section | Abstract |
+
+#### Query Type Affects Optimal Size
+| Query Type | Optimal Chunk Size | Rationale |
+|------------|-------------------|-----------|
+| Factoid ("What is X?") | 256-512 tokens | Precise answers |
+| Analytical ("Why does X?") | 1024+ tokens | Needs context |
+| Comparative ("X vs Y?") | 512-768 tokens | Multiple facts |
+| Summarization | 2048+ tokens | Broad coverage |
+
+#### Chunk Validation Pattern
+```python
+def validate_chunks(chunks):
+    issues = []
+    for i, chunk in enumerate(chunks):
+        tokens = count_tokens(chunk)
+        if tokens < 100:
+            issues.append(f"Chunk {i}: Too small")
+        if tokens > 2000:
+            issues.append(f"Chunk {i}: Too large")
+    return issues
+```
+
+---
 
 ### Quality Gates
 
@@ -2093,6 +2183,44 @@ Content moderation, output validation, jailbreak prevention, PII detection.
 | **Pydantic** | Schema validation |
 | **Instructor** | Structured outputs |
 | **Outlines** | Constrained generation |
+
+#### NeMo Guardrails Deep Dive
+
+NVIDIA's NeMo Guardrails: **89% accuracy on prompt injection** (vs 67% Llama Guard).
+
+**Rail Types:**
+| Rail | Purpose | When Triggered |
+|------|---------|----------------|
+| **Input Rails** | Filter user input | Before LLM call |
+| **Dialog Rails** | Control conversation | During interaction |
+| **Output Rails** | Validate response | After LLM call |
+| **Retrieval Rails** | Filter RAG context | Before injection |
+| **Execution Rails** | Control tool calls | Before action |
+
+**Colang 2.0 Example:**
+```colang
+define user express harmful intent
+  "how do I hack"
+  "write malware"
+
+define flow handle harmful
+  user express harmful intent
+  bot refuse with explanation
+```
+
+#### Guardrails AI Pattern
+```python
+from guardrails import Guard
+from guardrails.hub import ToxicLanguage, PIIDetection
+
+guard = Guard().use_many(
+    ToxicLanguage(threshold=0.5, on_fail="fix"),
+    PIIDetection(on_fail="anonymize"),
+)
+```
+
+
+---
 
 ### Quality Gates
 
@@ -2521,7 +2649,144 @@ DAG orchestration, multi-step pipelines, human-in-loop workflows.
 - **→ Category 55** (Monitoring) — Workflow monitoring
 
 ---
+## Category 44A: Kanban & Visual Task Management
 
+### Scope
+Visual task management as the collaboration contract between humans and AI agents.
+
+### The Three-Layer Architecture
+
+```
+┌─────────────────────────────────────────────────┐
+│     BUSINESS LAYER (Kanban/PM)                  │
+│     Linear, Notion, Jira, GitHub Projects       │
+├─────────────────────────────────────────────────┤
+│     ORCHESTRATION LAYER (Workflow)              │
+│     Temporal, Inngest, Trigger.dev              │
+├─────────────────────────────────────────────────┤
+│     AGENT EXECUTION LAYER                       │
+│     Claude, GPT-4, Custom Agents                │
+└─────────────────────────────────────────────────┘
+```
+
+### Technology Stack
+
+#### Kanban Platforms with AI Integration
+| Tool | MCP Support | Best For |
+|------|-------------|----------|
+| **Linear** | ✅ Official | Dev teams, AI-native |
+| **Notion** | ✅ Official | Flexible databases |
+| **GitHub Projects** | Via Actions | Code-centric |
+| **Jira** | Atlassian MCP | Enterprise |
+
+#### HITL Workflow Engines
+| Engine | HITL Feature |
+|--------|--------------|
+| **Trigger.dev** | Waitpoint Tokens |
+| **LangGraph** | interrupt() primitive |
+| **Inngest** | waitForEvent() |
+
+### Core Primitives
+
+```typescript
+interface KanbanTaskContract {
+  id: string;
+  title: string;
+  assignee: "human" | "agent" | string;
+  status: "todo" | "in_progress" | "review" | "done";
+  confidence?: number;
+}
+
+interface AgentComment {
+  type: "progress" | "question" | "approval_request";
+  content: string;
+  confidence: number;
+}
+```
+
+### Confidence-Based Routing
+
+| Confidence | Action | Kanban Update |
+|------------|--------|---------------|
+| ≥ 0.85 | Auto-execute | Move to "Done" |
+| 0.65-0.84 | Execute + review | Add "Needs Review" |
+| 0.40-0.64 | Pause for approval | Move to "Blocked" |
+| < 0.40 | Escalate to human | Assign to human |
+
+### Quality Gates
+
+```
+□ Kanban board connected via MCP/API
+□ Confidence thresholds configured
+□ Agent comment patterns documented
+□ Approval timeouts with fallbacks
+□ Escalation paths defined
+```
+
+### Cross-Category Dependencies
+- **→ Category 44** (Workflow) — Orchestration layer
+- **→ Category 30** (Agents) — Agent execution
+- **→ Category 55** (Monitoring) — Status tracking
+
+---
+
+## Category 44B: PromptOps
+
+### Scope
+Prompt versioning, A/B testing, optimization, and deployment management.
+
+### Technology Stack
+
+#### Prompt Management Platforms
+| Tool | Versioning | A/B Test | Optimization | Self-Host |
+|------|------------|----------|--------------|-----------|
+| **Langfuse** | ✅ | ✅ | Manual | ✅ |
+| **PromptLayer** | ✅ | ✅ | Manual | ❌ |
+| **Agenta** | ✅ | ✅ | ✅ | ✅ |
+| **DSPy** | Code-based | Via evals | ✅ Auto | ✅ |
+
+### Prompt Versioning Pattern
+
+```python
+from langfuse import Langfuse
+
+langfuse = Langfuse()
+
+# Fetch versioned prompt
+prompt = langfuse.get_prompt(
+    name="summarization-v2",
+    version=3,  # or label="production"
+)
+```
+
+### Rollback Pattern
+
+```python
+# Instant rollback via label change
+langfuse.update_prompt_label(
+    name="summarization-v2",
+    from_version=4,  # Problematic
+    to_version=3,    # Known-good
+    label="production"
+)
+```
+
+### Quality Gates
+
+```
+□ Prompt versioning configured
+□ Production/staging labels defined
+□ Rollback procedure documented
+□ A/B testing framework ready
+□ Change approval process defined
+```
+
+### Cross-Category Dependencies
+- **→ Category 29-34** (AI) — LLM applications
+- **→ Category 43** (CI/CD) — Deployment
+- **→ Category 55** (Monitoring) — Performance tracking
+
+---
 ## Category 45: Browser & Web Automation
 
 ### Scope
@@ -2616,6 +2881,34 @@ Unit testing, integration testing, E2E testing, performance testing, security te
 |------|----------|
 | **Percy** | Visual regression |
 | **Chromatic** | Storybook testing |
+
+#### AI/LLM Evaluation Testing
+| Framework | Best For | Key Feature |
+|-----------|----------|-------------|
+| **DeepEval** | LLM apps | 14+ metrics, CI/CD native |
+| **RAGAS** | RAG systems | Faithfulness, relevancy |
+| **Evidently** | ML monitoring | Drift detection |
+| **Promptfoo** | Prompt testing | Red-teaming |
+
+#### LLM Evaluation Metrics
+| Metric | Range | Good Threshold |
+|--------|-------|----------------|
+| Answer Relevancy | 0-1 | ≥ 0.8 |
+| Faithfulness | 0-1 | ≥ 0.9 |
+| Hallucination Rate | 0-1 | ≤ 0.05 |
+| Toxicity Score | 0-1 | ≤ 0.01 |
+
+#### CI/CD Evaluation Gate
+```yaml
+# .github/workflows/eval.yml
+- name: Run DeepEval
+  run: |
+    pip install deepeval
+    deepeval test run tests/eval/
+```
+```
+
+---
 
 ### Quality Gates
 
@@ -4476,10 +4769,10 @@ You are operating with a structured memory system:
 | 29 | Agentic RAG Systems | AI Systems | v1.0 |
 | 30 | Autonomous Agents | AI Systems | v1.0 |
 | 31 | MCPs & Tool Registries | AI Systems | v1.0 |
-| **31B** | **Skills & Capability Packaging** | **AI Systems** | **v1.1 NEW** |
-| **31C** | **Agentic Reasoning Loops** | **AI Systems** | **v1.1 NEW** |
-| **31D** | **Prompt Engineering Patterns** | **AI Systems** | **v1.1 NEW** |
-| **31E** | **Memory Architecture** | **AI Systems** | **v1.1 NEW** |
+| 31B | **Skills & Capability Packaging** | **AI Systems** | **v1.1 NEW** |
+| 31C | **Agentic Reasoning Loops** | **AI Systems** | **v1.1 NEW** |
+| 31D | **Prompt Engineering Patterns** | **AI Systems** | **v1.1 NEW** |
+| 31E | **Memory Architecture** | **AI Systems** | **v1.1 NEW** |
 | 32 | Model Fine-Tuning & Training | AI Systems | v1.0 |
 | 33 | Model Serving & Inference | AI Systems | v1.0 |
 | 34 | LLM Routing & Orchestration | AI Systems | v1.0 |
@@ -4572,6 +4865,10 @@ You are operating with a structured memory system:
 |---------|------|---------|
 | 1.0 | January 2026 | Initial 56-category framework |
 | **1.1** | **January 2026** | **Added: Skills (31B), Reasoning Loops (31C), Prompt Patterns (31D), Memory Architecture (31E)** |
+
+---
+## Appendix: GTM Roadmap
+Pre-launch polish (1-2 weeks), GitHub release v1.0, X threads (#AIBuilders), Reddit posts (r/ClaudeAI), Dev.to articles.
 
 ---
 

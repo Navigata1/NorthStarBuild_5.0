@@ -8,7 +8,7 @@
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║                         NORTH STAR BOOTSTRAP                                 ║
-║                              v1.1                                            ║
+║                              v1.2                                            ║
 ║                                                                              ║
 ║              The Ignition Key for Production-Ready Development               ║
 ║                                                                              ║
@@ -68,33 +68,43 @@ Full framework documents are fetched on-demand from:
 • BRIDGE.md — Navigation layer
 • NORTH_STAR_BLUEPRINT_v5.0.md — HOW to build (methodology)
 • MASTER_BUILD_FRAMEWORK_v1.1.md — WHAT to build with (technology)
-• GLOBAL_IDE_RULES.md — Persistent cross-project rules (optional)
 
-┌─────────────────────┐
-│     BOOTSTRAP       │ ← YOU ARE HERE (the ignition key)
-│   (This Document)   │
-└──────────┬──────────┘
-           │
-           │ fetches on-demand
-           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                        /build SCAFFOLDING                        │
-│  ┌─────────────┐  ┌──────────────────┐  ┌────────────────────┐  │
-│  │  BRIDGE.md  │  │  NORTH STAR v5.0 │  │  MASTER BUILD v1.1 │  │
-│  │  Navigation │  │  Methodology     │  │  Technology        │  │
-│  └─────────────┘  └──────────────────┘  └────────────────────┘  │
-│                                                                  │
-│  TEMPORARY — Deleted when project complete                       │
-└─────────────────────────────────────────────────────────────────┘
-           │
-           │ generates
-           ▼
-┌─────────────────────┐
-│  Project Files      │ ← PERMANENT (your project)
-│  • claude.md        │
-│  • src/             │
-│  • .provenance      │
-└─────────────────────┘
+Separately (one-time user setup, NOT per-project):
+• GLOBAL_IDE_RULES.md — Persistent cross-project rules (see Section 0)
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│  ONE-TIME SETUP (Section 0)              PER-PROJECT (Section 1)            │
+│  ─────────────────────────               ──────────────────────             │
+│                                                                              │
+│  ┌──────────────────────┐               ┌─────────────────────┐             │
+│  │  GLOBAL_IDE_RULES.md │               │     BOOTSTRAP       │             │
+│  │  (download once)     │               │   (This Document)   │             │
+│  └──────────┬───────────┘               └──────────┬──────────┘             │
+│             │                                      │                         │
+│             │ install to                           │ fetches per-project     │
+│             ▼                                      ▼                         │
+│  ┌──────────────────────┐    ┌─────────────────────────────────────────┐   │
+│  │  ~/.claude/CLAUDE.md │    │             /build SCAFFOLDING           │   │
+│  │  (user home)         │    │  ┌─────────┐  ┌────────┐  ┌──────────┐  │   │
+│  │                      │    │  │ BRIDGE  │  │ NS v5  │  │ MBF v1.1 │  │   │
+│  │  PERMANENT           │    │  └─────────┘  └────────┘  └──────────┘  │   │
+│  │  Applies to ALL      │    │                                         │   │
+│  │  projects            │    │  TEMPORARY — Deleted when complete      │   │
+│  └──────────────────────┘    └────────────────────┬────────────────────┘   │
+│             │                                      │                         │
+│             │ auto-read                            │ generates               │
+│             ▼                                      ▼                         │
+│             └──────────────┐ ┌─────────────────────┘                        │
+│                            ▼ ▼                                               │
+│                     ┌─────────────────────┐                                 │
+│                     │  Project Files      │ ← PERMANENT (your project)      │
+│                     │  • claude.md        │   (overrides global where set)  │
+│                     │  • src/             │                                 │
+│                     │  • .provenance      │                                 │
+│                     └─────────────────────┘                                 │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -138,7 +148,8 @@ project/
 BOOTSTRAP SECTIONS
 ─────────────────────────────────────────────────────────────────────────────
 
-Section 1:  Scaffolding Setup Protocol
+Section 0:  One-Time Prerequisites (Global IDE Rules - do ONCE, not per-project)
+Section 1:  Scaffolding Setup Protocol (do per-project)
 Section 2:  Quick-Start Directive
 Section 3:  IDE Detection & Project Intelligence File Generation
 Section 4:  Emergency Reference Card
@@ -156,6 +167,295 @@ Section 15: Global IDE Rules Reference
 
 Appendix A: IDE File Reference
 Appendix B: Provenance File Template
+```
+
+---
+
+# SECTION 0: ONE-TIME PREREQUISITES
+
+Before using this Bootstrap for your first project, complete this one-time setup:
+
+```
+ONE-TIME SETUP — Execute ONCE, Not Per-Project
+─────────────────────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  IMPORTANT DISTINCTION                                                       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  SECTION 0 (This Section):                                                   │
+│  • ONE-TIME setup done ONCE, EVER                                           │
+│  • Installed to your USER HOME directory                                    │
+│  • Persists permanently across ALL projects                                 │
+│  • Like installing .gitconfig — you do it once                              │
+│                                                                              │
+│  SECTION 1 (Scaffolding):                                                    │
+│  • PER-PROJECT setup done for EACH project                                  │
+│  • Downloaded to ./build/ folder                                            │
+│  • Temporary — deleted when project complete                                │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+STEP 0.1: CHECK FOR EXISTING GLOBAL IDE RULES
+─────────────────────────────────────────────────────────────────────────────
+
+Before installing NS Build global rules, CHECK if the user already has 
+global IDE rules configured. DO NOT OVERWRITE existing configuration.
+
+DETECTION PATHS BY IDE:
+─────────────────────────────────────────────────────────────────────────────
+
+  Claude Code:     ~/.claude/CLAUDE.md
+  Cursor:          ~/.cursor/rules/global.mdc
+  Windsurf:        ~/.windsurf/global_rules.md
+  VS Code:         ~/.github/copilot-instructions.md
+  Aider:           ~/.aider.conf.yml
+  Cline:           ~/.cline/settings
+
+AGENT ACTION:
+  1. Detect which IDE is being used
+  2. Check if global rules file exists at expected path
+  3. IF EXISTS → Proceed to SYNTHESIS PROTOCOL (Step 0.2)
+  4. IF NOT EXISTS → Proceed to FRESH INSTALL (Step 0.3)
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+STEP 0.2: GLOBAL RULES SYNTHESIS PROTOCOL (If Existing Rules Found)
+─────────────────────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  ⚠️ CRITICAL: ENHANCEMENT NOT REPLACEMENT                                   │
+│                                                                              │
+│  User's existing global rules may represent YEARS of customization.        │
+│  NEVER overwrite. Always SYNTHESIZE and ask permission.                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+SYNTHESIS WORKFLOW:
+─────────────────────────────────────────────────────────────────────────────
+
+  PHASE 1: ANALYZE EXISTING
+  ─────────────────────────────────────────────────────────────────────────
+  
+  Read existing global rules file and identify:
+  
+  □ Confidence settings (if any)
+  □ Autonomy preferences (if any)
+  □ Coding standards defined
+  □ Communication style preferences
+  □ Tool configurations
+  □ Custom workflows
+  □ Personal preferences
+  □ Framework-specific rules
+  
+  Document what exists before proposing changes.
+
+  ─────────────────────────────────────────────────────────────────────────
+  
+  PHASE 2: IDENTIFY NS BUILD ENHANCEMENTS
+  ─────────────────────────────────────────────────────────────────────────
+  
+  Compare existing rules against NS Build Global IDE Rules and identify:
+  
+  NS BUILD ADDITIONS (not present in existing):
+  □ Confidence calibration framework (if missing)
+  □ Autonomy dial settings (if missing)
+  □ Quality tier awareness (if missing)
+  □ Vertical slice methodology reference (if missing)
+  □ Tool efficiency patterns (if missing)
+  
+  COMPLEMENTARY ENHANCEMENTS (can enhance existing):
+  □ More specific coding standards
+  □ Additional communication preferences
+  □ Enhanced workflow patterns
+  
+  CONFLICTS (existing differs from NS Build):
+  □ Note but PREFER USER'S EXISTING SETTINGS
+  □ User's customization wins on conflicts
+
+  ─────────────────────────────────────────────────────────────────────────
+  
+  PHASE 3: PROPOSE ENHANCEMENT (Requires Approval)
+  ─────────────────────────────────────────────────────────────────────────
+  
+  Present to user:
+  
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │  GLOBAL IDE RULES ENHANCEMENT PROPOSAL                                  │
+  ├─────────────────────────────────────────────────────────────────────────┤
+  │                                                                          │
+  │  I found existing global IDE rules at: [path]                           │
+  │                                                                          │
+  │  EXISTING VALUABLE CONTENT (will be PRESERVED):                         │
+  │  • [list items from Phase 1]                                            │
+  │                                                                          │
+  │  PROPOSED NS BUILD ADDITIONS:                                           │
+  │  • [list items from Phase 2 - additions only]                           │
+  │                                                                          │
+  │  CONFLICTS (your settings will be kept):                                │
+  │  • [list any conflicts, noting user's version wins]                     │
+  │                                                                          │
+  │  May I ENHANCE your global rules with the NS Build additions?           │
+  │  (Your existing settings will be preserved, not replaced)               │
+  │                                                                          │
+  │  Options:                                                                │
+  │  [A] Yes, enhance with all additions                                    │
+  │  [B] Show me the proposed file first                                    │
+  │  [C] Let me choose which additions to include                           │
+  │  [D] No, keep my existing rules as-is                                   │
+  │                                                                          │
+  └─────────────────────────────────────────────────────────────────────────┘
+  
+  WAIT FOR USER RESPONSE before proceeding.
+
+  ─────────────────────────────────────────────────────────────────────────
+  
+  PHASE 4: EXECUTE ENHANCEMENT (Only After Approval)
+  ─────────────────────────────────────────────────────────────────────────
+  
+  If user approves:
+  
+  1. CREATE BACKUP of existing file
+     cp ~/.claude/CLAUDE.md ~/.claude/CLAUDE.md.backup.$(date +%Y%m%d)
+     
+  2. MERGE content (existing + approved additions)
+     Structure:
+     
+     ─────────────────────────────────────────────────────
+     # GLOBAL IDE RULES
+     # Enhanced with NS Build Framework additions
+     # Original backup: ~/.claude/CLAUDE.md.backup.YYYYMMDD
+     
+     ## PRESERVED USER SETTINGS
+     [user's original content]
+     
+     ## NS BUILD ENHANCEMENTS (added YYYY-MM-DD)
+     [approved additions only]
+     ─────────────────────────────────────────────────────
+     
+  3. WRITE enhanced file
+  
+  4. VERIFY file is readable
+  
+  5. INFORM user:
+     "Global rules enhanced. Backup saved at [path]."
+
+  ─────────────────────────────────────────────────────────────────────────
+  
+  IF USER DECLINES (Option D):
+  ─────────────────────────────────────────────────────────────────────────
+  
+  Respect the decision. Inform user:
+  
+  "Understood. Your existing global rules will be used as-is.
+   The NS Build framework will work with your current settings.
+   You can manually add NS Build rules later if desired.
+   
+   Proceeding to Section 1 (Project Scaffolding)..."
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+STEP 0.3: FRESH INSTALL (If No Existing Rules Found)
+─────────────────────────────────────────────────────────────────────────────
+
+If no existing global rules are detected:
+
+  PHASE 1: INFORM USER
+  ─────────────────────────────────────────────────────────────────────────
+  
+  "No existing global IDE rules detected at [path].
+   
+   I can install NS Build global rules which provide:
+   • Confidence calibration defaults
+   • Autonomy dial settings
+   • Universal coding standards
+   • Communication preferences
+   • Tool usage patterns
+   
+   These will apply to ALL your future projects.
+   
+   May I install NS Build global rules?
+   
+   [A] Yes, install global rules
+   [B] Show me what will be installed first
+   [C] No, skip global rules for now"
+  
+  WAIT FOR USER RESPONSE.
+
+  ─────────────────────────────────────────────────────────────────────────
+  
+  PHASE 2: INSTALL (If Approved)
+  ─────────────────────────────────────────────────────────────────────────
+  
+  If user approves:
+  
+  1. CREATE directory if needed
+     mkdir -p ~/.claude
+     
+  2. FETCH NS Build global rules
+     Download from:
+     https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/GLOBAL_IDE_RULES.md
+     
+  3. SAVE to appropriate path
+     Save as: ~/.claude/CLAUDE.md
+     
+  4. VERIFY installation
+     Read file and confirm content
+     
+  5. INFORM user:
+     "Global IDE rules installed at ~/.claude/CLAUDE.md
+      These will apply to all future projects."
+
+  ─────────────────────────────────────────────────────────────────────────
+  
+  IF USER DECLINES:
+  ─────────────────────────────────────────────────────────────────────────
+  
+  "Understood. Skipping global rules installation.
+   You can install them later by following Section 15 instructions.
+   
+   Proceeding to Section 1 (Project Scaffolding)..."
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+STEP 0.4: PREREQUISITES CHECKLIST
+─────────────────────────────────────────────────────────────────────────────
+
+After completing Steps 0.1-0.3, verify:
+
+  □ Global IDE Rules: Installed / Enhanced / Skipped (user choice)
+  □ Git installed and configured
+  □ IDE/editor ready
+  □ Internet access for fetching framework docs
+
+─────────────────────────────────────────────────────────────────────────────
+
+ONCE COMPLETE: Proceed to Section 1 for per-project scaffolding.
+
+This Section 0 needs to be executed only ONCE, ever.
+On subsequent projects, agents should CHECK if global rules exist
+and skip directly to Section 1 if already configured.
+
+─────────────────────────────────────────────────────────────────────────────
+
+AGENT BEHAVIOR ON SUBSEQUENT PROJECTS:
+─────────────────────────────────────────────────────────────────────────────
+
+When starting a NEW project (not the first one):
+
+  IF global rules file exists at expected path:
+    → Skip Section 0 entirely
+    → Proceed directly to Section 1
+    → Global rules are already active
+    
+  IF global rules file is MISSING (user may have deleted):
+    → Offer to reinstall: "Global rules appear to be missing. Reinstall?"
+    → If yes → Follow Step 0.3
+    → If no → Proceed to Section 1
+
 ```
 
 ---

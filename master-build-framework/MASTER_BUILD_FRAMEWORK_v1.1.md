@@ -1,12 +1,3 @@
-# MASTER BUILD FRAMEWORK v1.1 — SEGMENT 1 of 4
-## MBF_PART_1_CORE
-### Contents: Front Matter + Tier 1 (Cat 1-7) + Tier 2 (Cat 8-14)
-### Lines: 1-1113 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full MBF, merge all 4 parts.
-> For BRIDGE routing: Categories 1-14 are in this segment.
----
-
 # THE 56-PHASE MASTER BUILD FRAMEWORK
 ## v1.1 — January 2026
 
@@ -69,11 +60,6 @@ This document is an **exhaustive, autonomous execution framework** designed to b
 
 ## Tier 1: Build Targets (What You Create)
 1. **Web Applications** — SaaS, PWAs, dashboards, full-stack
-   - Tools: React/Next.js, Vue/Nuxt, SvelteKit; Vercel/Netlify for deployment.
-   - Patterns: Vertical slices (NS Part III); hero animations (Whisk/Flow sequencing for scroll-stoppers).
-   - Quality Gates: First-impression test (load <2s); accessibility (WCAG 2.2).
-   - Prompt Hook: "Build a SaaS web app for [idea], using Next.js + Tailwind; integrate scroll animation from transcripts; ensure efficiency with 50% faster loads via Framer Motion v11."
-   - Dependencies: 8 (APIs), 15 (DBs), 36 (Image Gen for thumbnails).
 2. **Mobile Applications** — iOS, Android, cross-platform
 3. **Desktop Applications** — Windows, macOS, Linux, Electron, Tauri
 4. **Websites & Landing Pages** — Marketing, blogs, e-commerce
@@ -112,13 +98,6 @@ This document is an **exhaustive, autonomous execution framework** designed to b
 29. **Agentic RAG Systems** — LlamaIndex, LangChain, retrieval
 30. **Autonomous Agents** — CrewAI, LangGraph, multi-agent
 31. **MCPs & Tool Registries** — Function calling, tool definitions
-   - Updated with skills as executable code
-31E. **Memory Architecture** — Working/Episodic/Semantic/Procedural
-   - Bolster: Embed RLM for infinite context (offload prompts to environment, recursive sub-calling).
-   - Tools: Qdrant/Pinecone for embeddings; RLM with Ripple for 10M+ tokens (research: MIT v2, 2x cost reduction).
-   - Patterns: Fork at 75-80% utilization (your idea); selective retrieval for efficiency.
-   - Quality Gates: Context rot test (accuracy >95% at 1M tokens).
-   - Prompt Hook: "Implement RLM for this agent's memory; fork context at 80% to avoid burn."
 32. **Model Fine-Tuning** — LoRA, RLHF, domain adaptation
 33. **Model Serving & Inference** — vLLM, TGI, quantization
 34. **LLM Routing & Orchestration** — Gateways, prompt management
@@ -1120,15 +1099,6 @@ Internal developer platforms, self-service infrastructure, golden paths, develop
 
 ---
 
-# MASTER BUILD FRAMEWORK v1.1 — SEGMENT 2 of 4
-## MBF_PART_2_DATA_AI
-### Contents: Tier 3 (Cat 15-21) + Tier 4 (Cat 22-35)
-### Lines: 1114-2243 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full MBF, merge all 4 parts.
-> For BRIDGE routing: Categories 15-35 are in this segment.
----
-
 # TIER 3: DATA & PERSISTENCE
 ## *How Data Is Stored, Retrieved, and Managed*
 
@@ -1139,7 +1109,7 @@ Internal developer platforms, self-service infrastructure, golden paths, develop
 ### Scope
 SQL databases, PostgreSQL, MySQL, SQLite, transactional systems, migrations, ORMs.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Database Engines
 | Database | Best For |
@@ -1181,9 +1151,9 @@ SQL databases, PostgreSQL, MySQL, SQLite, transactional systems, migrations, ORM
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  Data layer
-- **â†' Category 22** (Caching)  -  Query caching
-- **â†' Category 43** (DevOps)  -  Backup automation
+- **→ Category 8** (APIs) — Data layer
+- **→ Category 22** (Caching) — Query caching
+- **→ Category 43** (DevOps) — Backup automation
 
 ---
 
@@ -1192,7 +1162,7 @@ SQL databases, PostgreSQL, MySQL, SQLite, transactional systems, migrations, ORM
 ### Scope
 Embeddings storage, similarity search, RAG retrieval, recommendation systems.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Vector Databases
 | Database | Best For |
@@ -1232,9 +1202,9 @@ Embeddings storage, similarity search, RAG retrieval, recommendation systems.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 29-31** (AI)  -  RAG systems
-- **â†' Category 15** (Relational)  -  Metadata storage
-- **â†' Category 11** (GPU)  -  Embedding compute
+- **→ Category 29-31** (AI) — RAG systems
+- **→ Category 15** (Relational) — Metadata storage
+- **→ Category 11** (GPU) — Embedding compute
 
 ---
 
@@ -1243,7 +1213,7 @@ Embeddings storage, similarity search, RAG retrieval, recommendation systems.
 ### Scope
 Document databases, key-value stores, graph databases, time-series.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Document Databases
 | Database | Best For |
@@ -1277,8 +1247,8 @@ Document databases, key-value stores, graph databases, time-series.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  Data layer
-- **â†' Category 22** (Caching)  -  Cache integration
+- **→ Category 8** (APIs) — Data layer
+- **→ Category 22** (Caching) — Cache integration
 
 ---
 
@@ -1287,7 +1257,7 @@ Document databases, key-value stores, graph databases, time-series.
 ### Scope
 Client-side databases, offline-first, sync engines, CRDTs.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Browser Databases
 | Database | Type |
@@ -1317,9 +1287,9 @@ Client-side databases, offline-first, sync engines, CRDTs.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 1-3** (Apps)  -  Client applications
-- **â†' Category 15** (Relational)  -  Server database
-- **â†' Category 24** (Real-time)  -  Sync layer
+- **→ Category 1-3** (Apps) — Client applications
+- **→ Category 15** (Relational) — Server database
+- **→ Category 24** (Real-time) — Sync layer
 
 ---
 
@@ -1328,7 +1298,7 @@ Client-side databases, offline-first, sync engines, CRDTs.
 ### Scope
 Cloud storage, file uploads, CDN for assets, presigned URLs.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Cloud Object Storage
 | Service | Best For |
@@ -1358,9 +1328,9 @@ Cloud storage, file uploads, CDN for assets, presigned URLs.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  Upload endpoints
-- **â†' Category 9** (Edge)  -  CDN delivery
-- **â†' Category 36-38** (Content)  -  Media processing
+- **→ Category 8** (APIs) — Upload endpoints
+- **→ Category 9** (Edge) — CDN delivery
+- **→ Category 36-38** (Content) — Media processing
 
 ---
 
@@ -1369,7 +1339,7 @@ Cloud storage, file uploads, CDN for assets, presigned URLs.
 ### Scope
 Analytics databases, OLAP, data lakes, ETL, business intelligence.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Cloud Data Warehouses
 | Warehouse | Best For |
@@ -1408,9 +1378,9 @@ Analytics databases, OLAP, data lakes, ETL, business intelligence.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 15-17** (Databases)  -  Source systems
-- **â†' Category 44** (Workflows)  -  Orchestration
-- **â†' Category 49** (Dashboards)  -  Visualization
+- **→ Category 15-17** (Databases) — Source systems
+- **→ Category 44** (Workflows) — Orchestration
+- **→ Category 49** (Dashboards) — Visualization
 
 ---
 
@@ -1419,7 +1389,7 @@ Analytics databases, OLAP, data lakes, ETL, business intelligence.
 ### Scope
 Full-text search, faceted search, autocomplete, typo tolerance.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Search Engines
 | Engine | Best For |
@@ -1446,8 +1416,8 @@ Full-text search, faceted search, autocomplete, typo tolerance.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  Search API
-- **â†' Category 16** (Vector)  -  Semantic search
+- **→ Category 8** (APIs) — Search API
+- **→ Category 16** (Vector) — Semantic search
 
 ---
 
@@ -1461,7 +1431,7 @@ Full-text search, faceted search, autocomplete, typo tolerance.
 ### Scope
 In-memory caching, distributed caching, CDN caching, query caching.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### In-Memory Caches
 | Cache | Best For |
@@ -1488,39 +1458,10 @@ In-memory caching, distributed caching, CDN caching, query caching.
 □ Failover tested
 ```
 
-#### Semantic Caching for LLMs
-
-Cache LLM responses based on semantic similarity, not exact string match.
-
-| Library | Language | Features |
-|---------|----------|----------|
-| **GPTCache** | Python | Multiple backends, built-in eval |
-| **Upstash Vector** | Any | Serverless, REST API |
-| **Redis + VSS** | Any | Vector similarity search |
-
-```typescript
-// Semantic cache check
-const cached = await cache.get(query);  // Uses embedding similarity
-if (cached) return cached;              // ~$0 cost
-
-const response = await llm.complete(query);  // ~$0.003 cost
-await cache.set(query, response, { ttl: 86400 });
-```
-
-**TTL Guidelines:**
-| Use Case | TTL | Similarity Threshold |
-|----------|-----|---------------------|
-| FAQ/Help | 7 days | 0.95 |
-| Code explanation | 24 hours | 0.90 |
-| Real-time chat | 5 minutes | 0.99 |
-
-**-> NS Part III §21.7**  -  Full implementation patterns
-
-
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  Response caching
-- **â†' Category 9** (Edge)  -  Edge caching
-- **â†' Category 15** (Databases)  -  Query caching
+- **→ Category 8** (APIs) — Response caching
+- **→ Category 9** (Edge) — Edge caching
+- **→ Category 15** (Databases) — Query caching
 
 ---
 
@@ -1529,7 +1470,7 @@ await cache.set(query, response, { ttl: 86400 });
 ### Scope
 Async messaging, job queues, event-driven architecture, pub/sub.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Message Queues
 | Queue | Best For |
@@ -1563,9 +1504,9 @@ Async messaging, job queues, event-driven architecture, pub/sub.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  Event triggers
-- **â†' Category 10** (Serverless)  -  Function triggers
-- **â†' Category 44** (Workflows)  -  Orchestration
+- **→ Category 8** (APIs) — Event triggers
+- **→ Category 10** (Serverless) — Function triggers
+- **→ Category 44** (Workflows) — Orchestration
 
 ---
 
@@ -1574,7 +1515,7 @@ Async messaging, job queues, event-driven architecture, pub/sub.
 ### Scope
 WebSocket servers, real-time updates, presence, collaboration.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Real-Time Platforms
 | Platform | Best For |
@@ -1604,8 +1545,8 @@ WebSocket servers, real-time updates, presence, collaboration.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  REST fallback
-- **â†' Category 50** (Auth)  -  Connection auth
+- **→ Category 8** (APIs) — REST fallback
+- **→ Category 50** (Auth) — Connection auth
 
 ---
 
@@ -1614,7 +1555,7 @@ WebSocket servers, real-time updates, presence, collaboration.
 ### Scope
 Scheduled tasks, cron jobs, recurring jobs, batch processing.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Serverless Scheduling
 | Service | Platform |
@@ -1648,9 +1589,9 @@ Scheduled tasks, cron jobs, recurring jobs, batch processing.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 10** (Serverless)  -  Job execution
-- **â†' Category 23** (Queues)  -  Job queuing
-- **â†' Category 55** (Monitoring)  -  Job monitoring
+- **→ Category 10** (Serverless) — Job execution
+- **→ Category 23** (Queues) — Job queuing
+- **→ Category 55** (Monitoring) — Job monitoring
 
 ---
 
@@ -1659,7 +1600,7 @@ Scheduled tasks, cron jobs, recurring jobs, batch processing.
 ### Scope
 Knowledge graphs, ontologies, graph algorithms, entity resolution.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Graph Databases
 | Database | Query Language |
@@ -1684,8 +1625,8 @@ Knowledge graphs, ontologies, graph algorithms, entity resolution.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 16** (Vector)  -  Semantic enrichment
-- **â†' Category 29** (RAG)  -  Knowledge retrieval
+- **→ Category 16** (Vector) — Semantic enrichment
+- **→ Category 29** (RAG) — Knowledge retrieval
 
 ---
 
@@ -1694,7 +1635,7 @@ Knowledge graphs, ontologies, graph algorithms, entity resolution.
 ### Scope
 Data pipelines, ETL/ELT, data cleaning, schema evolution.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### ETL/ELT Frameworks
 | Tool | Type |
@@ -1721,322 +1662,11 @@ Data pipelines, ETL/ELT, data cleaning, schema evolution.
 □ Audit logging enabled
 □ Data lineage tracked
 ```
-### Data Versioning with DVC
-
-#### Why Data Versioning Matters
-ML projects require reproducibility. Code versioning (Git) is solved. **Data versioning is not.**
-
-#### Recommended Stack
-| Tool | Purpose | Integration |
-|------|---------|-------------|
-| **DVC** | Data + model versioning | Git-native |
-| **LakeFS** | Git-like data lake | S3-compatible |
-| **Delta Lake** | Versioned data tables | Spark ecosystem |
-
-#### DVC Quick Start
-```bash
-# Initialize DVC in existing Git repo
-dvc init
-
-# Track large data file
-dvc add data/training_set.parquet
-
-# Push to remote storage
-dvc remote add -d myremote s3://mybucket/dvc
-dvc push
-```
-
-#### Data Lineage Pattern
-```yaml
-# dvc.yaml pipeline definition
-stages:
-  prepare:
-    cmd: python src/prepare.py
-    deps:
-      - src/prepare.py
-      - data/raw/
-    outs:
-      - data/prepared/
-  
-  train:
-    cmd: python src/train.py
-    deps:
-      - src/train.py
-      - data/prepared/
-    outs:
-      - models/model.pkl
-``````
-
-
-#### Advanced DVC Pipelines
-
-```yaml
-# dvc.yaml - Complete ML pipeline with params and metrics
-stages:
-  # Data ingestion
-  ingest:
-    cmd: python src/ingest.py --source ${data.source}
-    deps:
-      - src/ingest.py
-    params:
-      - data.source
-      - data.format
-    outs:
-      - data/raw/:
-          cache: false    # Don't cache raw data
-
-  # Data preparation
-  prepare:
-    cmd: python src/prepare.py
-    deps:
-      - src/prepare.py
-      - data/raw/
-    params:
-      - prepare.split_ratio
-      - prepare.seed
-    outs:
-      - data/prepared/train.parquet
-      - data/prepared/test.parquet
-    plots:
-      - data/prepared/distribution.json:
-          x: feature
-          y: count
-
-  # Feature engineering
-  featurize:
-    cmd: python src/featurize.py
-    deps:
-      - src/featurize.py
-      - data/prepared/
-    params:
-      - features
-    outs:
-      - data/features/
-
-  # Model training
-  train:
-    cmd: python src/train.py
-    deps:
-      - src/train.py
-      - data/features/
-    params:
-      - train.epochs
-      - train.learning_rate
-      - train.batch_size
-    outs:
-      - models/model.pkl
-    metrics:
-      - metrics/train.json:
-          cache: false
-    plots:
-      - plots/loss.csv:
-          x: epoch
-          y: loss
-
-  # Model evaluation
-  evaluate:
-    cmd: python src/evaluate.py
-    deps:
-      - src/evaluate.py
-      - models/model.pkl
-      - data/features/
-    metrics:
-      - metrics/eval.json:
-          cache: false
-    plots:
-      - plots/confusion_matrix.csv:
-          template: confusion
-          x: predicted
-          y: actual
-```
-
-```yaml
-# params.yaml - Centralized parameters
-data:
-  source: s3://mybucket/raw/
-  format: parquet
-
-prepare:
-  split_ratio: 0.8
-  seed: 42
-
-features:
-  - feature_a
-  - feature_b
-  - feature_c
-
-train:
-  epochs: 100
-  learning_rate: 0.001
-  batch_size: 32
-```
-
-#### Remote Storage Configurations
-
-```bash
-# S3 remote
-dvc remote add -d s3remote s3://my-bucket/dvc-store
-dvc remote modify s3remote profile myprofile
-
-# Google Cloud Storage
-dvc remote add -d gcsremote gs://my-bucket/dvc-store
-dvc remote modify gcsremote credentialpath /path/to/creds.json
-
-# Azure Blob Storage
-dvc remote add -d azureremote azure://mycontainer/dvc-store
-dvc remote modify azureremote connection_string ${AZURE_STORAGE_CONNECTION_STRING}
-
-# SSH remote (self-hosted)
-dvc remote add -d sshremote ssh://user@server.com/path/to/dvc-store
-
-# Local remote (for testing)
-dvc remote add -d localremote /tmp/dvc-store
-```
-
-#### Experiment Tracking Integration
-
-```python
-# src/train.py - DVC Live integration
-import dvclive
-from dvclive import Live
-
-def train_model(params):
-    with Live(save_dvc_exp=True) as live:
-        # Log parameters
-        live.log_param("learning_rate", params["learning_rate"])
-        live.log_param("epochs", params["epochs"])
-        
-        for epoch in range(params["epochs"]):
-            # Training loop
-            train_loss, val_loss = train_epoch(model, data)
-            
-            # Log metrics
-            live.log_metric("train/loss", train_loss)
-            live.log_metric("val/loss", val_loss)
-            live.log_metric("epoch", epoch)
-            
-            # Log plots
-            if epoch % 10 == 0:
-                live.log_sklearn_plot(
-                    "confusion_matrix",
-                    y_true, y_pred,
-                    name="val/confusion_matrix"
-                )
-            
-            live.next_step()
-        
-        # Log final model
-        live.log_artifact("models/model.pkl", type="model")
-```
-
-```bash
-# Run experiments with parameter variations
-dvc exp run -S train.learning_rate=0.01
-dvc exp run -S train.learning_rate=0.001
-dvc exp run -S train.learning_rate=0.0001
-
-# Compare experiments
-dvc exp show --md
-
-# Apply best experiment to workspace
-dvc exp apply exp-abc12
-
-# Push experiment to remote
-dvc exp push origin exp-abc12
-```
-
-#### Data Versioning Strategies
-
-```bash
-# Strategy 1: Version entire directories
-dvc add data/training/
-git add data/training.dvc data/.gitignore
-git commit -m "Add training data v1"
-
-# Strategy 2: Version with metadata
-dvc add data/dataset.parquet --desc "Customer data Q1 2024"
-
-# Strategy 3: External data references (no copy)
-dvc import-url s3://source-bucket/large-dataset.parquet \
-    data/external/large-dataset.parquet
-
-# Strategy 4: Import from another DVC repo
-dvc import https://github.com/org/data-repo \
-    data/shared-features.parquet \
-    -o data/imported/
-```
-
-#### CI/CD Integration for Data Pipelines
-
-```yaml
-# .github/workflows/dvc-pipeline.yml
-name: DVC Pipeline
-
-on:
-  push:
-    paths:
-      - 'src/**'
-      - 'params.yaml'
-      - 'dvc.yaml'
-
-jobs:
-  reproduce:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup DVC
-        uses: iterative/setup-dvc@v1
-        
-      - name: Configure DVC Remote
-        run: |
-          dvc remote modify s3remote access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-          dvc remote modify s3remote secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          
-      - name: Pull Data
-        run: dvc pull
-        
-      - name: Reproduce Pipeline
-        run: dvc repro
-        
-      - name: Push Results
-        if: github.ref == 'refs/heads/main'
-        run: |
-          dvc push
-          
-      - name: Comment Metrics
-        uses: iterative/cml@v0
-        with:
-          report: |
-            ## Metrics
-            $(dvc metrics show --md)
-            
-            ## Plots
-            ![](./plots/loss.png)
-```
-
-#### Quality Gates (Expanded)
-
-```
-[ ] Source validation implemented
-[ ] Data quality checks automated
-[ ] Idempotent transforms
-[ ] Audit logging enabled
-[ ] Data lineage tracked
-[ ] DVC pipelines reproducible (dvc repro succeeds)
-[ ] Remote storage configured and tested
-[ ] Experiment tracking integrated (dvclive)
-[ ] Data versioning strategy documented
-[ ] CI/CD pipeline validates data changes
-[ ] Metrics and plots automated
-```
 
 ### Cross-Category Dependencies
-- **-> Category 15-17** (Databases)  -  Source/target
-- **-> Category 20** (Warehousing)  -  Destination
-- **-> Category 28** (Feature Stores)  -  ML data management
-- **-> Category 44** (Workflows)  -  Orchestration
-- **-> NS Part III §22**  -  Checkpoint/restart for long pipelines
+- **→ Category 15-17** (Databases) — Source/target
+- **→ Category 20** (Warehousing) — Destination
+- **→ Category 44** (Workflows) — Orchestration
 
 ---
 
@@ -2045,7 +1675,7 @@ jobs:
 ### Scope
 Feature engineering, feature stores, training data, experiment tracking.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Feature Stores
 | Store | Type |
@@ -2064,34 +1694,6 @@ Feature engineering, feature stores, training data, experiment tracking.
 ### Quality Gates
 
 ```
-
-### Data Drift Detection
-
-Monitor for distribution shifts between training and production data.
-
-| Drift Type | What Changes | Detection Tool |
-|------------|--------------|----------------|
-| **Data drift** | Input distribution | Evidently, NannyML |
-| **Concept drift** | Input→Output relationship | Arize, WhyLabs |
-| **Prediction drift** | Output distribution | Any monitoring |
-
-**Quick Setup (Evidently):**
-```python
-from evidently.metrics import DataDriftPreset
-from evidently.report import Report
-
-report = Report(metrics=[DataDriftPreset()])
-report.run(reference_data=train_df, current_data=prod_df)
-report.save_html("drift_report.html")
-
-# Threshold: Retrain if > 20% features drifted
-```
-
-**Monitoring Cadence:**
-• High-stakes models: Daily drift checks
-• Standard models: Weekly drift checks
-• Batch models: Every inference batch
-
 □ Feature definitions documented
 □ Training/serving parity verified
 □ Feature freshness monitored
@@ -2099,8 +1701,8 @@ report.save_html("drift_report.html")
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 11** (GPU)  -  Model training
-- **â†' Category 32** (Fine-tuning)  -  Training data
+- **→ Category 11** (GPU) — Model training
+- **→ Category 32** (Fine-tuning) — Training data
 
 ---
 
@@ -2109,7 +1711,7 @@ report.save_html("drift_report.html")
 ### Scope
 Retrieval-augmented generation, multi-hop reasoning, document processing.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### RAG Frameworks
 | Framework | Best For |
@@ -2141,39 +1743,6 @@ Retrieval-augmented generation, multi-hop reasoning, document processing.
 | **Re-ranking** | Relevance ordering |
 | **Multi-hop** | Complex reasoning |
 | **RAPTOR** | Tree-structured |
-
-#### Chunking Strategy Selection Matrix
-
-| Document Type | Recommended Strategy | Chunk Size | Overlap |
-|---------------|---------------------|------------|---------|
-| Technical docs | Semantic | 512-1024 | 50-100 |
-| Legal/Financial | Page-level | 1 page | 0 |
-| Code files | AST-based | Function | 0 |
-| Conversations | Message-based | 1 message | Context |
-| Research papers | Section-based | Section | Abstract |
-
-#### Query Type Affects Optimal Size
-| Query Type | Optimal Chunk Size | Rationale |
-|------------|-------------------|-----------|
-| Factoid ("What is X?") | 256-512 tokens | Precise answers |
-| Analytical ("Why does X?") | 1024+ tokens | Needs context |
-| Comparative ("X vs Y?") | 512-768 tokens | Multiple facts |
-| Summarization | 2048+ tokens | Broad coverage |
-
-#### Chunk Validation Pattern
-```python
-def validate_chunks(chunks):
-    issues = []
-    for i, chunk in enumerate(chunks):
-        tokens = count_tokens(chunk)
-        if tokens < 100:
-            issues.append(f"Chunk {i}: Too small")
-        if tokens > 2000:
-            issues.append(f"Chunk {i}: Too large")
-    return issues
-```
-
----
 
 ### Quality Gates
 
@@ -2220,10 +1789,10 @@ You are building an Agentic RAG system. Before writing code:
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 16** (Vector)  -  Retrieval
-- **â†' Category 30** (Agents)  -  Agent integration
-- **â†' Category 31** (MCPs)  -  Tool calling
-- **â†' Category 11** (GPU)  -  Inference
+- **→ Category 16** (Vector) — Retrieval
+- **→ Category 30** (Agents) — Agent integration
+- **→ Category 31** (MCPs) — Tool calling
+- **→ Category 11** (GPU) — Inference
 
 ---
 
@@ -2232,7 +1801,7 @@ You are building an Agentic RAG system. Before writing code:
 ### Scope
 Task agents, workflow agents, multi-agent systems, tool use.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Agent Frameworks
 | Framework | Best For |
@@ -2278,17 +1847,17 @@ You are building an autonomous agent. Before writing code:
    - Define agent objective
    - Plan tool requirements
    - Design state machine
-   - Set autonomy level (â†' NS Section 18: Autonomy Dial)
+   - Set autonomy level (→ NS Section 18: Autonomy Dial)
 
 2. SAFETY PHASE
    - Implement loop bounds
    - Add human-in-loop gates
    - Set resource limits
-   - Calibrate confidence thresholds (â†' NS Section 17)
+   - Calibrate confidence thresholds (→ NS Section 17)
 
 3. IMPLEMENTATION PHASE
    - Build tool integrations
-   - Implement memory (â†' NS Section 20: Memory Architecture)
+   - Implement memory (→ NS Section 20: Memory Architecture)
    - Add reflection
 
 4. EVALUATION PHASE
@@ -2301,99 +1870,17 @@ You are building an autonomous agent. Before writing code:
    - Human oversight
    - Reliable tool use
    - Observable runs
-   - Handoff capability (â†' NS Section 23: Handoff Protocols)
+   - Handoff capability (→ NS Section 23: Handoff Protocols)
 
 FOR ORCHESTRATION METHODOLOGY: See North Star Blueprint v5.0
-  â†' Part IV (Sections 13-19): AI Orchestration
-  â†' Part V (Sections 20-23): Agent Composition
-```
-
-#### SDK for Custom Agents
-
-When off-the-shelf frameworks don't fit, build custom agents with the Anthropic SDK:
-
-```python
-import anthropic
-
-class CustomAgent:
-    def __init__(self, tools: list[dict], system_prompt: str):
-        self.client = anthropic.Anthropic()
-        self.tools = tools
-        self.system = system_prompt
-        self.max_iterations = 10  # Bounded execution
-    
-    def run(self, task: str) -> str:
-        messages = [{"role": "user", "content": task}]
-        
-        for i in range(self.max_iterations):
-            response = self.client.messages.create(
-                model="claude-sonnet-4-20250514",
-                max_tokens=4096,
-                system=self.system,
-                tools=self.tools,
-                messages=messages
-            )
-            
-            if response.stop_reason == "end_turn":
-                return response.content[0].text
-            
-            for block in response.content:
-                if block.type == "tool_use":
-                    result = self._execute_tool(block.name, block.input)
-                    messages.append({"role": "assistant", "content": response.content})
-                    messages.append({
-                        "role": "user",
-                        "content": [{"type": "tool_result", "tool_use_id": block.id, "content": result}]
-                    })
-        
-        raise RuntimeError("Agent exceeded max iterations")
-```
-
-#### Background Agent Tasks
-
-For long-running operations, use async patterns with checkpointing:
-
-```python
-from dataclasses import dataclass
-
-@dataclass
-class AgentCheckpoint:
-    task_id: str
-    state: dict
-    messages: list
-    iteration: int
-
-async def background_agent_task(task_id: str, task: str, checkpoint_store):
-    """Long-running agent with checkpoint/resume capability."""
-    checkpoint = await checkpoint_store.get(task_id)
-    if checkpoint:
-        messages = checkpoint.messages
-        start_iteration = checkpoint.iteration
-    else:
-        messages = [{"role": "user", "content": task}]
-        start_iteration = 0
-    
-    for i in range(start_iteration, MAX_ITERATIONS):
-        response = await run_agent_step(messages)
-        
-        await checkpoint_store.save(AgentCheckpoint(
-            task_id=task_id,
-            state=extract_state(response),
-            messages=messages,
-            iteration=i
-        ))
-        
-        if is_complete(response):
-            await checkpoint_store.delete(task_id)
-            return response
-    
-    return {"status": "max_iterations", "checkpoint": task_id}
+  → Part IV (Sections 13-19): AI Orchestration
+  → Part V (Sections 20-23): Agent Composition
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 29** (RAG)  -  Knowledge retrieval
-- **â†' Category 31** (MCPs)  -  Tool definitions
-- **â†' Category 44** (Workflows)  -  Orchestration
+- **→ Category 29** (RAG) — Knowledge retrieval
+- **→ Category 31** (MCPs) — Tool definitions
+- **→ Category 44** (Workflows) — Orchestration
 
 ---
 
@@ -2402,7 +1889,7 @@ async def background_agent_task(task_id: str, task: str, checkpoint_store):
 ### Scope
 Model Context Protocol, function calling, tool definitions, skill manifests.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### MCP & Tool Frameworks
 | Framework | Provider |
@@ -2428,9 +1915,9 @@ Model Context Protocol, function calling, tool definitions, skill manifests.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  Tool backends
-- **â†' Category 29-30** (AI)  -  Agent integration
-- **â†' Category 50** (Auth)  -  Tool authentication
+- **→ Category 8** (APIs) — Tool backends
+- **→ Category 29-30** (AI) — Agent integration
+- **→ Category 50** (Auth) — Tool authentication
 
 ---
 
@@ -2439,7 +1926,7 @@ Model Context Protocol, function calling, tool definitions, skill manifests.
 ### Scope
 LLM fine-tuning, LoRA adapters, RLHF, domain adaptation.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Fine-Tuning Frameworks
 | Framework | Best For |
@@ -2477,33 +1964,9 @@ LLM fine-tuning, LoRA adapters, RLHF, domain adaptation.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 11** (GPU)  -  Training compute
-- **â†' Category 28** (Feature Store)  -  Training data
-- **â†' Category 33** (Inference)  -  Deployment
-
-
-### Model Registry
-
-Central catalog for model artifacts, versions, and metadata.
-
-| Registry | Type | Best For |
-|----------|------|----------|
-| **MLflow Model Registry** | Open-source | General ML workflows |
-| **Weights & Biases** | SaaS | Experiment tracking |
-| **SageMaker Model Registry** | AWS | AWS ecosystem |
-| **Vertex AI Model Registry** | GCP | GCP ecosystem |
-| **Neptune.ai** | SaaS | Team collaboration |
-| **ClearML** | Open-source | End-to-end MLOps |
-
-**Minimum Required Metadata:**
-```
-□ Model version and training date
-□ Training data version (link to DVC/feature store)
-□ Evaluation metrics on test set
-□ Deployment status (staging/production)
-□ Model card (fairness, limitations, usage)
-□ Lineage (parent model, fine-tuning config)
-```
+- **→ Category 11** (GPU) — Training compute
+- **→ Category 28** (Feature Store) — Training data
+- **→ Category 33** (Inference) — Deployment
 
 ---
 
@@ -2512,7 +1975,7 @@ Central catalog for model artifacts, versions, and metadata.
 ### Scope
 LLM inference, model deployment, quantization, batching, caching.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Inference Engines
 | Engine | Best For |
@@ -2552,9 +2015,9 @@ LLM inference, model deployment, quantization, batching, caching.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 11** (GPU)  -  Compute resources
-- **â†' Category 22** (Caching)  -  Response cache
-- **â†' Category 55** (Monitoring)  -  Inference metrics
+- **→ Category 11** (GPU) — Compute resources
+- **→ Category 22** (Caching) — Response cache
+- **→ Category 55** (Monitoring) — Inference metrics
 
 ---
 
@@ -2563,7 +2026,7 @@ LLM inference, model deployment, quantization, batching, caching.
 ### Scope
 Model selection, router logic, fallbacks, cost optimization, prompt management.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### LLM Gateways
 | Gateway | Features |
@@ -2590,225 +2053,10 @@ Model selection, router logic, fallbacks, cost optimization, prompt management.
 □ Observability complete
 ```
 
-#### Structured Output Schemas (JSON Mode)
-
-Force LLMs to return valid, typed JSON matching your schema.
-
-| Approach | Language | Library |
-|----------|----------|---------|
-| **Native JSON Mode** | Any | Provider API (`response_format`) |
-| **Zod + zodToJsonSchema** | TypeScript | `zod`, `zod-to-json-schema` |
-| **Pydantic** | Python | `pydantic` |
-| **Instructor** | Both | `instructor` (recommended) |
-
-```typescript
-// Instructor pattern (TypeScript)
-const result = await client.chat.completions.create({
-  model: 'gpt-4o',
-  response_model: { schema: SentimentSchema, name: 'Sentiment' },
-  max_retries: 3,
-  messages: [{ role: 'user', content: text }],
-});
-```
-
-**Benefits:**
-- Type-safe extraction with compile-time checking
-- Automatic retry on schema validation failures
-- Provider-agnostic schema definitions
-- Streaming support for partial objects
-
-**-> NS Part III §21.6**  -  Full implementation patterns
-
-
-
-#### Conversation Compaction Strategies
-
-Manage long conversations by intelligently summarizing history while preserving critical context.
-
-| Strategy | Description | Best For |
-|----------|-------------|----------|
-| **Rolling Summary** | Keep recent turns verbatim, summarize older | General purpose |
-| **Hierarchical** | Multi-level compression (more for older) | Long sessions |
-| **Semantic Chunking** | Group by topic, summarize completed topics | Task-oriented |
-
-**Compaction Triggers:**
-- Context usage > 70% of model limit
-- Conversation exceeds 30 turns
-- User requests session break/handoff
-
-**Always Preserve:**
-- Architectural decisions and rationale
-- Current task/goal statement
-- Active blockers
-- Code snippets in progress
-
-```typescript
-if (await compactor.shouldCompact(messages)) {
-  const result = await compactor.compact(messages);
-  console.log(`Compacted: ${result.beforeTokens} -> ${result.afterTokens} tokens`);
-}
-```
-
-**-> NS Part III §20.5**  -  Full implementation patterns
-
-
-#### RLM (Recursive Language Model) Patterns
-
-Self-referential prompting where LLM output becomes input for iterative refinement.
-
-| Pattern | Description | Use Case |
-|---------|-------------|----------|
-| **Generate-Critique-Refine** | Draft -> Critique -> Improve | Quality improvement |
-| **Recursive Decomposition** | Break down -> Solve -> Synthesize | Complex problems |
-| **Meta-Cognitive Reflection** | Reflect on reasoning -> Adjust | Strategy optimization |
-| **Chain-of-Verification** | Claim extraction -> Verify -> Revise | Fact-checking |
-| **Self-Consistency Voting** | Multiple samples -> Vote | High-stakes decisions |
-
-```typescript
-// Generate-Critique-Refine loop
-for (let i = 0; i < maxIterations; i++) {
-  const critique = await llm.complete(`Critique: ${current}`);
-  if (extractScore(critique) >= threshold) break;
-  current = await llm.complete(`Refine based on: ${critique}`);
-}
-```
-
-**Termination Conditions:**
-- Max iterations (safety limit)
-- Quality/confidence threshold met
-- No improvement detected
-- Token budget exhausted
-
-**-> NS Part III §22.5**  -  Full implementation patterns
-
-
-#### Proactive Context Gathering
-
-Anticipate information needs before they become blockers - gather context proactively.
-
-| Task Type | Proactive Context to Gather |
-|-----------|----------------------------|
-| **Bug Fix** | Error file, test file, recent changes, logs |
-| **New Feature** | Similar features, interfaces, design docs |
-| **Refactor** | All files to change, dependents, tests |
-| **Integration** | Both systems' code, API contracts |
-
-**Key Patterns:**
-- Dependency-aware reading (follow imports 2 levels deep)
-- Context prefetching for multi-step tasks
-- Token-budget-aware prioritization
-- Parallel file reads for speed
-
-```typescript
-// Analyze task and gather context before starting
-const plan = await gatherer.analyzeContextNeeds(task);
-const context = await gatherer.gatherContext(plan);
-// Now execute with full context loaded
-```
-
-**-> NS Part III §21.8**  -  Full implementation patterns
-
-
-#### Diff-Based Output Strategies
-
-Surgical edits beat full rewrites for token efficiency and reviewability.
-
-| Scenario | Strategy | Rationale |
-|----------|----------|-----------|
-| New file | Full output | No existing content |
-| File < 50 lines | Full output | Diff overhead not worth it |
-| File > 50 lines | Diff/search-replace | Token efficiency |
-| File > 200 lines | Always diff | Critical for large files |
-
-**Format Options:**
-- **Unified Diff**  -  Standard git/patch format, best for tooling
-- **Search-Replace**  -  `<search>...</search><replace>...</replace>`, best for LLM output
-- **Line-Based**  -  Insert/delete/replace by line number, best for precision
-
-```typescript
-// Search-replace format (LLM-friendly)
-const edit = {
-  filePath: "src/auth.ts",
-  search: "return null;",
-  replace: "throw new AuthError('Not found');"
-};
-const { result, applied } = applySearchReplace(content, edit);
-```
-
-**Always validate:** syntax check -> type check -> diff ratio warning -> rollback capability
-
-**-> NS Part III §21.9**  -  Full implementation patterns
-
-
-#### Custom Slash Commands Pattern
-
-Discoverable, type-safe shortcuts for common agent operations.
-
-| Command | Description | Example |
-|---------|-------------|---------|
-| `/help` | Show available commands | `/help review` |
-| `/init` | Initialize agent context | `/init --deep` |
-| `/compact` | Compress conversation | `/compact --aggressive` |
-| `/checkpoint` | Save current state | `/checkpoint pre-refactor` |
-| `/review` | Code review (custom) | `/review PR #123` |
-
-**Command Definition Structure:**
-- `name`, `aliases`  -  Command triggers
-- `args`, `flags`  -  Typed parameters with autocomplete
-- `permissions`, `scope`  -  Access control
-- `handler`  -  Execution function
-
-```typescript
-// Custom command registration
-registry.register({
-  name: 'review',
-  aliases: ['r'],
-  args: [{ name: 'target', type: 'string', required: true }],
-  flags: [{ name: 'detailed', short: 'd', type: 'boolean' }],
-  handler: async (ctx, args, flags) => performReview(args.target, flags),
-});
-```
-
-**-> NS Part III §21.10**  -  Full implementation patterns
-
-
-#### Context Control Commands
-
-User-initiated commands for managing context window usage.
-
-| Command | Effect | When to Use |
-|---------|--------|-------------|
-| `/context` | Show token usage breakdown | Check current state |
-| `/compact` | Compress older messages | Context > 40% |
-| `/compact --aggressive` | Maximum compression | Context > 70% |
-| `/clear` | Reset conversation | Fresh start needed |
-| `/escape compact` | Skip auto-compaction | Override safety |
-
-**Automatic Threshold Handling:**
-- 40% -> Warning shown
-- 60% -> Compaction recommended  
-- 70% -> Auto-prompt to compact
-- 85% -> Critical: auto-compact or handoff
-
-```typescript
-// Check context and prompt user appropriately
-const threshold = await checkContextThreshold(ctx);
-if (threshold.action === 'critical') {
-  await generateEmergencyHandoff(ctx);
-}
-```
-
-**-> NS Part II §16.5**  -  Full implementation patterns
-**-> NS Part III §20.5**  -  Conversation Compaction Strategies
-
-
-
-
-
 ### Cross-Category Dependencies
-- **â†' Category 29-33** (AI)  -  Model backends
-- **â†' Category 22** (Caching)  -  Response cache
-- **â†' Category 55** (Monitoring)  -  LLM metrics
+- **→ Category 29-33** (AI) — Model backends
+- **→ Category 22** (Caching) — Response cache
+- **→ Category 55** (Monitoring) — LLM metrics
 
 ---
 
@@ -2817,7 +2065,7 @@ if (threshold.action === 'critical') {
 ### Scope
 Content moderation, output validation, jailbreak prevention, PII detection.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Guardrail Frameworks
 | Framework | Features |
@@ -2846,145 +2094,6 @@ Content moderation, output validation, jailbreak prevention, PII detection.
 | **Instructor** | Structured outputs |
 | **Outlines** | Constrained generation |
 
-#### NeMo Guardrails Deep Dive
-
-NVIDIA's NeMo Guardrails: **89% accuracy on prompt injection** (vs 67% Llama Guard).
-
-**Rail Types:**
-| Rail | Purpose | When Triggered |
-|------|---------|----------------|
-| **Input Rails** | Filter user input | Before LLM call |
-| **Dialog Rails** | Control conversation | During interaction |
-| **Output Rails** | Validate response | After LLM call |
-| **Retrieval Rails** | Filter RAG context | Before injection |
-| **Execution Rails** | Control tool calls | Before action |
-
-**Colang 2.0 Example:**
-```colang
-define user express harmful intent
-  "how do I hack"
-  "write malware"
-
-define flow handle harmful
-  user express harmful intent
-  bot refuse with explanation
-```
-
-#### Guardrails AI Pattern
-```python
-from guardrails import Guard
-from guardrails.hub import ToxicLanguage, PIIDetection
-
-guard = Guard().use_many(
-    ToxicLanguage(threshold=0.5, on_fail="fix"),
-    PIIDetection(on_fail="anonymize"),
-)
-```
-
-#### Pre/Post Tool Hooks
-
-Validation gates that wrap tool execution for safety and auditability.
-
-| Hook Type | When | Purpose |
-|-----------|------|---------|
-| **Pre-Hook** | Before execution | Validate inputs, check permissions, rate limit |
-| **Post-Hook** | After execution | Validate outputs, log results, transform response |
-| **Error Hook** | On failure | Rollback, retry with backoff, alert |
-
-```typescript
-// Wrap any tool with validation hooks
-async function executeWithHooks<T>(
-  toolName: string,
-  input: unknown,
-  executor: () => Promise<T>
-): Promise<T> {
-  await preHook(toolName, input);   // Validate before
-  const result = await executor();   // Execute
-  return postHook(toolName, result); // Validate after
-}
-```
-
-#### Closed-Loop Prompt Contracts
-
-Treat prompts as APIs with typed input/output schemas.
-
-```typescript
-interface PromptContract<TInput, TOutput> {
-  inputSchema: z.ZodType<TInput>;
-  outputSchema: z.ZodType<TOutput>;
-  template: (input: TInput) => string;
-  maxRetries: number;
-}
-```
-
-**Benefits:**
-- Input validation before LLM call
-- Output validation after LLM response  
-- Automatic retry with exponential backoff
-- Testable prompt behavior
-
-**-> NS Part III §21.5**  -  Full implementation patterns
-
-#### Checkpoint/Restart State Machine
-
-State persistence for long-running agent tasks - enables pause, checkpoint, and resume.
-
-| State | Description |
-|-------|-------------|
-| **IDLE** | No active task, ready to start |
-| **RUNNING** | Task in progress, accepting checkpoints |
-| **PAUSED** | Task suspended, state persisted |
-| **COMPLETE** | Task finished successfully |
-| **ABORTED** | Task terminated (error/timeout/cancel) |
-
-**Key Features:**
-- Auto-checkpoint after each completed step
-- Resume skips already-completed steps
-- File-based or Redis storage backends
-- Zod schema validation on checkpoint data
-
-```typescript
-// Resume a paused task
-const checkpoint = await checkpointManager.resumeTask(taskId);
-console.log(`Resuming from step ${checkpoint.currentStep}`);
-```
-
-**-> NS Part III §22.4**  -  Full state machine implementation
-
-
-
-#### ULTRATHINK Escalation Protocol
-
-Extended thinking mode for complex reasoning - 10-100x more thinking tokens.
-
-| Budget Level | Tokens | Best For |
-|--------------|--------|----------|
-| **STANDARD** | 0 | Routine tasks |
-| **ELEVATED** | 10K | Moderate complexity |
-| **DEEP** | 32K | High complexity |
-| **ULTRATHINK** | 64K | Critical decisions |
-| **MAXIMUM** | 128K | Extreme complexity |
-
-**Escalation Triggers:**
-- Multiple failed attempts (confidence dropping)
-- Agent expresses uncertainty
-- 5+ interacting components
-- Security-critical decisions
-- Architecture with long-term implications
-
-```typescript
-// Enable extended thinking
-const response = await anthropic.messages.create({
-  model: 'claude-sonnet-4-20250514',
-  thinking: { type: 'enabled', budget_tokens: 32000 },
-  messages: [{ role: 'user', content: complexProblem }],
-});
-```
-
-**-> NS Part VII §14.2.3**  -  Full implementation patterns
-
----
-
 ### Quality Gates
 
 ```
@@ -2998,19 +2107,10 @@ const response = await anthropic.messages.create({
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 29-34** (AI)  -  AI systems to protect
-- **â†' Category 52** (Security)  -  Security integration
-- **â†' Category 56** (Compliance)  -  Regulatory compliance
+- **→ Category 29-34** (AI) — AI systems to protect
+- **→ Category 52** (Security) — Security integration
+- **→ Category 56** (Compliance) — Regulatory compliance
 
----
-
-# MASTER BUILD FRAMEWORK v1.1 — SEGMENT 3 of 4
-## MBF_PART_3_CONTENT_OPS
-### Contents: Tier 5 (Cat 36-42) + Tier 6 (Cat 43-49)
-### Lines: 2244-3074 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full MBF, merge all 4 parts.
-> For BRIDGE routing: Categories 36-49 are in this segment.
 ---
 
 # TIER 5: CONTENT GENERATION
@@ -3023,7 +2123,7 @@ const response = await anthropic.messages.create({
 ### Scope
 AI image generation, thumbnails, product shots, social graphics.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Image Generation Models
 | Model | Provider | Best For |
@@ -3061,9 +2161,9 @@ AI image generation, thumbnails, product shots, social graphics.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 11** (GPU)  -  Generation compute
-- **â†' Category 19** (Storage)  -  Asset storage
-- **â†' Category 35** (Safety)  -  Content moderation
+- **→ Category 11** (GPU) — Generation compute
+- **→ Category 19** (Storage) — Asset storage
+- **→ Category 35** (Safety) — Content moderation
 
 ---
 
@@ -3072,7 +2172,7 @@ AI image generation, thumbnails, product shots, social graphics.
 ### Scope
 Voice synthesis, text-to-speech, music generation, voice cloning.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Text-to-Speech
 | Service | Best For |
@@ -3108,9 +2208,9 @@ Voice synthesis, text-to-speech, music generation, voice cloning.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 11** (GPU)  -  Generation compute
-- **â†' Category 19** (Storage)  -  Audio storage
-- **â†' Category 47** (Voice)  -  Voice interfaces
+- **→ Category 11** (GPU) — Generation compute
+- **→ Category 19** (Storage) — Audio storage
+- **→ Category 47** (Voice) — Voice interfaces
 
 ---
 
@@ -3119,7 +2219,7 @@ Voice synthesis, text-to-speech, music generation, voice cloning.
 ### Scope
 AI video generation, transcoding, compositing, streaming.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Video Generation
 | Service | Features |
@@ -3154,9 +2254,9 @@ AI video generation, transcoding, compositing, streaming.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 11** (GPU)  -  Processing compute
-- **â†' Category 19** (Storage)  -  Video storage
-- **â†' Category 9** (Edge)  -  CDN delivery
+- **→ Category 11** (GPU) — Processing compute
+- **→ Category 19** (Storage) — Video storage
+- **→ Category 9** (Edge) — CDN delivery
 
 ---
 
@@ -3165,7 +2265,7 @@ AI video generation, transcoding, compositing, streaming.
 ### Scope
 PDF generation, reports, contracts, invoices, slides.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### PDF Generation
 | Tool | Best For |
@@ -3201,8 +2301,8 @@ PDF generation, reports, contracts, invoices, slides.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 19** (Storage)  -  Document storage
-- **â†' Category 44** (Workflows)  -  Generation pipelines
+- **→ Category 19** (Storage) — Document storage
+- **→ Category 44** (Workflows) — Generation pipelines
 
 ---
 
@@ -3211,7 +2311,7 @@ PDF generation, reports, contracts, invoices, slides.
 ### Scope
 AI-assisted coding, code completion, code transformation.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### AI Coding Assistants
 | Tool | Features |
@@ -3239,8 +2339,8 @@ AI-assisted coding, code completion, code transformation.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 29** (RAG)  -  Codebase retrieval
-- **â†' Category 46** (Testing)  -  Generated tests
+- **→ Category 29** (RAG) — Codebase retrieval
+- **→ Category 46** (Testing) — Generated tests
 
 ---
 
@@ -3249,7 +2349,7 @@ AI-assisted coding, code completion, code transformation.
 ### Scope
 Synthetic data generation, content creation, dataset augmentation.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Synthetic Data
 | Tool | Purpose |
@@ -3274,8 +2374,8 @@ Synthetic data generation, content creation, dataset augmentation.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 28** (Feature Store)  -  Training data
-- **â†' Category 46** (Testing)  -  Test data
+- **→ Category 28** (Feature Store) — Training data
+- **→ Category 46** (Testing) — Test data
 
 ---
 
@@ -3284,7 +2384,7 @@ Synthetic data generation, content creation, dataset augmentation.
 ### Scope
 Machine translation, i18n, l10n, content adaptation.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Translation Services
 | Service | Features |
@@ -3318,8 +2418,8 @@ Machine translation, i18n, l10n, content adaptation.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 1-4** (Apps/Websites)  -  UI localization
-- **â†' Category 56** (Compliance)  -  Regional compliance
+- **→ Category 1-4** (Apps/Websites) — UI localization
+- **→ Category 56** (Compliance) — Regional compliance
 
 ---
 
@@ -3333,7 +2433,7 @@ Machine translation, i18n, l10n, content adaptation.
 ### Scope
 Continuous integration, continuous deployment, build automation, release management.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### CI/CD Platforms
 | Platform | Best For |
@@ -3372,531 +2472,9 @@ Continuous integration, continuous deployment, build automation, release managem
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 12-13** (Infrastructure)  -  Deployment targets
-- **â†' Category 46** (Testing)  -  Test execution
-- **â†' Category 53** (Secrets)  -  Credential management
-
-
-
-### GitHub Integration Patterns
-
-```
-GITHUB INTEGRATION PATTERNS
-===============================================================================
-
-Comprehensive patterns for AI-native development workflows with GitHub.
-Covers PR automation, issue management, Actions workflows, and MCP integration.
-
--------------------------------------------------------------------------------
-
-GITHUB ACTIONS FOR AI WORKFLOWS
--------------------------------------------------------------------------------
-```
-
-#### AI-Assisted PR Review Workflow
-
-```yaml
-# .github/workflows/ai-pr-review.yml
-name: AI PR Review
-
-on:
-  pull_request:
-    types: [opened, synchronize, ready_for_review]
-
-jobs:
-  ai-review:
-    runs-on: ubuntu-latest
-    if: ${{ !github.event.pull_request.draft }}
-    
-    permissions:
-      contents: read
-      pull-requests: write
-    
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Full history for context
-      
-      - name: Get changed files
-        id: changed
-        run: |
-          echo "files=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | tr '\n' ' ')" >> $GITHUB_OUTPUT
-      
-      - name: AI Code Review
-        uses: anthropics/claude-code-review@v1  # Example action
-        with:
-          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
-          files: ${{ steps.changed.outputs.files }}
-          review-scope: |
-            - Security vulnerabilities
-            - Performance issues
-            - Code style consistency
-            - Test coverage gaps
-          max-comments: 10
-          
-      - name: Post Review Summary
-        if: always()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const summary = require('./ai-review-summary.json');
-            await github.rest.pulls.createReview({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-              body: summary.overview,
-              event: summary.issues.length > 0 ? 'REQUEST_CHANGES' : 'APPROVE',
-              comments: summary.lineComments
-            });
-```
-
-#### Automated Issue Triage
-
-```yaml
-# .github/workflows/ai-issue-triage.yml
-name: AI Issue Triage
-
-on:
-  issues:
-    types: [opened]
-
-jobs:
-  triage:
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-    
-    steps:
-      - name: Analyze Issue
-        id: analyze
-        uses: anthropics/claude-issue-triage@v1
-        with:
-          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
-          issue-body: ${{ github.event.issue.body }}
-          issue-title: ${{ github.event.issue.title }}
-          labels-config: |
-            bug: "describes unexpected behavior or error"
-            feature: "requests new functionality"
-            documentation: "relates to docs improvements"
-            question: "asks for help or clarification"
-          
-      - name: Apply Labels
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const labels = JSON.parse('${{ steps.analyze.outputs.labels }}');
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              labels: labels
-            });
-            
-      - name: Assign Team
-        if: steps.analyze.outputs.team
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const team = '${{ steps.analyze.outputs.team }}';
-            await github.rest.issues.addAssignees({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              assignees: [team]
-            });
-```
-
-#### CI Pipeline with AI Test Generation
-
-```yaml
-# .github/workflows/ai-test-gen.yml
-name: AI Test Generation
-
-on:
-  pull_request:
-    paths:
-      - 'src/**/*.ts'
-      - 'src/**/*.tsx'
-
-jobs:
-  generate-tests:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-    
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          
-      - name: Get Uncovered Files
-        id: coverage
-        run: |
-          npm ci
-          npm run test:coverage -- --json > coverage.json
-          node scripts/find-uncovered.js > uncovered.txt
-          echo "files=$(cat uncovered.txt | tr '\n' ' ')" >> $GITHUB_OUTPUT
-          
-      - name: Generate Tests
-        if: steps.coverage.outputs.files != ''
-        uses: anthropics/claude-test-gen@v1
-        with:
-          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
-          files: ${{ steps.coverage.outputs.files }}
-          test-framework: vitest
-          output-dir: src/__tests__/generated
-          
-      - name: Commit Generated Tests
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/__tests__/generated
-          git diff --staged --quiet || git commit -m "chore: add AI-generated tests"
-          git push
-```
-
-```
--------------------------------------------------------------------------------
-
-GITHUB API PATTERNS
--------------------------------------------------------------------------------
-```
-
-#### TypeScript GitHub Client
-
-```typescript
-import { Octokit } from '@octokit/rest';
-import { createAppAuth } from '@octokit/auth-app';
-
-// Initialize client (GitHub App recommended for production)
-const octokit = new Octokit({
-  authStrategy: createAppAuth,
-  auth: {
-    appId: process.env.GITHUB_APP_ID,
-    privateKey: process.env.GITHUB_PRIVATE_KEY,
-    installationId: process.env.GITHUB_INSTALLATION_ID,
-  },
-});
-
-// PR Operations
-async function createPRComment(
-  owner: string,
-  repo: string,
-  prNumber: number,
-  body: string,
-  path?: string,
-  line?: number
-): Promise<void> {
-  if (path && line) {
-    // Line-specific comment
-    const { data: pr } = await octokit.pulls.get({ owner, repo, pull_number: prNumber });
-    await octokit.pulls.createReviewComment({
-      owner,
-      repo,
-      pull_number: prNumber,
-      body,
-      path,
-      line,
-      commit_id: pr.head.sha,
-    });
-  } else {
-    // General PR comment
-    await octokit.issues.createComment({
-      owner,
-      repo,
-      issue_number: prNumber,
-      body,
-    });
-  }
-}
-
-// Get PR Diff for AI Analysis
-async function getPRDiff(
-  owner: string,
-  repo: string,
-  prNumber: number
-): Promise<string> {
-  const { data } = await octokit.pulls.get({
-    owner,
-    repo,
-    pull_number: prNumber,
-    mediaType: { format: 'diff' },
-  });
-  return data as unknown as string;
-}
-
-// Get File Content at Specific Ref
-async function getFileContent(
-  owner: string,
-  repo: string,
-  path: string,
-  ref: string
-): Promise<string> {
-  const { data } = await octokit.repos.getContent({
-    owner,
-    repo,
-    path,
-    ref,
-  });
-  
-  if ('content' in data) {
-    return Buffer.from(data.content, 'base64').toString('utf-8');
-  }
-  throw new Error(`Path ${path} is not a file`);
-}
-
-// Create Branch and Commit
-async function createBranchWithChanges(
-  owner: string,
-  repo: string,
-  baseBranch: string,
-  newBranch: string,
-  changes: Array<{ path: string; content: string }>
-): Promise<string> {
-  // Get base branch SHA
-  const { data: ref } = await octokit.git.getRef({
-    owner,
-    repo,
-    ref: `heads/${baseBranch}`,
-  });
-  const baseSha = ref.object.sha;
-  
-  // Create new branch
-  await octokit.git.createRef({
-    owner,
-    repo,
-    ref: `refs/heads/${newBranch}`,
-    sha: baseSha,
-  });
-  
-  // Create blobs and tree
-  const blobs = await Promise.all(
-    changes.map(async ({ path, content }) => {
-      const { data } = await octokit.git.createBlob({
-        owner,
-        repo,
-        content: Buffer.from(content).toString('base64'),
-        encoding: 'base64',
-      });
-      return { path, sha: data.sha, mode: '100644' as const, type: 'blob' as const };
-    })
-  );
-  
-  const { data: tree } = await octokit.git.createTree({
-    owner,
-    repo,
-    base_tree: baseSha,
-    tree: blobs,
-  });
-  
-  // Create commit
-  const { data: commit } = await octokit.git.createCommit({
-    owner,
-    repo,
-    message: 'AI-generated changes',
-    tree: tree.sha,
-    parents: [baseSha],
-  });
-  
-  // Update branch reference
-  await octokit.git.updateRef({
-    owner,
-    repo,
-    ref: `heads/${newBranch}`,
-    sha: commit.sha,
-  });
-  
-  return commit.sha;
-}
-```
-
-```
--------------------------------------------------------------------------------
-
-MCP GITHUB SERVER INTEGRATION
--------------------------------------------------------------------------------
-
-GitHub MCP Server enables AI agents to interact with repositories natively.
-```
-
-#### MCP Server Configuration
-
-```json
-{
-  "mcpServers": {
-    "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
-      }
-    }
-  }
-}
-```
-
-#### Available MCP Tools
-
-| Tool | Description | Parameters |
-|------|-------------|------------|
-| `create_or_update_file` | Create/update file in repo | `owner`, `repo`, `path`, `content`, `message`, `branch` |
-| `search_repositories` | Search GitHub repos | `query`, `page`, `perPage` |
-| `create_repository` | Create new repo | `name`, `description`, `private` |
-| `get_file_contents` | Read file from repo | `owner`, `repo`, `path`, `branch` |
-| `push_files` | Push multiple files | `owner`, `repo`, `branch`, `files`, `message` |
-| `create_issue` | Create issue | `owner`, `repo`, `title`, `body`, `labels` |
-| `create_pull_request` | Create PR | `owner`, `repo`, `title`, `body`, `head`, `base` |
-| `fork_repository` | Fork a repo | `owner`, `repo` |
-| `create_branch` | Create branch | `owner`, `repo`, `branch`, `from_branch` |
-| `list_commits` | List commits | `owner`, `repo`, `sha`, `page`, `perPage` |
-| `list_issues` | List issues | `owner`, `repo`, `state`, `labels`, `page` |
-| `update_issue` | Update issue | `owner`, `repo`, `issue_number`, `title`, `body`, `state` |
-| `add_issue_comment` | Comment on issue | `owner`, `repo`, `issue_number`, `body` |
-| `search_code` | Search code | `query`, `page`, `perPage` |
-| `search_issues` | Search issues/PRs | `query`, `page`, `perPage` |
-| `search_users` | Search users | `query`, `page`, `perPage` |
-
-#### Agent GitHub Workflow Example
-
-```typescript
-// AI agent workflow using MCP GitHub tools
-async function handleUserRequest(request: string): Promise<void> {
-  const agent = new Agent({
-    model: 'claude-sonnet-4-20250514',
-    mcpServers: ['github'],
-  });
-  
-  // Example: "Create a PR to fix the typo in README.md"
-  const response = await agent.run(`
-    User request: ${request}
-    
-    Available GitHub tools:
-    - get_file_contents: Read files
-    - create_branch: Create feature branch
-    - push_files: Commit changes
-    - create_pull_request: Open PR
-    
-    Execute the necessary steps to fulfill this request.
-  `);
-  
-  // Agent will autonomously:
-  // 1. Read README.md to find typo
-  // 2. Create branch 'fix/readme-typo'
-  // 3. Push corrected file
-  // 4. Create PR with description
-}
-```
-
-```
--------------------------------------------------------------------------------
-
-GITHUB WEBHOOKS FOR AI TRIGGERS
--------------------------------------------------------------------------------
-```
-
-#### Webhook Handler (Node.js)
-
-```typescript
-import express from 'express';
-import crypto from 'crypto';
-import { Anthropic } from '@anthropic-ai/sdk';
-
-const app = express();
-const anthropic = new Anthropic();
-
-// Verify webhook signature
-function verifySignature(payload: string, signature: string): boolean {
-  const expected = `sha256=${crypto
-    .createHmac('sha256', process.env.GITHUB_WEBHOOK_SECRET!)
-    .update(payload)
-    .digest('hex')}`;
-  return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected));
-}
-
-app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
-  const signature = req.headers['x-hub-signature-256'] as string;
-  
-  if (!verifySignature(req.body.toString(), signature)) {
-    return res.status(401).send('Invalid signature');
-  }
-  
-  const event = req.headers['x-github-event'] as string;
-  const payload = JSON.parse(req.body.toString());
-  
-  switch (event) {
-    case 'pull_request':
-      if (payload.action === 'opened') {
-        await handleNewPR(payload);
-      }
-      break;
-      
-    case 'issues':
-      if (payload.action === 'opened') {
-        await handleNewIssue(payload);
-      }
-      break;
-      
-    case 'issue_comment':
-      if (payload.comment.body.startsWith('@ai-bot')) {
-        await handleBotMention(payload);
-      }
-      break;
-  }
-  
-  res.status(200).send('OK');
-});
-
-async function handleNewPR(payload: any): Promise<void> {
-  const { pull_request, repository } = payload;
-  
-  // Get PR diff for context
-  const diff = await getPRDiff(
-    repository.owner.login,
-    repository.name,
-    pull_request.number
-  );
-  
-  // AI review
-  const review = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
-    max_tokens: 2000,
-    messages: [{
-      role: 'user',
-      content: `Review this PR:\n\nTitle: ${pull_request.title}\n\nDescription: ${pull_request.body}\n\nDiff:\n${diff}`
-    }],
-  });
-  
-  // Post review comment
-  await createPRComment(
-    repository.owner.login,
-    repository.name,
-    pull_request.number,
-    review.content[0].text
-  );
-}
-```
-
-```
--------------------------------------------------------------------------------
-
-QUALITY GATES FOR GITHUB INTEGRATION
--------------------------------------------------------------------------------
-
-[ ] GitHub App used for production (not PAT)
-[ ] Webhook signatures verified
-[ ] Rate limits handled with backoff
-[ ] Sensitive data not logged
-[ ] PR comments are actionable, not noisy
-[ ] Bot actions clearly labeled
-[ ] Error handling for API failures
-[ ] Audit trail for AI-generated changes
-```
+- **→ Category 12-13** (Infrastructure) — Deployment targets
+- **→ Category 46** (Testing) — Test execution
+- **→ Category 53** (Secrets) — Credential management
 
 ---
 
@@ -3905,7 +2483,7 @@ QUALITY GATES FOR GITHUB INTEGRATION
 ### Scope
 DAG orchestration, multi-step pipelines, human-in-loop workflows.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Workflow Engines
 | Engine | Best For |
@@ -3938,1356 +2516,9 @@ DAG orchestration, multi-step pipelines, human-in-loop workflows.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 10** (Serverless)  -  Task execution
-- **â†' Category 23** (Queues)  -  Event triggers
-- **â†' Category 55** (Monitoring)  -  Workflow monitoring
-
----
-## Category 44A: Kanban & Visual Task Management
-
-### Scope
-Visual task management as the collaboration contract between humans and AI agents.
-
-### The Three-Layer Architecture
-
-```
-â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"
-â"'     BUSINESS LAYER (Kanban/PM)                  â"'
-â"'     Linear, Notion, Jira, GitHub Projects       â"'
-â"œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"¤
-â"'     ORCHESTRATION LAYER (Workflow)              â"'
-â"'     Temporal, Inngest, Trigger.dev              â"'
-â"œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"¤
-â"'     AGENT EXECUTION LAYER                       â"'
-â"'     Claude, GPT-4, Custom Agents                â"'
-â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜
-```
-
-### Technology Stack
-
-#### Kanban Platforms with AI Integration
-| Tool | MCP Support | Best For |
-|------|-------------|----------|
-| **Linear** | âœ... Official | Dev teams, AI-native |
-| **Notion** | âœ... Official | Flexible databases |
-| **GitHub Projects** | Via Actions | Code-centric |
-| **Jira** | Atlassian MCP | Enterprise |
-
-#### HITL Workflow Engines
-| Engine | HITL Feature |
-|--------|--------------|
-| **Trigger.dev** | Waitpoint Tokens |
-| **LangGraph** | interrupt() primitive |
-| **Inngest** | waitForEvent() |
-
-### Core Primitives
-
-```typescript
-interface KanbanTaskContract {
-  id: string;
-  title: string;
-  assignee: "human" | "agent" | string;
-  status: "todo" | "in_progress" | "review" | "done";
-  confidence?: number;
-}
-
-interface AgentComment {
-  type: "progress" | "question" | "approval_request";
-  content: string;
-  confidence: number;
-}
-```
-
-### Confidence-Based Routing
-
-| Confidence | Action | Kanban Update |
-|------------|--------|---------------|
-| ≥ 0.85 | Auto-execute | Move to "Done" |
-| 0.65-0.84 | Execute + review | Add "Needs Review" |
-| 0.40-0.64 | Pause for approval | Move to "Blocked" |
-| < 0.40 | Escalate to human | Assign to human |
-
-
-
-### Board Data Model
-
-```typescript
-interface KanbanBoard {
-  id: string;
-  name: string;
-  columns: KanbanColumn[];
-  swimlanes: Swimlane[];
-  settings: BoardSettings;
-  metadata: BoardMetadata;
-}
-
-interface KanbanColumn {
-  id: string;
-  name: string;
-  position: number;
-  wipLimit?: number;           // Work-in-progress limit
-  automations: ColumnAutomation[];
-  acceptsCriteria?: string[];  // Card types this column accepts
-}
-
-interface KanbanCard {
-  id: string;
-  title: string;
-  description: string;
-  columnId: string;
-  swimlaneId?: string;
-  position: number;            // Position within column
-  
-  // Assignment
-  assignee: CardAssignee;
-  watchers: string[];
-  
-  // Classification
-  labels: string[];
-  priority: 'critical' | 'high' | 'medium' | 'low';
-  estimate?: number;           // Story points or hours
-  
-  // AI-specific
-  confidence?: number;         // Agent's confidence (0-1)
-  agentContext?: AgentContext; // Preserved context for agent handoff
-  
-  // Tracking
-  createdAt: Date;
-  updatedAt: Date;
-  dueDate?: Date;
-  blockedBy?: string[];        // IDs of blocking cards
-  
-  // Activity
-  comments: CardComment[];
-  history: CardHistoryEntry[];
-}
-
-type CardAssignee = 
-  | { type: 'human'; userId: string }
-  | { type: 'agent'; agentId: string; model?: string }
-  | { type: 'unassigned' };
-
-interface Swimlane {
-  id: string;
-  name: string;
-  position: number;
-  type: 'human' | 'agent' | 'mixed' | 'custom';
-  filter?: CardFilter;         // Auto-sort cards into swimlane
-}
-
-interface BoardSettings {
-  wipLimitEnforcement: 'strict' | 'warning' | 'none';
-  autoArchiveDays?: number;
-  defaultAssignee?: CardAssignee;
-  confidenceThresholds: ConfidenceThresholds;
-}
-
-interface ConfidenceThresholds {
-  autoComplete: number;        // ≥ this: auto-move to Done
-  needsReview: number;         // ≥ this: add review flag
-  humanEscalation: number;     // < this: escalate to human
-}
-```
-
-### Card Lifecycle & State Transitions
-
-```
-CARD STATE MACHINE
-===============================================================================
-
-+-----------------------------------------------------------------------------+
-|                         CARD LIFECYCLE                                      |
-+-----------------------------------------------------------------------------+
-|                                                                             |
-|  +----------+    +----------+    +----------+    +----------+             |
-|  |  BACKLOG |---â–¶|   TODO   |---â–¶|IN PROGRESS|---â–¶|  REVIEW  |             |
-|  +----------+    +----------+    +----------+    +----------+             |
-|       |              |                |               |                    |
-|       |              |                |               |                    |
-|       |              |                v               v                    |
-|       |              |          +----------+    +----------+              |
-|       |              |          |  BLOCKED |    |   DONE   |              |
-|       |              |          +----------+    +----------+              |
-|       |              |                |               |                    |
-|       |              |                |               v                    |
-|       |              |                |          +----------+              |
-|       +--------------+----------------+---------â–¶| ARCHIVED |              |
-|                                                   +----------+              |
-|                                                                             |
-|  AGENT-SPECIFIC TRANSITIONS:                                                |
-|  -----------------------------                                              |
-|  * confidence ≥ 0.85 -> Auto: IN_PROGRESS -> DONE                            |
-|  * confidence 0.65-0.84 -> Auto: IN_PROGRESS -> REVIEW                       |
-|  * confidence < 0.65 -> Auto: IN_PROGRESS -> BLOCKED (needs human)           |
-|  * agent question -> Add WAITING_FOR_INPUT flag                              |
-|                                                                             |
-+-----------------------------------------------------------------------------+
-```
-
-```typescript
-type CardStatus = 
-  | 'backlog'
-  | 'todo'
-  | 'in_progress'
-  | 'blocked'
-  | 'review'
-  | 'done'
-  | 'archived';
-
-interface CardTransition {
-  from: CardStatus;
-  to: CardStatus;
-  trigger: TransitionTrigger;
-  conditions?: TransitionCondition[];
-  actions?: TransitionAction[];
-}
-
-type TransitionTrigger =
-  | { type: 'manual'; userId: string }
-  | { type: 'agent'; agentId: string; confidence: number }
-  | { type: 'automation'; ruleId: string }
-  | { type: 'schedule'; scheduledAt: Date };
-
-const standardTransitions: CardTransition[] = [
-  // Human triggers
-  { from: 'backlog', to: 'todo', trigger: { type: 'manual', userId: '*' } },
-  { from: 'todo', to: 'in_progress', trigger: { type: 'manual', userId: '*' } },
-  { from: 'in_progress', to: 'review', trigger: { type: 'manual', userId: '*' } },
-  { from: 'review', to: 'done', trigger: { type: 'manual', userId: '*' } },
-  
-  // Agent high-confidence auto-complete
-  {
-    from: 'in_progress',
-    to: 'done',
-    trigger: { type: 'agent', agentId: '*', confidence: 0.85 },
-    conditions: [{ type: 'confidence_gte', value: 0.85 }],
-    actions: [{ type: 'add_label', label: 'auto-completed' }],
-  },
-  
-  // Agent medium-confidence needs review
-  {
-    from: 'in_progress',
-    to: 'review',
-    trigger: { type: 'agent', agentId: '*', confidence: 0.70 },
-    conditions: [
-      { type: 'confidence_gte', value: 0.65 },
-      { type: 'confidence_lt', value: 0.85 },
-    ],
-    actions: [{ type: 'add_label', label: 'needs-review' }],
-  },
-  
-  // Agent low-confidence escalation
-  {
-    from: 'in_progress',
-    to: 'blocked',
-    trigger: { type: 'agent', agentId: '*', confidence: 0.30 },
-    conditions: [{ type: 'confidence_lt', value: 0.65 }],
-    actions: [
-      { type: 'add_label', label: 'needs-human' },
-      { type: 'notify', targets: ['assignee', 'watchers'] },
-    ],
-  },
-];
-
-async function transitionCard(
-  card: KanbanCard,
-  to: CardStatus,
-  trigger: TransitionTrigger
-): Promise<KanbanCard> {
-  const transition = findValidTransition(card.status, to, trigger);
-  
-  if (!transition) {
-    throw new Error(`Invalid transition: ${card.status} -> ${to}`);
-  }
-  
-  // Check conditions
-  for (const condition of transition.conditions ?? []) {
-    if (!evaluateCondition(card, condition)) {
-      throw new Error(`Condition not met: ${condition.type}`);
-    }
-  }
-  
-  // Execute actions
-  for (const action of transition.actions ?? []) {
-    await executeAction(card, action);
-  }
-  
-  // Update card
-  const updated = {
-    ...card,
-    status: to,
-    updatedAt: new Date(),
-    history: [
-      ...card.history,
-      {
-        type: 'status_change',
-        from: card.status,
-        to,
-        trigger,
-        timestamp: new Date(),
-      },
-    ],
-  };
-  
-  return updated;
-}
-```
-
-### WIP Limits Enforcement
-
-```typescript
-interface WipLimitConfig {
-  column: string;
-  limit: number;
-  enforcement: 'strict' | 'warning' | 'none';
-  excludeLabels?: string[];    // Cards with these labels don't count
-  perAssignee?: boolean;       // Limit per person vs total
-}
-
-class WipLimitEnforcer {
-  constructor(private board: KanbanBoard) {}
-  
-  canAddCard(columnId: string, card: KanbanCard): WipCheckResult {
-    const column = this.board.columns.find(c => c.id === columnId);
-    if (!column?.wipLimit) {
-      return { allowed: true };
-    }
-    
-    const currentCount = this.countCardsInColumn(columnId, card);
-    
-    if (currentCount >= column.wipLimit) {
-      const enforcement = this.board.settings.wipLimitEnforcement;
-      
-      switch (enforcement) {
-        case 'strict':
-          return {
-            allowed: false,
-            reason: `WIP limit reached (${currentCount}/${column.wipLimit})`,
-            suggestions: this.getSuggestions(column),
-          };
-          
-        case 'warning':
-          return {
-            allowed: true,
-            warning: `WIP limit exceeded (${currentCount}/${column.wipLimit})`,
-          };
-          
-        case 'none':
-        default:
-          return { allowed: true };
-      }
-    }
-    
-    return { allowed: true };
-  }
-  
-  private countCardsInColumn(columnId: string, excludeCard?: KanbanCard): number {
-    return this.board.cards.filter(c => 
-      c.columnId === columnId && 
-      c.id !== excludeCard?.id &&
-      !this.isExcluded(c)
-    ).length;
-  }
-  
-  private getSuggestions(column: KanbanColumn): string[] {
-    const suggestions: string[] = [];
-    
-    // Find oldest card
-    const oldestCard = this.getOldestCard(column.id);
-    if (oldestCard) {
-      suggestions.push(`Complete or move: "${oldestCard.title}"`);
-    }
-    
-    // Find blocked cards
-    const blockedCards = this.getBlockedCards(column.id);
-    if (blockedCards.length > 0) {
-      suggestions.push(`Unblock ${blockedCards.length} card(s) first`);
-    }
-    
-    return suggestions;
-  }
-}
-```
-
-### Swimlanes for Agent vs Human Work
-
-```typescript
-const defaultSwimlanes: Swimlane[] = [
-  {
-    id: 'agent-autonomous',
-    name: '🤖 Agent (Autonomous)',
-    position: 0,
-    type: 'agent',
-    filter: {
-      assignee: { type: 'agent' },
-      confidence: { gte: 0.85 },
-    },
-  },
-  {
-    id: 'agent-supervised',
-    name: '🤖👤 Agent (Supervised)',
-    position: 1,
-    type: 'mixed',
-    filter: {
-      assignee: { type: 'agent' },
-      confidence: { lt: 0.85 },
-    },
-  },
-  {
-    id: 'human',
-    name: '👤 Human',
-    position: 2,
-    type: 'human',
-    filter: {
-      assignee: { type: 'human' },
-    },
-  },
-  {
-    id: 'unassigned',
-    name: '📋 Unassigned',
-    position: 3,
-    type: 'custom',
-    filter: {
-      assignee: { type: 'unassigned' },
-    },
-  },
-];
-
-function assignCardToSwimlane(
-  card: KanbanCard,
-  swimlanes: Swimlane[]
-): string {
-  for (const swimlane of swimlanes.sort((a, b) => a.position - b.position)) {
-    if (swimlane.filter && matchesFilter(card, swimlane.filter)) {
-      return swimlane.id;
-    }
-  }
-  
-  // Default to last swimlane
-  return swimlanes[swimlanes.length - 1].id;
-}
-
-// Visual representation
-function renderBoardWithSwimlanes(board: KanbanBoard): string {
-  let output = '';
-  
-  for (const swimlane of board.swimlanes) {
-    output += `\n${'='.repeat(80)}\n`;
-    output += `${swimlane.name}\n`;
-    output += `${'-'.repeat(80)}\n`;
-    
-    // Render columns for this swimlane
-    const swimlaneCards = board.cards.filter(c => c.swimlaneId === swimlane.id);
-    
-    for (const column of board.columns) {
-      const columnCards = swimlaneCards.filter(c => c.columnId === column.id);
-      const wipStatus = column.wipLimit 
-        ? `(${columnCards.length}/${column.wipLimit})`
-        : '';
-      
-      output += `\n[${column.name}] ${wipStatus}\n`;
-      
-      for (const card of columnCards) {
-        const confidence = card.confidence 
-          ? ` [${(card.confidence * 100).toFixed(0)}%]`
-          : '';
-        output += `  * ${card.title}${confidence}\n`;
-      }
-    }
-  }
-  
-  return output;
-}
-```
-
-### AI-Assisted Prioritization
-
-```typescript
-interface PrioritizationFactors {
-  urgency: number;             // Time-based urgency (0-1)
-  impact: number;              // Business impact (0-1)
-  effort: number;              // Estimated effort (0-1, lower = easier)
-  dependencies: number;        // Blocking other work (0-1)
-  agentSuitability: number;    // How well AI can handle (0-1)
-}
-
-async function aiPrioritizeBacklog(
-  cards: KanbanCard[],
-  context: ProjectContext
-): Promise<KanbanCard[]> {
-  // Get AI assessment of each card
-  const assessments = await Promise.all(
-    cards.map(card => assessCard(card, context))
-  );
-  
-  // Calculate priority score
-  const scored = cards.map((card, i) => ({
-    card,
-    score: calculatePriorityScore(assessments[i]),
-    factors: assessments[i],
-  }));
-  
-  // Sort by score (highest first)
-  scored.sort((a, b) => b.score - a.score);
-  
-  // Update positions
-  return scored.map((item, index) => ({
-    ...item.card,
-    position: index,
-    metadata: {
-      ...item.card.metadata,
-      priorityFactors: item.factors,
-      priorityScore: item.score,
-    },
-  }));
-}
-
-function calculatePriorityScore(factors: PrioritizationFactors): number {
-  // Weighted scoring formula
-  const weights = {
-    urgency: 0.25,
-    impact: 0.30,
-    effort: 0.15,           // Inverted: easier = higher priority
-    dependencies: 0.20,
-    agentSuitability: 0.10,
-  };
-  
-  return (
-    factors.urgency * weights.urgency +
-    factors.impact * weights.impact +
-    (1 - factors.effort) * weights.effort +
-    factors.dependencies * weights.dependencies +
-    factors.agentSuitability * weights.agentSuitability
-  );
-}
-
-async function assessCard(
-  card: KanbanCard,
-  context: ProjectContext
-): Promise<PrioritizationFactors> {
-  const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
-    max_tokens: 500,
-    messages: [{
-      role: 'user',
-      content: `Assess this task for prioritization:
-
-Title: ${card.title}
-Description: ${card.description}
-Labels: ${card.labels.join(', ')}
-Due: ${card.dueDate || 'None'}
-
-Project context: ${context.summary}
-
-Rate each factor 0-1:
-- urgency: How time-sensitive?
-- impact: Business value if completed?
-- effort: Complexity/time required?
-- dependencies: Does this block other work?
-- agentSuitability: Can AI handle autonomously?
-
-Respond in JSON format.`,
-    }],
-  });
-  
-  return JSON.parse(response.content[0].text);
-}
-```
-
-### MCP Integration Patterns
-
-```typescript
-// Linear MCP Integration
-interface LinearMCPTools {
-  'linear_create_issue': {
-    params: { title: string; description?: string; teamId: string; priority?: number };
-    result: { id: string; identifier: string; url: string };
-  };
-  'linear_update_issue': {
-    params: { issueId: string; title?: string; stateId?: string; assigneeId?: string };
-    result: { success: boolean };
-  };
-  'linear_search_issues': {
-    params: { query: string; limit?: number };
-    result: { issues: Array<{ id: string; title: string; state: string }> };
-  };
-  'linear_get_teams': {
-    params: {};
-    result: { teams: Array<{ id: string; name: string; key: string }> };
-  };
-}
-
-// Agent-Kanban sync workflow
-async function syncAgentWorkToKanban(
-  agentId: string,
-  work: AgentWorkResult
-): Promise<void> {
-  const mcp = getMCPClient('linear');
-  
-  // Find or create issue for this work
-  let issue = await findIssueForWork(work);
-  
-  if (!issue) {
-    // Create new issue
-    const result = await mcp.call('linear_create_issue', {
-      title: work.taskTitle,
-      description: formatAgentDescription(work),
-      teamId: work.teamId,
-      priority: confidenceToPriority(work.confidence),
-    });
-    issue = result;
-  }
-  
-  // Update based on confidence
-  if (work.confidence >= 0.85) {
-    // Auto-complete
-    await mcp.call('linear_update_issue', {
-      issueId: issue.id,
-      stateId: 'done',
-    });
-    
-    await mcp.call('linear_create_comment', {
-      issueId: issue.id,
-      body: `✅ Completed by AI agent (confidence: ${(work.confidence * 100).toFixed(0)}%)\n\n${work.summary}`,
-    });
-  } else if (work.confidence >= 0.65) {
-    // Needs review
-    await mcp.call('linear_update_issue', {
-      issueId: issue.id,
-      stateId: 'in_review',
-    });
-    
-    await mcp.call('linear_create_comment', {
-      issueId: issue.id,
-      body: `👀 Ready for review (confidence: ${(work.confidence * 100).toFixed(0)}%)\n\n${work.summary}\n\n**Please verify:**\n${work.reviewPoints.map(p => `- ${p}`).join('\n')}`,
-    });
-  } else {
-    // Blocked - needs human
-    await mcp.call('linear_update_issue', {
-      issueId: issue.id,
-      stateId: 'blocked',
-      assigneeId: work.escalateToUserId,
-    });
-    
-    await mcp.call('linear_create_comment', {
-      issueId: issue.id,
-      body: `⚠️ Needs human input (confidence: ${(work.confidence * 100).toFixed(0)}%)\n\n**Issue:**\n${work.blockerReason}\n\n**Questions:**\n${work.questions.map(q => `- ${q}`).join('\n')}`,
-    });
-  }
-}
-
-function confidenceToPriority(confidence: number): number {
-  // Linear priorities: 0=none, 1=urgent, 2=high, 3=medium, 4=low
-  if (confidence >= 0.85) return 4;      // Low priority (auto-handled)
-  if (confidence >= 0.65) return 3;      // Medium (needs review)
-  if (confidence >= 0.40) return 2;      // High (needs attention)
-  return 1;                              // Urgent (needs human now)
-}
-```
-
-### Quality Gates
-
-```
-[ ] Kanban board connected via MCP/API
-[ ] Confidence thresholds configured
-[ ] Agent comment patterns documented
-[ ] Approval timeouts with fallbacks
-[ ] Escalation paths defined
-[ ] WIP limits enforced per column
-[ ] Swimlanes separate agent vs human work
-[ ] Card lifecycle transitions validated
-[ ] AI prioritization factors weighted appropriately
-[ ] Sync between agent work and board is real-time
-```
-
-### Cross-Category Dependencies
-- **-> Category 44** (Workflow)  -  Orchestration layer
-- **-> Category 30** (Agents)  -  Agent execution
-- **-> Category 55** (Monitoring)  -  Status tracking
-- **-> NS Part III §20-21**  -  Agent orchestration patterns
-
----
-
----
-
-## Category 44B: PromptOps
-
-### Scope
-Prompt versioning, A/B testing, optimization, and deployment management.
-
-### Technology Stack
-
-#### Prompt Management Platforms
-| Tool | Versioning | A/B Test | Optimization | Self-Host |
-|------|------------|----------|--------------|-----------|
-| **Langfuse** | âœ... | âœ... | Manual | âœ... |
-| **PromptLayer** | âœ... | âœ... | Manual | ❌ |
-| **Agenta** | âœ... | âœ... | âœ... | âœ... |
-| **DSPy** | Code-based | Via evals | âœ... Auto | âœ... |
-
-
-
-### Git-Like Prompt Version Control
-
-```
-PROMPT VERSION CONTROL MODEL
-===============================================================================
-
-Treat prompts as code: version control, branching, code review, and CI/CD.
-
--------------------------------------------------------------------------------
-
-VERSION CONTROL ARCHITECTURE
--------------------------------------------------------------------------------
-
-+-----------------------------------------------------------------------------+
-|                    PROMPT VERSION CONTROL                                   |
-+-----------------------------------------------------------------------------+
-|                                                                             |
-|  Repository Structure                      Branch Strategy                  |
-|  --------------------                      ---------------                  |
-|                                                                             |
-|  prompts/                                  main ------------------â–¶ prod   |
-|  +-- summarization/                             |                          |
-|  |   +-- prompt.yaml                            +-- staging ----â–¶ staging  |
-|  |   +-- variants/                              |                          |
-|  |   |   +-- concise.yaml                       +-- feature/new-tone       |
-|  |   |   +-- detailed.yaml                                                  |
-|  |   +-- tests/                                                             |
-|  |       +-- eval.yaml                                                      |
-|  +-- extraction/                                                            |
-|  |   +-- prompt.yaml                                                        |
-|  +-- _shared/                                                               |
-|      +-- personas.yaml                                                      |
-|                                                                             |
-+-----------------------------------------------------------------------------+
-```
-
-```typescript
-// Prompt definition schema
-interface PromptVersion {
-  id: string;
-  name: string;
-  version: number;
-  content: string;
-  
-  // Metadata
-  author: string;
-  createdAt: Date;
-  description: string;
-  changelog: string;
-  
-  // Configuration
-  model: string;
-  temperature: number;
-  maxTokens: number;
-  stopSequences?: string[];
-  
-  // Variables
-  variables: PromptVariable[];
-  
-  // Lineage
-  parentVersion?: number;
-  branchName?: string;
-  
-  // Labels (like git tags)
-  labels: string[];  // e.g., ['production', 'reviewed']
-}
-
-interface PromptVariable {
-  name: string;
-  type: 'string' | 'number' | 'boolean' | 'array' | 'object';
-  required: boolean;
-  default?: any;
-  description: string;
-  validation?: string;  // Regex or JSON Schema
-}
-
-// YAML format for file storage
-const promptYaml = `
-name: summarization
-version: 4
-model: claude-sonnet-4-20250514
-temperature: 0.3
-max_tokens: 1000
-
-variables:
-  - name: document
-    type: string
-    required: true
-    description: The document to summarize
-  - name: max_length
-    type: number
-    required: false
-    default: 200
-    description: Maximum summary length in words
-
-content: |
-  You are a professional summarizer. Create a concise summary of the 
-  following document in {{max_length}} words or less.
-  
-  Focus on:
-  - Key findings and conclusions
-  - Important data points
-  - Action items if any
-  
-  Document:
-  {{document}}
-  
-  Summary:
-
-labels:
-  - production
-  - reviewed
-
-changelog: |
-  v4: Added max_length variable, improved focus instructions
-  v3: Switched to claude-sonnet-4-20250514
-  v2: Added action items focus
-  v1: Initial version
-`;
-```
-
-### Diff & Merge Strategies
-
-```typescript
-interface PromptDiff {
-  version1: number;
-  version2: number;
-  changes: DiffChange[];
-  summary: string;
-}
-
-interface DiffChange {
-  type: 'added' | 'removed' | 'modified';
-  field: string;
-  oldValue?: any;
-  newValue?: any;
-  lineNumbers?: { start: number; end: number };
-}
-
-class PromptDiffer {
-  diff(v1: PromptVersion, v2: PromptVersion): PromptDiff {
-    const changes: DiffChange[] = [];
-    
-    // Compare content with line-level diff
-    if (v1.content !== v2.content) {
-      const contentDiff = this.diffLines(v1.content, v2.content);
-      changes.push({
-        type: 'modified',
-        field: 'content',
-        oldValue: v1.content,
-        newValue: v2.content,
-        ...contentDiff,
-      });
-    }
-    
-    // Compare config
-    if (v1.model !== v2.model) {
-      changes.push({
-        type: 'modified',
-        field: 'model',
-        oldValue: v1.model,
-        newValue: v2.model,
-      });
-    }
-    
-    if (v1.temperature !== v2.temperature) {
-      changes.push({
-        type: 'modified',
-        field: 'temperature',
-        oldValue: v1.temperature,
-        newValue: v2.temperature,
-      });
-    }
-    
-    // Compare variables
-    const varChanges = this.diffVariables(v1.variables, v2.variables);
-    changes.push(...varChanges);
-    
-    return {
-      version1: v1.version,
-      version2: v2.version,
-      changes,
-      summary: this.summarizeChanges(changes),
-    };
-  }
-  
-  private diffLines(text1: string, text2: string): { hunks: DiffHunk[] } {
-    // Use diff algorithm (Myers, patience, etc.)
-    const lines1 = text1.split('\n');
-    const lines2 = text2.split('\n');
-    
-    // Implementation using diff library
-    return { hunks: computeDiff(lines1, lines2) };
-  }
-  
-  private summarizeChanges(changes: DiffChange[]): string {
-    const contentChange = changes.find(c => c.field === 'content');
-    const configChanges = changes.filter(c => 
-      ['model', 'temperature', 'maxTokens'].includes(c.field)
-    );
-    const varChanges = changes.filter(c => c.field.startsWith('variable'));
-    
-    const parts: string[] = [];
-    
-    if (contentChange) {
-      parts.push('prompt content modified');
-    }
-    if (configChanges.length > 0) {
-      parts.push(`${configChanges.length} config change(s)`);
-    }
-    if (varChanges.length > 0) {
-      parts.push(`${varChanges.length} variable change(s)`);
-    }
-    
-    return parts.join(', ') || 'no changes';
-  }
-}
-
-// Merge conflicts handling
-interface MergeResult {
-  success: boolean;
-  merged?: PromptVersion;
-  conflicts?: MergeConflict[];
-}
-
-interface MergeConflict {
-  field: string;
-  base: any;
-  ours: any;
-  theirs: any;
-  resolution?: 'ours' | 'theirs' | 'manual';
-}
-
-async function mergePromptVersions(
-  base: PromptVersion,
-  ours: PromptVersion,
-  theirs: PromptVersion
-): Promise<MergeResult> {
-  const conflicts: MergeConflict[] = [];
-  const merged: Partial<PromptVersion> = { ...base };
-  
-  // Three-way merge for each field
-  for (const field of ['content', 'model', 'temperature', 'maxTokens'] as const) {
-    if (ours[field] !== base[field] && theirs[field] !== base[field]) {
-      if (ours[field] !== theirs[field]) {
-        // Conflict!
-        conflicts.push({
-          field,
-          base: base[field],
-          ours: ours[field],
-          theirs: theirs[field],
-        });
-      } else {
-        // Same change in both - auto-merge
-        merged[field] = ours[field];
-      }
-    } else if (ours[field] !== base[field]) {
-      merged[field] = ours[field];
-    } else if (theirs[field] !== base[field]) {
-      merged[field] = theirs[field];
-    }
-  }
-  
-  if (conflicts.length > 0) {
-    return { success: false, conflicts };
-  }
-  
-  return {
-    success: true,
-    merged: {
-      ...merged,
-      version: Math.max(ours.version, theirs.version) + 1,
-      parentVersion: base.version,
-    } as PromptVersion,
-  };
-}
-```
-
-### A/B Testing Framework
-
-```typescript
-interface ABTest {
-  id: string;
-  name: string;
-  status: 'draft' | 'running' | 'paused' | 'completed';
-  
-  // Variants
-  control: PromptVariant;
-  treatment: PromptVariant[];
-  
-  // Traffic allocation
-  allocation: TrafficAllocation;
-  
-  // Success metrics
-  metrics: ABMetric[];
-  
-  // Configuration
-  minSampleSize: number;
-  maxDuration: number;  // Hours
-  confidenceLevel: number;  // e.g., 0.95
-  
-  // Results
-  results?: ABTestResults;
-}
-
-interface PromptVariant {
-  id: string;
-  name: string;
-  promptVersion: number;
-  weight: number;  // Traffic percentage (0-100)
-}
-
-interface TrafficAllocation {
-  type: 'percentage' | 'user_segment' | 'feature_flag';
-  config: Record<string, any>;
-}
-
-interface ABMetric {
-  name: string;
-  type: 'latency' | 'cost' | 'quality' | 'custom';
-  direction: 'lower_better' | 'higher_better';
-  evaluator?: string;  // For quality metrics
-}
-
-class ABTestRunner {
-  async selectVariant(
-    test: ABTest,
-    context: { userId: string; sessionId: string }
-  ): Promise<PromptVariant> {
-    // Consistent hashing for user stickiness
-    const hash = this.hashContext(context, test.id);
-    const bucket = hash % 100;
-    
-    let cumulative = 0;
-    for (const variant of [test.control, ...test.treatment]) {
-      cumulative += variant.weight;
-      if (bucket < cumulative) {
-        return variant;
-      }
-    }
-    
-    return test.control;  // Fallback
-  }
-  
-  async recordMetric(
-    test: ABTest,
-    variant: PromptVariant,
-    metric: string,
-    value: number
-  ): Promise<void> {
-    await this.metricsStore.record({
-      testId: test.id,
-      variantId: variant.id,
-      metric,
-      value,
-      timestamp: new Date(),
-    });
-    
-    // Check for statistical significance
-    if (await this.hasSignificantResults(test)) {
-      await this.notifySignificance(test);
-    }
-  }
-  
-  async analyzeResults(test: ABTest): Promise<ABTestResults> {
-    const results: ABTestResults = {
-      testId: test.id,
-      variants: [],
-      winner: null,
-      confidence: 0,
-    };
-    
-    for (const variant of [test.control, ...test.treatment]) {
-      const metrics = await this.metricsStore.getMetrics(test.id, variant.id);
-      
-      results.variants.push({
-        variantId: variant.id,
-        sampleSize: metrics.length,
-        metrics: this.aggregateMetrics(metrics, test.metrics),
-      });
-    }
-    
-    // Statistical significance testing
-    const significance = this.calculateSignificance(
-      results.variants,
-      test.confidenceLevel
-    );
-    
-    if (significance.significant) {
-      results.winner = significance.winner;
-      results.confidence = significance.confidence;
-    }
-    
-    return results;
-  }
-}
-
-// Usage in production
-async function executePromptWithABTest(
-  promptName: string,
-  variables: Record<string, any>,
-  context: { userId: string }
-): Promise<string> {
-  const activeTest = await getActiveABTest(promptName);
-  
-  let promptVersion: number;
-  let variantId: string;
-  
-  if (activeTest) {
-    const variant = await abTestRunner.selectVariant(activeTest, context);
-    promptVersion = variant.promptVersion;
-    variantId = variant.id;
-  } else {
-    promptVersion = await getProductionVersion(promptName);
-    variantId = 'production';
-  }
-  
-  const prompt = await loadPrompt(promptName, promptVersion);
-  const startTime = Date.now();
-  
-  const result = await llm.complete({
-    prompt: renderPrompt(prompt, variables),
-    model: prompt.model,
-    temperature: prompt.temperature,
-  });
-  
-  // Record metrics
-  if (activeTest) {
-    await abTestRunner.recordMetric(activeTest, { id: variantId }, 'latency', Date.now() - startTime);
-    await abTestRunner.recordMetric(activeTest, { id: variantId }, 'tokens', result.usage.totalTokens);
-  }
-  
-  return result.content;
-}
-```
-
-### Rollback Mechanisms
-
-```typescript
-interface RollbackConfig {
-  promptName: string;
-  fromVersion: number;
-  toVersion: number;
-  reason: string;
-  rollbackType: 'instant' | 'gradual' | 'canary';
-}
-
-class PromptRollbackManager {
-  async rollback(config: RollbackConfig): Promise<RollbackResult> {
-    // Validate target version exists and is healthy
-    const targetPrompt = await this.loadPrompt(config.promptName, config.toVersion);
-    if (!targetPrompt) {
-      throw new Error(`Version ${config.toVersion} not found`);
-    }
-    
-    switch (config.rollbackType) {
-      case 'instant':
-        return this.instantRollback(config);
-      case 'gradual':
-        return this.gradualRollback(config);
-      case 'canary':
-        return this.canaryRollback(config);
-    }
-  }
-  
-  private async instantRollback(config: RollbackConfig): Promise<RollbackResult> {
-    // Swap production label immediately
-    await this.updateLabel(config.promptName, 'production', config.toVersion);
-    
-    // Log rollback event
-    await this.logRollback({
-      ...config,
-      completedAt: new Date(),
-      duration: 0,
-    });
-    
-    return {
-      success: true,
-      type: 'instant',
-      previousVersion: config.fromVersion,
-      currentVersion: config.toVersion,
-    };
-  }
-  
-  private async gradualRollback(config: RollbackConfig): Promise<RollbackResult> {
-    // Create temporary A/B test for gradual rollback
-    const rollbackTest: ABTest = {
-      id: `rollback-${config.promptName}-${Date.now()}`,
-      name: `Rollback: ${config.promptName}`,
-      status: 'running',
-      control: {
-        id: 'current',
-        name: 'Current (Rolling Back)',
-        promptVersion: config.fromVersion,
-        weight: 90,  // Start with 90% current
-      },
-      treatment: [{
-        id: 'rollback',
-        name: 'Rollback Target',
-        promptVersion: config.toVersion,
-        weight: 10,  // 10% rollback target
-      }],
-      // ... monitoring config
-    };
-    
-    await this.createABTest(rollbackTest);
-    
-    // Schedule gradual traffic shift
-    const schedule = [
-      { delay: 0, weights: [90, 10] },
-      { delay: 5 * 60 * 1000, weights: [70, 30] },    // 5 min
-      { delay: 15 * 60 * 1000, weights: [50, 50] },   // 15 min
-      { delay: 30 * 60 * 1000, weights: [20, 80] },   // 30 min
-      { delay: 60 * 60 * 1000, weights: [0, 100] },   // 1 hour
-    ];
-    
-    for (const step of schedule) {
-      await this.scheduleWeightChange(rollbackTest.id, step);
-    }
-    
-    return {
-      success: true,
-      type: 'gradual',
-      testId: rollbackTest.id,
-      schedule,
-    };
-  }
-}
-
-// Automatic rollback on error spike
-class AutoRollbackMonitor {
-  async checkForRollbackTriggers(promptName: string): Promise<void> {
-    const currentVersion = await this.getProductionVersion(promptName);
-    const metrics = await this.getRecentMetrics(promptName, currentVersion);
-    
-    // Check error rate
-    const errorRate = metrics.errors / metrics.total;
-    if (errorRate > 0.05) {  // 5% error threshold
-      const previousVersion = await this.getLastStableVersion(promptName);
-      
-      await this.notifyTeam({
-        type: 'auto_rollback_triggered',
-        promptName,
-        fromVersion: currentVersion,
-        toVersion: previousVersion,
-        reason: `Error rate ${(errorRate * 100).toFixed(1)}% exceeds threshold`,
-      });
-      
-      await this.rollbackManager.rollback({
-        promptName,
-        fromVersion: currentVersion,
-        toVersion: previousVersion,
-        reason: 'Automatic rollback: error rate exceeded',
-        rollbackType: 'instant',
-      });
-    }
-    
-    // Check latency degradation
-    const latencyP95 = metrics.latencyP95;
-    const baseline = await this.getBaselineLatency(promptName);
-    if (latencyP95 > baseline * 2) {  // 2x latency threshold
-      // Similar rollback logic
-    }
-  }
-}
-```
-
-### Deployment Pipeline
-
-```yaml
-# .github/workflows/prompt-deploy.yml
-name: Prompt Deployment Pipeline
-
-on:
-  push:
-    paths:
-      - 'prompts/**'
-    branches:
-      - main
-      - staging
-
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Validate Prompt Syntax
-        run: |
-          npm run prompts:validate
-          
-      - name: Type Check Variables
-        run: |
-          npm run prompts:typecheck
-
-  test:
-    needs: validate
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Run Prompt Evaluations
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          npm run prompts:eval -- --changed-only
-          
-      - name: Upload Eval Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: eval-results
-          path: eval-results/
-
-  deploy-staging:
-    needs: test
-    if: github.ref == 'refs/heads/staging'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to Staging
-        run: |
-          npm run prompts:deploy -- --env staging
-          
-  deploy-production:
-    needs: test
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Deploy with Canary
-        run: |
-          npm run prompts:deploy -- --env production --canary 10
-          
-      - name: Monitor Canary (5 min)
-        run: |
-          npm run prompts:monitor -- --duration 300
-          
-      - name: Promote or Rollback
-        run: |
-          npm run prompts:promote-or-rollback
-```
-
-### Quality Gates
-
-```
-[ ] Prompt versioning configured with YAML schema
-[ ] Production/staging labels defined
-[ ] Rollback procedure documented and tested
-[ ] A/B testing framework operational
-[ ] Change approval process (PR review) defined
-[ ] Automated eval tests on every change
-[ ] Canary deployment for production
-[ ] Auto-rollback on error spike configured
-[ ] Prompt diff/merge tools available
-[ ] Version history retained for audit
-```
-
-### Cross-Category Dependencies
-- **-> Category 29-34** (AI)  -  LLM applications
-- **-> Category 43** (CI/CD)  -  Deployment pipelines
-- **-> Category 46** (Testing)  -  Prompt evaluation
-- **-> Category 55** (Monitoring)  -  Performance tracking
+- **→ Category 10** (Serverless) — Task execution
+- **→ Category 23** (Queues) — Event triggers
+- **→ Category 55** (Monitoring) — Workflow monitoring
 
 ---
 
@@ -5296,7 +2527,7 @@ jobs:
 ### Scope
 Web scraping, browser automation, RPA, testing automation.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Browser Automation
 | Tool | Best For |
@@ -5337,9 +2568,9 @@ Web scraping, browser automation, RPA, testing automation.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 44** (Workflows)  -  Orchestration
-- **â†' Category 46** (Testing)  -  E2E testing
-- **â†' Category 30** (Agents)  -  AI automation
+- **→ Category 44** (Workflows) — Orchestration
+- **→ Category 46** (Testing) — E2E testing
+- **→ Category 30** (Agents) — AI automation
 
 ---
 
@@ -5348,7 +2579,7 @@ Web scraping, browser automation, RPA, testing automation.
 ### Scope
 Unit testing, integration testing, E2E testing, performance testing, security testing.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Unit Testing
 | Framework | Language |
@@ -5386,240 +2617,6 @@ Unit testing, integration testing, E2E testing, performance testing, security te
 | **Percy** | Visual regression |
 | **Chromatic** | Storybook testing |
 
-#### AI/LLM Evaluation Testing
-| Framework | Best For | Key Feature |
-|-----------|----------|-------------|
-| **DeepEval** | LLM apps | 14+ metrics, CI/CD native |
-| **RAGAS** | RAG systems | Faithfulness, relevancy |
-| **Evidently** | ML monitoring | Drift detection |
-| **Promptfoo** | Prompt testing | Red-teaming |
-
-#### LLM Evaluation Metrics
-| Metric | Range | Good Threshold |
-|--------|-------|----------------|
-| Answer Relevancy | 0-1 | ≥ 0.8 |
-| Faithfulness | 0-1 | ≥ 0.9 |
-| Hallucination Rate | 0-1 | ≤ 0.05 |
-| Toxicity Score | 0-1 | ≤ 0.01 |
-
-#### CI/CD Evaluation Gate
-```yaml
-# .github/workflows/eval.yml
-- name: Run DeepEval
-  run: |
-    pip install deepeval
-    deepeval test run tests/eval/
-```
-```
-
-#### Invariant Assertion Patterns
-
-Design by Contract validation for production code quality.
-
-| Assertion Type | When | Purpose |
-|----------------|------|---------|
-| **Precondition** | Before execution | Validate inputs |
-| **Postcondition** | After execution | Validate outputs |
-| **Class Invariant** | After any mutation | Maintain consistency |
-| **AI Output Invariant** | After LLM call | Validate response schema |
-
-```typescript
-// Runtime validation with Zod
-import { z } from 'zod';
-
-const AIResponseSchema = z.object({
-  answer: z.string().min(1),
-  confidence: z.number().min(0).max(1),
-  sources: z.array(z.string()).optional(),
-});
-
-// Validate LLM output before use
-const validated = AIResponseSchema.parse(llmResponse);
-```
-
-**Tools:**
-| Tool | Language | Use Case |
-|------|----------|----------|
-| **Zod** | TypeScript | Schema validation |
-| **Pydantic** | Python | Data validation |
-| **fast-check** | TypeScript | Property testing |
-| **Hypothesis** | Python | Property testing |
-
-**-> NS Part V §44.4**  -  Full implementation patterns
-
-#### Chaos Engineering for AI Systems
-
-Proactively test AI system resilience by injecting failures:
-
-```python
-import random
-from functools import wraps
-
-def chaos_monkey(failure_rate: float = 0.1, failure_types: list = None):
-    """Inject random failures to test resilience."""
-    failure_types = failure_types or ['timeout', 'rate_limit', 'malformed']
-    
-    def decorator(func):
-        @wraps(func)
-        async def wrapper(*args, **kwargs):
-            if random.random() < failure_rate:
-                failure = random.choice(failure_types)
-                if failure == 'timeout':
-                    raise TimeoutError("Chaos: Simulated timeout")
-                elif failure == 'rate_limit':
-                    raise RateLimitError("Chaos: Simulated rate limit")
-                elif failure == 'malformed':
-                    return {"error": "Chaos: Malformed response"}
-            return await func(*args, **kwargs)
-        return wrapper
-    return decorator
-
-# Usage
-@chaos_monkey(failure_rate=0.05)
-async def call_llm(prompt: str) -> str:
-    return await anthropic.messages.create(...)
-```
-
-#### Headless Browser Testing for AI UIs
-
-Test AI-powered interfaces with Playwright:
-
-```typescript
-import { test, expect } from '@playwright/test';
-
-test('AI chat responds within latency budget', async ({ page }) => {
-  await page.goto('/chat');
-  
-  const startTime = Date.now();
-  await page.fill('[data-testid="chat-input"]', 'Hello, how are you?');
-  await page.click('[data-testid="send-button"]');
-  
-  // Wait for streaming response to complete
-  await expect(page.locator('[data-testid="ai-response"]')).toBeVisible();
-  await expect(page.locator('[data-testid="loading"]')).toBeHidden();
-  
-  const responseTime = Date.now() - startTime;
-  expect(responseTime).toBeLessThan(5000); // 5s latency budget
-});
-```
-
-#### RAGAS Evaluation Framework
-
-Evaluate RAG pipeline quality with RAGAS metrics:
-
-```python
-from ragas import evaluate
-from ragas.metrics import faithfulness, answer_relevancy, context_precision
-
-def evaluate_rag_pipeline(questions, ground_truths, contexts, answers):
-    """Comprehensive RAG evaluation using RAGAS."""
-    dataset = Dataset.from_dict({
-        "question": questions,
-        "ground_truth": ground_truths,
-        "contexts": contexts,
-        "answer": answers
-    })
-    
-    results = evaluate(
-        dataset,
-        metrics=[faithfulness, answer_relevancy, context_precision]
-    )
-    
-    return {
-        "faithfulness": results["faithfulness"],      # Hallucination check
-        "relevancy": results["answer_relevancy"],     # Answer quality
-        "precision": results["context_precision"]     # Retrieval quality
-    }
-```
-
-#### Multi-Modal Testing
-
-Test vision and document understanding capabilities:
-
-```python
-import base64
-from pathlib import Path
-
-def test_vision_extraction(image_path: Path, expected_content: dict):
-    """Test image understanding accuracy."""
-    with open(image_path, "rb") as f:
-        image_data = base64.standard_b64encode(f.read()).decode()
-    
-    response = anthropic.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=1024,
-        messages=[{
-            "role": "user",
-            "content": [
-                {"type": "image", "source": {"type": "base64", "media_type": "image/png", "data": image_data}},
-                {"type": "text", "text": "Extract all text and key information from this image."}
-            ]
-        }]
-    )
-    
-    # Verify extraction accuracy
-    result = response.content[0].text
-    for key, expected_value in expected_content.items():
-        assert expected_value.lower() in result.lower(), f"Missing: {key}"
-```
-
-
-### Prompt Regression Testing
-
-Ensure prompt changes don't degrade quality.
-
-```yaml
-# promptfoo config - promptfooconfig.yaml
-prompts:
-  - prompts/v1.txt
-  - prompts/v2.txt
-
-providers:
-  - openai:gpt-4
-
-tests:
-  - vars:
-      input: "What is machine learning?"
-    assert:
-      - type: llm-rubric
-        value: "Response should be clear and accurate"
-      - type: similar
-        value: "Machine learning is a subset of AI..."
-        threshold: 0.8
-      - type: not-contains
-        value: "I don't know"
-```
-
-**CI Integration:**
-```yaml
-# Block PR if regression detected
-- name: Prompt Regression Test
-  run: npx promptfoo eval --config promptfooconfig.yaml
-```
-
-### Golden Datasets for AI Evaluation
-
-Curated test sets for consistent quality measurement.
-
-| Dataset Type | Purpose | Recommended Size |
-|--------------|---------|------------------|
-| **Regression** | Catch quality drops | 100-500 samples |
-| **Edge cases** | Test boundaries | 50-100 samples |
-| **Production samples** | Real-world coverage | 200-1000 samples |
-| **Adversarial** | Security testing | 50-100 samples |
-
-**Golden Dataset Maintenance:**
-```
-□ Refresh quarterly from production
-□ Version alongside prompts (DVC)
-□ Include difficulty labels (easy/medium/hard)
-□ Balance across use case categories
-□ Annotate expected outputs
-□ Track dataset lineage
-```
-
----
-
 ### Quality Gates
 
 ```
@@ -5634,9 +2631,9 @@ Curated test sets for consistent quality measurement.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 43** (CI/CD)  -  Test execution
-- **â†' Category 52** (Security)  -  Security testing
-- **â†' NS Part IX** (Sections 42-45)  -  Testing philosophy, coverage strategies, patterns
+- **→ Category 43** (CI/CD) — Test execution
+- **→ Category 52** (Security) — Security testing
+- **→ NS Part IX** (Sections 42-45) — Testing philosophy, coverage strategies, patterns
 
 ---
 
@@ -5645,7 +2642,7 @@ Curated test sets for consistent quality measurement.
 ### Scope
 Chatbots, voice assistants, conversational AI, multimodal interfaces.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Chatbot Frameworks
 | Framework | Best For |
@@ -5679,9 +2676,9 @@ Chatbots, voice assistants, conversational AI, multimodal interfaces.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 29-34** (AI)  -  Language models
-- **â†' Category 37** (Audio)  -  Voice generation
-- **â†' Category 24** (Real-time)  -  WebSocket/WebRTC
+- **→ Category 29-34** (AI) — Language models
+- **→ Category 37** (Audio) — Voice generation
+- **→ Category 24** (Real-time) — WebSocket/WebRTC
 
 ---
 
@@ -5690,7 +2687,7 @@ Chatbots, voice assistants, conversational AI, multimodal interfaces.
 ### Scope
 Technical documentation, API documentation, knowledge bases, wikis.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Documentation Frameworks
 | Framework | Best For |
@@ -5725,9 +2722,9 @@ Technical documentation, API documentation, knowledge bases, wikis.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 4** (Websites)  -  Documentation sites
-- **â†' Category 8** (APIs)  -  API reference
-- **â†' Category 43** (CI/CD)  -  Doc generation
+- **→ Category 4** (Websites) — Documentation sites
+- **→ Category 8** (APIs) — API reference
+- **→ Category 43** (CI/CD) — Doc generation
 
 ---
 
@@ -5736,7 +2733,7 @@ Technical documentation, API documentation, knowledge bases, wikis.
 ### Scope
 Admin panels, analytics dashboards, internal tools, CRUD builders.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Low-Code Builders
 | Platform | Best For |
@@ -5776,19 +2773,10 @@ Admin panels, analytics dashboards, internal tools, CRUD builders.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 8** (APIs)  -  Data sources
-- **â†' Category 15-17** (Databases)  -  Data layer
-- **â†' Category 50** (Auth)  -  Access control
+- **→ Category 8** (APIs) — Data sources
+- **→ Category 15-17** (Databases) — Data layer
+- **→ Category 50** (Auth) — Access control
 
----
-
-# MASTER BUILD FRAMEWORK v1.1 — SEGMENT 4 of 4
-## MBF_PART_4_FOUNDATION
-### Contents: Tier 8 (Cat 50-56) + Usage Guide + Appendix + Addendum (Skills, RLM, Prompt Architecture)
-### Lines: 3075-4935 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full MBF, merge all 4 parts.
-> For BRIDGE routing: Categories 50-56 + Skills/RLM/Prompt patterns are in this segment.
 ---
 
 # TIER 8: SECURITY & FOUNDATION
@@ -5801,7 +2789,7 @@ Admin panels, analytics dashboards, internal tools, CRUD builders.
 ### Scope
 User authentication, SSO, OAuth, session management, user management.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Auth Platforms
 | Platform | Type |
@@ -5868,9 +2856,9 @@ You are implementing authentication. Before implementation:
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 1-6** (Build Targets)  -  Auth integration
-- **â†' Category 8** (APIs)  -  API auth
-- **â†' Category 52** (Security)  -  Security best practices
+- **→ Category 1-6** (Build Targets) — Auth integration
+- **→ Category 8** (APIs) — API auth
+- **→ Category 52** (Security) — Security best practices
 
 ---
 
@@ -5879,7 +2867,7 @@ You are implementing authentication. Before implementation:
 ### Scope
 Payment processing, subscriptions, invoicing, usage-based billing.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Payment Processors
 | Processor | Best For |
@@ -5910,9 +2898,9 @@ Payment processing, subscriptions, invoicing, usage-based billing.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 1-6** (Build Targets)  -  Payment integration
-- **â†' Category 50** (Auth)  -  Customer identity
-- **â†' Category 56** (Compliance)  -  PCI, tax compliance
+- **→ Category 1-6** (Build Targets) — Payment integration
+- **→ Category 50** (Auth) — Customer identity
+- **→ Category 56** (Compliance) — PCI, tax compliance
 
 ---
 
@@ -5921,7 +2909,7 @@ Payment processing, subscriptions, invoicing, usage-based billing.
 ### Scope
 Application security, encryption, vulnerability management, penetration testing.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Security Scanning
 | Tool | Focus |
@@ -5962,9 +2950,9 @@ Application security, encryption, vulnerability management, penetration testing.
 ```
 
 ### Cross-Category Dependencies
-- **â†' All Categories**  -  Security applies everywhere
-- **â†' Category 50** (Auth)  -  Identity security
-- **â†' Category 53** (Secrets)  -  Key management
+- **→ All Categories** — Security applies everywhere
+- **→ Category 50** (Auth) — Identity security
+- **→ Category 53** (Secrets) — Key management
 
 ---
 
@@ -5973,7 +2961,7 @@ Application security, encryption, vulnerability management, penetration testing.
 ### Scope
 API keys, credentials, certificates, environment variables.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Secret Managers
 | Service | Type |
@@ -6004,9 +2992,9 @@ API keys, credentials, certificates, environment variables.
 ```
 
 ### Cross-Category Dependencies
-- **â†' All Categories**  -  Secrets used everywhere
-- **â†' Category 43** (CI/CD)  -  Pipeline secrets
-- **â†' Category 52** (Security)  -  Security integration
+- **→ All Categories** — Secrets used everywhere
+- **→ Category 43** (CI/CD) — Pipeline secrets
+- **→ Category 52** (Security) — Security integration
 
 ---
 
@@ -6015,7 +3003,7 @@ API keys, credentials, certificates, environment variables.
 ### Scope
 Product analytics, user tracking, event tracking, experimentation.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Product Analytics
 | Platform | Best For |
@@ -6052,9 +3040,9 @@ Product analytics, user tracking, event tracking, experimentation.
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 1-6** (Build Targets)  -  Tracking integration
-- **â†' Category 20** (Warehousing)  -  Data destination
-- **â†' Category 56** (Compliance)  -  Privacy compliance
+- **→ Category 1-6** (Build Targets) — Tracking integration
+- **→ Category 20** (Warehousing) — Data destination
+- **→ Category 56** (Compliance) — Privacy compliance
 
 ---
 
@@ -6063,7 +3051,7 @@ Product analytics, user tracking, event tracking, experimentation.
 ### Scope
 Application monitoring, infrastructure monitoring, logging, tracing, alerting.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Full-Stack Observability
 | Platform | Features |
@@ -6120,50 +3108,6 @@ Application monitoring, infrastructure monitoring, logging, tracing, alerting.
 □ SLOs defined
 □ Error tracking enabled
 □ Uptime monitoring active
-
-### Agent Observability Model
-
-Hierarchical tracing structure for AI agent systems.
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    AGENT OBSERVABILITY HIERARCHY                             │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  SESSION (user conversation)                                                │
-│    │                                                                         │
-│    ├─── TRACE (single request/task)                                         │
-│    │      │                                                                  │
-│    │      ├─── SPAN (individual operation)                                  │
-│    │      │      ├── LLM call                                               │
-│    │      │      ├── Tool call                                              │
-│    │      │      ├── Retrieval                                              │
-│    │      │      └── Post-processing                                        │
-│    │      │                                                                  │
-│    │      └─── SPAN (next operation)                                        │
-│    │             └── ...                                                     │
-│    │                                                                         │
-│    └─── TRACE (next request)                                                │
-│           └── ...                                                            │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-| Level | What to Track |
-|-------|---------------|
-| **Session** | User ID, total cost, satisfaction score, duration |
-| **Trace** | Latency, success/failure, execution path, total tokens |
-| **Span** | Token usage, tool results, errors, model used |
-
-**Observability Tools for Agents:**
-| Tool | Strength |
-|------|----------|
-| **LangSmith** | LangChain native |
-| **Langfuse** | Open-source, self-host |
-| **Arize Phoenix** | LLM observability |
-| **Helicone** | LLM proxy logging |
-| **Braintrust** | Eval + logging |
-
 ```
 
 ### Agentic Prompt Hook
@@ -6199,8 +3143,8 @@ You are implementing monitoring and observability. Before implementation:
 ```
 
 ### Cross-Category Dependencies
-- **â†' All Categories**  -  Monitoring applies everywhere
-- **â†' Category 43** (CI/CD)  -  Deployment monitoring
+- **→ All Categories** — Monitoring applies everywhere
+- **→ Category 43** (CI/CD) — Deployment monitoring
 
 ---
 
@@ -6209,7 +3153,7 @@ You are implementing monitoring and observability. Before implementation:
 ### Scope
 GDPR, CCPA, SOC 2, HIPAA, accessibility, privacy policies, data governance.
 
-### Technology Stack  -  Exhaustive
+### Technology Stack — Exhaustive
 
 #### Privacy Compliance
 | Platform | Focus |
@@ -6259,62 +3203,6 @@ GDPR, CCPA, SOC 2, HIPAA, accessibility, privacy policies, data governance.
 □ Encryption implemented
 ```
 
-#### HIPAA (Healthcare)
-```
-□ PHI identification and protection
-□ Business Associate Agreements (BAAs)
-□ Access controls and audit trails
-□ Encryption at rest and in transit
-□ Employee HIPAA training
-□ Breach notification procedures
-□ Minimum necessary standard
-```
-
-#### EU AI Act (AI Systems)
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         EU AI ACT COMPLIANCE                                 │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  TIMELINE                                                                    │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│  • Feb 2025: Prohibited practices enforcement                               │
-│  • Aug 2025: GPAI (General Purpose AI) obligations                          │
-│  • Aug 2026: High-risk AI requirements                                      │
-│  • Penalties: Up to 35M EUR or 7% global turnover                           │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  RISK CLASSIFICATION                                                         │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  LEVEL          │ EXAMPLES                    │ REQUIREMENTS                 │
-│  ───────────────┼─────────────────────────────┼──────────────────────────────│
-│  Prohibited     │ Social scoring, subliminal  │ Banned                       │
-│                 │ manipulation                │                              │
-│  High-risk      │ Hiring, credit, education,  │ Full compliance: risk       │
-│                 │ law enforcement             │ management, data quality,   │
-│                 │                             │ logging, transparency       │
-│  Limited        │ Chatbots, emotion detection │ Transparency obligations    │
-│  Minimal        │ Spam filters, games         │ None                         │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  HIGH-RISK REQUIREMENTS                                                      │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  □ Risk management system                                                   │
-│  □ Data governance and quality                                              │
-│  □ Technical documentation                                                   │
-│  □ Record-keeping (logging)                                                  │
-│  □ Transparency to users                                                     │
-│  □ Human oversight mechanisms                                                │
-│  □ Accuracy, robustness, cybersecurity                                       │
-│  □ Conformity assessment                                                     │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
 ### Quality Gates
 
 ```
@@ -6329,10 +3217,10 @@ GDPR, CCPA, SOC 2, HIPAA, accessibility, privacy policies, data governance.
 ```
 
 ### Cross-Category Dependencies
-- **â†' All Categories**  -  Compliance applies everywhere
-- **â†' Category 50** (Auth)  -  Identity verification
-- **â†' Category 52** (Security)  -  Security controls
-- **â†' Category 54** (Analytics)  -  Consent integration
+- **→ All Categories** — Compliance applies everywhere
+- **→ Category 50** (Auth) — Identity verification
+- **→ Category 52** (Security) — Security controls
+- **→ Category 54** (Analytics) — Consent integration
 
 ---
 
@@ -6380,82 +3268,82 @@ When presenting to an AI model (Claude, GPT, etc.):
 ### SaaS Application (Full Stack)
 ```
 Required Categories:
-â"œâ"€â"€ 1 (Web App)
-â"œâ"€â"€ 8 (APIs & Backend)
-â"œâ"€â"€ 15 (Relational Database)
-â"œâ"€â"€ 22 (Caching)
-â"œâ"€â"€ 24 (Real-Time - optional)
-â"œâ"€â"€ 43 (CI/CD)
-â"œâ"€â"€ 46 (Testing)
-â"œâ"€â"€ 50 (Authentication)
-â"œâ"€â"€ 51 (Payments)
-â"œâ"€â"€ 52 (Security)
-â"œâ"€â"€ 54 (Analytics)
-â"œâ"€â"€ 55 (Monitoring)
-â""â"€â"€ 56 (Compliance)
+├── 1 (Web App)
+├── 8 (APIs & Backend)
+├── 15 (Relational Database)
+├── 22 (Caching)
+├── 24 (Real-Time - optional)
+├── 43 (CI/CD)
+├── 46 (Testing)
+├── 50 (Authentication)
+├── 51 (Payments)
+├── 52 (Security)
+├── 54 (Analytics)
+├── 55 (Monitoring)
+└── 56 (Compliance)
 ```
 
 ### AI-Powered Application
 ```
 Required Categories:
-â"œâ"€â"€ 1 or 2 (Web/Mobile App)
-â"œâ"€â"€ 8 (APIs & Backend)
-â"œâ"€â"€ 16 (Vector Database)
-â"œâ"€â"€ 29 (Agentic RAG)
-â"œâ"€â"€ 30 (Autonomous Agents - optional)
-â"œâ"€â"€ 31 (MCPs & Tools)
-â"œâ"€â"€ 33 (Model Serving)
-â"œâ"€â"€ 34 (LLM Routing)
-â"œâ"€â"€ 35 (AI Safety)
-â""â"€â"€ 50-56 (Foundation Tier)
+├── 1 or 2 (Web/Mobile App)
+├── 8 (APIs & Backend)
+├── 16 (Vector Database)
+├── 29 (Agentic RAG)
+├── 30 (Autonomous Agents - optional)
+├── 31 (MCPs & Tools)
+├── 33 (Model Serving)
+├── 34 (LLM Routing)
+├── 35 (AI Safety)
+└── 50-56 (Foundation Tier)
 ```
 
 ### Content Generation Pipeline
 ```
 Required Categories:
-â"œâ"€â"€ 36 (Image Generation)
-â"œâ"€â"€ 37 (Audio Generation)
-â"œâ"€â"€ 38 (Video Processing)
-â"œâ"€â"€ 39 (Document Generation)
-â"œâ"€â"€ 11 (GPU Compute)
-â"œâ"€â"€ 19 (Object Storage)
-â"œâ"€â"€ 44 (Workflow Orchestration)
-â""â"€â"€ 43 (CI/CD)
+├── 36 (Image Generation)
+├── 37 (Audio Generation)
+├── 38 (Video Processing)
+├── 39 (Document Generation)
+├── 11 (GPU Compute)
+├── 19 (Object Storage)
+├── 44 (Workflow Orchestration)
+└── 43 (CI/CD)
 ```
 
 ### Mobile App with Backend
 ```
 Required Categories:
-â"œâ"€â"€ 2 (Mobile Application)
-â"œâ"€â"€ 8 (APIs & Backend)
-â"œâ"€â"€ 15 (Relational Database)
-â"œâ"€â"€ 19 (Object Storage)
-â"œâ"€â"€ 50 (Authentication)
-â"œâ"€â"€ 51 (Payments - if needed)
-â"œâ"€â"€ 54 (Analytics)
-â""â"€â"€ 55 (Monitoring)
+├── 2 (Mobile Application)
+├── 8 (APIs & Backend)
+├── 15 (Relational Database)
+├── 19 (Object Storage)
+├── 50 (Authentication)
+├── 51 (Payments - if needed)
+├── 54 (Analytics)
+└── 55 (Monitoring)
 ```
 
 ### Embedded/IoT System
 ```
 Required Categories:
-â"œâ"€â"€ 6 (Operating Systems & Embedded)
-â"œâ"€â"€ 8 (APIs - cloud connectivity)
-â"œâ"€â"€ 9 (Edge Computing)
-â"œâ"€â"€ 17 (Document/NoSQL - time series)
-â"œâ"€â"€ 52 (Security)
-â""â"€â"€ 55 (Monitoring)
+├── 6 (Operating Systems & Embedded)
+├── 8 (APIs - cloud connectivity)
+├── 9 (Edge Computing)
+├── 17 (Document/NoSQL - time series)
+├── 52 (Security)
+└── 55 (Monitoring)
 ```
 
 ### Internal Tools & Dashboard
 ```
 Required Categories:
-â"œâ"€â"€ 49 (Dashboards & Internal Tools)
-â"œâ"€â"€ 8 (APIs & Backend)
-â"œâ"€â"€ 15 (Relational Database)
-â"œâ"€â"€ 50 (Authentication)
-â"œâ"€â"€ 52 (Security)
-â""â"€â"€ 55 (Monitoring)
+├── 49 (Dashboards & Internal Tools)
+├── 8 (APIs & Backend)
+├── 15 (Relational Database)
+├── 50 (Authentication)
+├── 52 (Security)
+└── 55 (Monitoring)
 ```
 
 ---
@@ -6566,12 +3454,12 @@ Your output must be:
 
 ---
 
-*End of Framework v1.0  -  January 2026*
+*End of Framework v1.0 — January 2026*
 
 ---
 
 # ADDENDUM: SKILLS, REASONING LOOPS & PROMPT ARCHITECTURE
-## *v1.1 Patch  -  Critical Framework Extensions*
+## *v1.1 Patch — Critical Framework Extensions*
 
 ---
 
@@ -6584,7 +3472,7 @@ Skill manifests, capability packaging, skill composition, skill registries, vers
 
 | Concept | What It Is | How It Works |
 |---------|------------|--------------|
-| **Tool** | A single callable function | `get_weather(city)` â†' returns data |
+| **Tool** | A single callable function | `get_weather(city)` → returns data |
 | **MCP** | Protocol for tool communication | Standard interface between model and tools |
 | **Skill** | Packaged capability with instructions | Contains: instructions, patterns, examples, quality gates, prompts |
 
@@ -6598,15 +3486,15 @@ Skill manifests, capability packaging, skill composition, skill registries, vers
 #### Skill Manifest Structure
 ```
 /skill-name/
-â"œâ"€â"€ SKILL.md           # Core instructions, patterns, best practices
-â"œâ"€â"€ manifest.json      # Metadata, version, dependencies
-â"œâ"€â"€ examples/          # Sample inputs and expected outputs
-â"'   â"œâ"€â"€ input-1.json
-â"'   â""â"€â"€ output-1.json
-â"œâ"€â"€ templates/         # Reusable templates
-â"œâ"€â"€ quality-gates.md   # Validation criteria
-â""â"€â"€ hooks/             # Agentic invocation prompts
-    â""â"€â"€ invoke.md
+├── SKILL.md           # Core instructions, patterns, best practices
+├── manifest.json      # Metadata, version, dependencies
+├── examples/          # Sample inputs and expected outputs
+│   ├── input-1.json
+│   └── output-1.json
+├── templates/         # Reusable templates
+├── quality-gates.md   # Validation criteria
+└── hooks/             # Agentic invocation prompts
+    └── invoke.md
 ```
 
 #### Skill Manifest Schema (manifest.json)
@@ -6651,26 +3539,26 @@ Skill manifests, capability packaging, skill composition, skill registries, vers
 
 #### Sequential Composition
 ```
-Skill A â†' Skill B â†' Skill C
-(research) â†' (synthesize) â†' (document)
+Skill A → Skill B → Skill C
+(research) → (synthesize) → (document)
 ```
 
 #### Parallel Composition
 ```
-      â"Œâ†' Skill B â"€â"
-Skill A           â"œâ†' Skill D
-      â""â†' Skill C â"€â"˜
+      ┌→ Skill B ─┐
+Skill A           ├→ Skill D
+      └→ Skill C ─┘
 ```
 
 #### Conditional Composition
 ```
-Skill A â†' [condition] â†' Skill B (if true)
-                     â†' Skill C (if false)
+Skill A → [condition] → Skill B (if true)
+                     → Skill C (if false)
 ```
 
 #### Iterative Composition
 ```
-Skill A â†' Skill B â†' [evaluate] â†' loop back or exit
+Skill A → Skill B → [evaluate] → loop back or exit
 ```
 
 ### Skill Invocation Protocol
@@ -6687,7 +3575,7 @@ BEFORE executing any task that matches a skill category:
 
 ## Skill Loading Priority
 
-1. User skills (/mnt/skills/user/)  -  highest priority
+1. User skills (/mnt/skills/user/) — highest priority
 2. Private skills (/mnt/skills/private/)
 3. Public skills (/mnt/skills/public/)
 4. Example skills (/mnt/skills/examples/)
@@ -6717,7 +3605,7 @@ BEFORE executing any task that matches a skill category:
 □ Edge cases documented
 ```
 
-### Agentic Prompt Hook  -  Skill Invocation
+### Agentic Prompt Hook — Skill Invocation
 
 ```
 You are operating with skill-augmented capabilities. Before any significant output:
@@ -6749,10 +3637,10 @@ You are operating with skill-augmented capabilities. Before any significant outp
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 31** (MCPs)  -  Tool protocols
-- **â†' Category 30** (Agents)  -  Skill execution
-- **â†' Category 31C** (Reasoning)  -  Reasoning skills
-- **â†' Category 40** (Code Gen)  -  Code skills
+- **→ Category 31** (MCPs) — Tool protocols
+- **→ Category 30** (Agents) — Skill execution
+- **→ Category 31C** (Reasoning) — Reasoning skills
+- **→ Category 40** (Code Gen) — Code skills
 
 ---
 
@@ -6766,33 +3654,33 @@ Structured reasoning patterns, self-correction mechanisms, iterative refinement,
 #### RALPH Loop (Recommended Primary Pattern)
 
 ```
-â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"
-â"'                    RALPH LOOP                           â"'
-â"œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"¤
-â"'                                                         â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"                                          â"'
-â"'  â"'  REASON  â"' ← Analyze task, state, constraints       â"'
-â"'  â""â"€â"€â"€â"€â"¬â"€â"€â"€â"€â"€â"˜                                          â"'
-â"'       â†"                                                â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"                                          â"'
-â"'  â"'   ACT    â"' ← Execute next step (tool/generation)   â"'
-â"'  â""â"€â"€â"€â"€â"¬â"€â"€â"€â"€â"€â"˜                                          â"'
-â"'       â†"                                                â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"                                          â"'
-â"'  â"'  LEARN   â"' ← Evaluate result, extract insights     â"'
-â"'  â""â"€â"€â"€â"€â"¬â"€â"€â"€â"€â"€â"˜                                          â"'
-â"'       â†"                                                â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"                                          â"'
-â"'  â"'   PLAN   â"' ← Update strategy based on learning     â"'
-â"'  â""â"€â"€â"€â"€â"¬â"€â"€â"€â"€â"€â"˜                                          â"'
-â"'       â†"                                                â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"                                          â"'
-â"'  â"'HYPOTHESIZEâ"' ← Predict outcomes, identify risks     â"'
-â"'  â""â"€â"€â"€â"€â"¬â"€â"€â"€â"€â"€â"˜                                          â"'
-â"'       â†"                                                â"'
-â"'  [Continue or Exit based on completion criteria]       â"'
-â"'                                                         â"'
-â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜
+┌─────────────────────────────────────────────────────────┐
+│                    RALPH LOOP                           │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  ┌──────────┐                                          │
+│  │  REASON  │ ← Analyze task, state, constraints       │
+│  └────┬─────┘                                          │
+│       ↓                                                │
+│  ┌──────────┐                                          │
+│  │   ACT    │ ← Execute next step (tool/generation)   │
+│  └────┬─────┘                                          │
+│       ↓                                                │
+│  ┌──────────┐                                          │
+│  │  LEARN   │ ← Evaluate result, extract insights     │
+│  └────┬─────┘                                          │
+│       ↓                                                │
+│  ┌──────────┐                                          │
+│  │   PLAN   │ ← Update strategy based on learning     │
+│  └────┬─────┘                                          │
+│       ↓                                                │
+│  ┌──────────┐                                          │
+│  │HYPOTHESIZE│ ← Predict outcomes, identify risks     │
+│  └────┬─────┘                                          │
+│       ↓                                                │
+│  [Continue or Exit based on completion criteria]       │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 **RALPH Implementation:**
@@ -6847,9 +3735,9 @@ ANSWER: [Final output]
 
 ```
 PLAN:
-- Step 1: [action] â†' [expected_output_variable]
-- Step 2: [action using variable] â†' [next_variable]
-- Step 3: [action using variables] â†' [final_output]
+- Step 1: [action] → [expected_output_variable]
+- Step 2: [action using variable] → [next_variable]
+- Step 3: [action using variables] → [final_output]
 
 EXECUTE:
 - Run all steps
@@ -6868,15 +3756,15 @@ SYNTHESIZE:
 #### Reflexion Pattern (Self-Correction)
 
 ```
-â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"
-â"'            REFLEXION LOOP               â"'
-â"œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"¤
-â"'                                         â"'
-â"'  ATTEMPT â†' EVALUATE â†' REFLECT â†' RETRY   â"'
-â"'     â†'                              â"'    â"'
-â"'     â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜    â"'
-â"'                                         â"'
-â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜
+┌─────────────────────────────────────────┐
+│            REFLEXION LOOP               │
+├─────────────────────────────────────────┤
+│                                         │
+│  ATTEMPT → EVALUATE → REFLECT → RETRY   │
+│     ↑                              │    │
+│     └──────────────────────────────┘    │
+│                                         │
+└─────────────────────────────────────────┘
 
 ATTEMPT:
 - Execute task with current approach
@@ -6901,18 +3789,18 @@ RETRY:
 
 ```
                     [Problem]
-                        â"'
-          â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"¼â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"
-          â†"             â†"             â†"
+                        │
+          ┌─────────────┼─────────────┐
+          ↓             ↓             ↓
       [Path A]      [Path B]      [Path C]
        Score:8       Score:6       Score:9
-          â"'             ✠-              â"'
-     â"Œâ"€â"€â"€â"€â"´â"€â"€â"€â"€â"              â"Œâ"€â"€â"€â"€â"€â"€â"€â"´â"€â"€â"€â"€â"€â"€â"€â"
-     â†"         â†"              â†"               â†"
+          │             ✗             │
+     ┌────┴────┐              ┌───────┴───────┐
+     ↓         ↓              ↓               ↓
   [A.1]     [A.2]          [C.1]           [C.2]
   Score:7   Score:9        Score:8         Score:10
-              â"'                               â"'
-              â†"                               â†"
+              │                               │
+              ↓                               ↓
          [Continue]                    [Best Solution]
 ```
 
@@ -6962,8 +3850,8 @@ LOOP_BOUNDS:
     - confidence: > 0.95
     - no_progress_iterations: 3
   escalation:
-    - at_iteration: 7 â†' warn user
-    - at_iteration: 10 â†' stop and summarize
+    - at_iteration: 7 → warn user
+    - at_iteration: 10 → stop and summarize
 ```
 
 ### Quality Gates for Reasoning
@@ -6979,7 +3867,7 @@ LOOP_BOUNDS:
 □ Final confidence score provided
 ```
 
-### Agentic Prompt Hook  -  Reasoning Loops
+### Agentic Prompt Hook — Reasoning Loops
 
 ```
 You are executing with structured reasoning loops. For complex tasks:
@@ -7009,9 +3897,9 @@ You are executing with structured reasoning loops. For complex tasks:
    HYPOTHESIZE: [Predict next iteration outcome]
    
    CHECK: [Exit conditions met?]
-   - If yes â†' proceed to output
-   - If no â†' continue to iteration {n+1}
-   - If bounds exceeded â†' escalate/summarize
+   - If yes → proceed to output
+   - If no → continue to iteration {n+1}
+   - If bounds exceeded → escalate/summarize
 
 4. LOOP TERMINATION
    - Document final state
@@ -7027,10 +3915,10 @@ You are executing with structured reasoning loops. For complex tasks:
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 30** (Agents)  -  Agent execution
-- **â†' Category 31B** (Skills)  -  Skill invocation
-- **â†' Category 35** (Safety)  -  Bounded execution
-- **â†' Category 31D** (Prompts)  -  Prompt patterns
+- **→ Category 30** (Agents) — Agent execution
+- **→ Category 31B** (Skills) — Skill invocation
+- **→ Category 35** (Safety) — Bounded execution
+- **→ Category 31D** (Prompts) — Prompt patterns
 
 ---
 
@@ -7042,42 +3930,42 @@ Prompt architecture, system prompts, few-shot patterns, chain of thought, consti
 ### Prompt Architecture Layers
 
 ```
-â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"
-â"'                  PROMPT ARCHITECTURE                    â"'
-â"œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"¤
-â"'                                                         â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"   â"'
-â"'  â"'              SYSTEM PROMPT LAYER                â"'   â"'
-â"'  â"'  - Identity and role                            â"'   â"'
-â"'  â"'  - Core capabilities                            â"'   â"'
-â"'  â"'  - Constraints and boundaries                   â"'   â"'
-â"'  â"'  - Output format defaults                       â"'   â"'
-â"'  â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜   â"'
-â"'                         â†"                               â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"   â"'
-â"'  â"'              CONTEXT LAYER                      â"'   â"'
-â"'  â"'  - Retrieved documents (RAG)                    â"'   â"'
-â"'  â"'  - Conversation history                         â"'   â"'
-â"'  â"'  - User preferences/memory                      â"'   â"'
-â"'  â"'  - Skill instructions                           â"'   â"'
-â"'  â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜   â"'
-â"'                         â†"                               â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"   â"'
-â"'  â"'              INSTRUCTION LAYER                  â"'   â"'
-â"'  â"'  - Task-specific instructions                   â"'   â"'
-â"'  â"'  - Few-shot examples                            â"'   â"'
-â"'  â"'  - Output format requirements                   â"'   â"'
-â"'  â"'  - Quality criteria                             â"'   â"'
-â"'  â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜   â"'
-â"'                         â†"                               â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"   â"'
-â"'  â"'              USER INPUT LAYER                   â"'   â"'
-â"'  â"'  - The actual user request                      â"'   â"'
-â"'  â"'  - Attached files/images                        â"'   â"'
-â"'  â"'  - Clarifications                               â"'   â"'
-â"'  â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜   â"'
-â"'                                                         â"'
-â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜
+┌─────────────────────────────────────────────────────────┐
+│                  PROMPT ARCHITECTURE                    │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │              SYSTEM PROMPT LAYER                │   │
+│  │  - Identity and role                            │   │
+│  │  - Core capabilities                            │   │
+│  │  - Constraints and boundaries                   │   │
+│  │  - Output format defaults                       │   │
+│  └─────────────────────────────────────────────────┘   │
+│                         ↓                               │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │              CONTEXT LAYER                      │   │
+│  │  - Retrieved documents (RAG)                    │   │
+│  │  - Conversation history                         │   │
+│  │  - User preferences/memory                      │   │
+│  │  - Skill instructions                           │   │
+│  └─────────────────────────────────────────────────┘   │
+│                         ↓                               │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │              INSTRUCTION LAYER                  │   │
+│  │  - Task-specific instructions                   │   │
+│  │  - Few-shot examples                            │   │
+│  │  - Output format requirements                   │   │
+│  │  - Quality criteria                             │   │
+│  └─────────────────────────────────────────────────┘   │
+│                         ↓                               │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │              USER INPUT LAYER                   │   │
+│  │  - The actual user request                      │   │
+│  │  - Attached files/images                        │   │
+│  │  - Clarifications                               │   │
+│  └─────────────────────────────────────────────────┘   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ### Core Prompt Patterns
@@ -7278,7 +4166,7 @@ If something goes wrong, [specific guidance]
 □ Version controlled
 ```
 
-### Agentic Prompt Hook  -  Prompt Engineering
+### Agentic Prompt Hook — Prompt Engineering
 
 ```
 You are crafting prompts for optimal output. For each prompt:
@@ -7289,11 +4177,11 @@ You are crafting prompts for optimal output. For each prompt:
    - What constraints apply?
 
 2. PATTERN SELECTION
-   - Does this need step-by-step reasoning? â†' CoT
-   - Does this need examples? â†' Few-Shot
-   - Does this need multiple attempts? â†' Self-Consistency
-   - Does this need expert voice? â†' Persona
-   - Does this need structure? â†' Structured Output
+   - Does this need step-by-step reasoning? → CoT
+   - Does this need examples? → Few-Shot
+   - Does this need multiple attempts? → Self-Consistency
+   - Does this need expert voice? → Persona
+   - Does this need structure? → Structured Output
 
 3. PROMPT CONSTRUCTION
    - Clear instruction first
@@ -7315,10 +4203,10 @@ You are crafting prompts for optimal output. For each prompt:
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 29** (RAG)  -  Context injection
-- **â†' Category 30** (Agents)  -  Agent prompting
-- **â†' Category 31C** (Reasoning)  -  Reasoning prompts
-- **â†' Category 35** (Safety)  -  Safety prompts
+- **→ Category 29** (RAG) — Context injection
+- **→ Category 30** (Agents) — Agent prompting
+- **→ Category 31C** (Reasoning) — Reasoning prompts
+- **→ Category 35** (Safety) — Safety prompts
 
 ---
 
@@ -7330,47 +4218,47 @@ Working memory, episodic memory, semantic memory, procedural memory, memory retr
 ### Memory Type Taxonomy
 
 ```
-â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"
-â"'                 MEMORY ARCHITECTURE                     â"'
-â"œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"¤
-â"'                                                         â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"   â"'
-â"'  â"'            WORKING MEMORY                       â"'   â"'
-â"'  â"'  - Current context window                       â"'   â"'
-â"'  â"'  - Active scratchpad                            â"'   â"'
-â"'  â"'  - Immediate task state                         â"'   â"'
-â"'  â"'  Capacity: Limited (context window)             â"'   â"'
-â"'  â"'  Duration: Current session                      â"'   â"'
-â"'  â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜   â"'
-â"'                         â†'â†"                              â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"   â"'
-â"'  â"'            EPISODIC MEMORY                      â"'   â"'
-â"'  â"'  - Conversation history                         â"'   â"'
-â"'  â"'  - Past interactions                            â"'   â"'
-â"'  â"'  - Specific events and outcomes                 â"'   â"'
-â"'  â"'  Storage: Vector DB, conversation logs          â"'   â"'
-â"'  â"'  Retrieval: Semantic search, recency            â"'   â"'
-â"'  â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜   â"'
-â"'                         â†'â†"                              â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"   â"'
-â"'  â"'            SEMANTIC MEMORY                      â"'   â"'
-â"'  â"'  - Facts and knowledge                          â"'   â"'
-â"'  â"'  - Concepts and relationships                   â"'   â"'
-â"'  â"'  - User preferences and profile                 â"'   â"'
-â"'  â"'  Storage: Knowledge graphs, embeddings          â"'   â"'
-â"'  â"'  Retrieval: Entity lookup, graph traversal      â"'   â"'
-â"'  â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜   â"'
-â"'                         â†'â†"                              â"'
-â"'  â"Œâ"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"   â"'
-â"'  â"'           PROCEDURAL MEMORY                     â"'   â"'
-â"'  â"'  - How to do things                             â"'   â"'
-â"'  â"'  - Skill execution patterns                     â"'   â"'
-â"'  â"'  - Successful approaches                        â"'   â"'
-â"'  â"'  Storage: Skill manifests, pattern library      â"'   â"'
-â"'  â"'  Retrieval: Task matching, skill lookup         â"'   â"'
-â"'  â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜   â"'
-â"'                                                         â"'
-â""â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"˜
+┌─────────────────────────────────────────────────────────┐
+│                 MEMORY ARCHITECTURE                     │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │            WORKING MEMORY                       │   │
+│  │  - Current context window                       │   │
+│  │  - Active scratchpad                            │   │
+│  │  - Immediate task state                         │   │
+│  │  Capacity: Limited (context window)             │   │
+│  │  Duration: Current session                      │   │
+│  └─────────────────────────────────────────────────┘   │
+│                         ↑↓                              │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │            EPISODIC MEMORY                      │   │
+│  │  - Conversation history                         │   │
+│  │  - Past interactions                            │   │
+│  │  - Specific events and outcomes                 │   │
+│  │  Storage: Vector DB, conversation logs          │   │
+│  │  Retrieval: Semantic search, recency            │   │
+│  └─────────────────────────────────────────────────┘   │
+│                         ↑↓                              │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │            SEMANTIC MEMORY                      │   │
+│  │  - Facts and knowledge                          │   │
+│  │  - Concepts and relationships                   │   │
+│  │  - User preferences and profile                 │   │
+│  │  Storage: Knowledge graphs, embeddings          │   │
+│  │  Retrieval: Entity lookup, graph traversal      │   │
+│  └─────────────────────────────────────────────────┘   │
+│                         ↑↓                              │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │           PROCEDURAL MEMORY                     │   │
+│  │  - How to do things                             │   │
+│  │  - Skill execution patterns                     │   │
+│  │  - Successful approaches                        │   │
+│  │  Storage: Skill manifests, pattern library      │   │
+│  │  Retrieval: Task matching, skill lookup         │   │
+│  └─────────────────────────────────────────────────┘   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ### Memory Implementation Patterns
@@ -7480,19 +4368,19 @@ def remember_procedure(task, approach, outcome):
 ```
 CONSOLIDATION PROCESS:
 
-1. WORKING â†' EPISODIC
+1. WORKING → EPISODIC
    - After task completion
    - Store conversation + outcome
    - Tag with metadata
 
-2. EPISODIC â†' SEMANTIC
+2. EPISODIC → SEMANTIC
    - Extract recurring facts
    - Update user model
    - Identify patterns
 
-3. EPISODIC â†' PROCEDURAL
-   - Successful approaches â†' skills
-   - Failed approaches â†' anti-patterns
+3. EPISODIC → PROCEDURAL
+   - Successful approaches → skills
+   - Failed approaches → anti-patterns
    - Update success rates
 ```
 
@@ -7511,7 +4399,7 @@ CONSOLIDATION PROCESS:
 □ User control over memory
 ```
 
-### Agentic Prompt Hook  -  Memory Systems
+### Agentic Prompt Hook — Memory Systems
 
 ```
 You are operating with a structured memory system:
@@ -7544,10 +4432,10 @@ You are operating with a structured memory system:
 ```
 
 ### Cross-Category Dependencies
-- **â†' Category 16** (Vector DB)  -  Embedding storage
-- **â†' Category 26** (Graphs)  -  Knowledge graphs
-- **â†' Category 29** (RAG)  -  Retrieval patterns
-- **â†' Category 31B** (Skills)  -  Procedural memory
+- **→ Category 16** (Vector DB) — Embedding storage
+- **→ Category 26** (Graphs) — Knowledge graphs
+- **→ Category 29** (RAG) — Retrieval patterns
+- **→ Category 31B** (Skills) — Procedural memory
 
 ---
 
@@ -7588,10 +4476,10 @@ You are operating with a structured memory system:
 | 29 | Agentic RAG Systems | AI Systems | v1.0 |
 | 30 | Autonomous Agents | AI Systems | v1.0 |
 | 31 | MCPs & Tool Registries | AI Systems | v1.0 |
-| 31B | **Skills & Capability Packaging** | **AI Systems** | **v1.1 NEW** |
-| 31C | **Agentic Reasoning Loops** | **AI Systems** | **v1.1 NEW** |
-| 31D | **Prompt Engineering Patterns** | **AI Systems** | **v1.1 NEW** |
-| 31E | **Memory Architecture** | **AI Systems** | **v1.1 NEW** |
+| **31B** | **Skills & Capability Packaging** | **AI Systems** | **v1.1 NEW** |
+| **31C** | **Agentic Reasoning Loops** | **AI Systems** | **v1.1 NEW** |
+| **31D** | **Prompt Engineering Patterns** | **AI Systems** | **v1.1 NEW** |
+| **31E** | **Memory Architecture** | **AI Systems** | **v1.1 NEW** |
 | 32 | Model Fine-Tuning & Training | AI Systems | v1.0 |
 | 33 | Model Serving & Inference | AI Systems | v1.0 |
 | 34 | LLM Routing & Orchestration | AI Systems | v1.0 |
@@ -7626,12 +4514,12 @@ You are operating with a structured memory system:
 
 | Loop | Pattern | Best For |
 |------|---------|----------|
-| **RALPH** | Reasonâ†'Actâ†'Learnâ†'Planâ†'Hypothesize | General complex tasks |
-| **ReAct** | Thoughtâ†'Actionâ†'Observation | Simple tool use |
-| **ReWOO** | Plan allâ†'Execute allâ†'Synthesize | Parallel execution |
-| **Reflexion** | Attemptâ†'Evaluateâ†'Reflectâ†'Retry | Quality-critical output |
-| **Tree of Thought** | Branchâ†'Evaluateâ†'Pruneâ†'Expand | Exploring solutions |
-| **OODA** | Observeâ†'Orientâ†'Decideâ†'Act | Dynamic environments |
+| **RALPH** | Reason→Act→Learn→Plan→Hypothesize | General complex tasks |
+| **ReAct** | Thought→Action→Observation | Simple tool use |
+| **ReWOO** | Plan all→Execute all→Synthesize | Parallel execution |
+| **Reflexion** | Attempt→Evaluate→Reflect→Retry | Quality-critical output |
+| **Tree of Thought** | Branch→Evaluate→Prune→Expand | Exploring solutions |
+| **OODA** | Observe→Orient→Decide→Act | Dynamic environments |
 
 ---
 
@@ -7686,10 +4574,6 @@ You are operating with a structured memory system:
 | **1.1** | **January 2026** | **Added: Skills (31B), Reasoning Loops (31C), Prompt Patterns (31D), Memory Architecture (31E)** |
 
 ---
-## Appendix: GTM Roadmap
-Pre-launch polish (1-2 weeks), GitHub release v1.0, X threads (#AIBuilders), Reddit posts (r/ClaudeAI), Dev.to articles.
-
----
 
 # FRAMEWORK INTEGRATION POINTS
 
@@ -7698,15 +4582,15 @@ Pre-launch polish (1-2 weeks), GitHub release v1.0, X threads (#AIBuilders), Red
 The following sections are designed as **extension points** where custom frameworks, methodologies, or domain-specific patterns can be integrated:
 
 ### Extension Point 1: Custom Skills
-**Location:** Category 31B  -  Skills & Capability Packaging
+**Location:** Category 31B — Skills & Capability Packaging
 **How to Integrate:** Create skill manifests in `/mnt/skills/user/` following the skill architecture defined. Your personal frameworks become invocable skills.
 
 ### Extension Point 2: Custom Reasoning Patterns
-**Location:** Category 31C  -  Agentic Reasoning Loops
+**Location:** Category 31C — Agentic Reasoning Loops
 **How to Integrate:** Define your reasoning methodology using the loop template. Add to the Loop Selection Guide.
 
 ### Extension Point 3: Custom Prompt Libraries
-**Location:** Category 31D  -  Prompt Engineering Patterns
+**Location:** Category 31D — Prompt Engineering Patterns
 **How to Integrate:** Add your prompt patterns to the pattern library. Document trigger phrases and use cases.
 
 ### Extension Point 4: Domain-Specific Categories
@@ -7719,7 +4603,7 @@ The following sections are designed as **extension points** where custom framewo
 - Cross-category dependencies
 
 ### Extension Point 5: Build Pattern Templates
-**Location:** Framework Usage Guide â†' Build Pattern Templates
+**Location:** Framework Usage Guide → Build Pattern Templates
 **How to Integrate:** Define your project archetypes as category combinations with required quality gates.
 
 ---
@@ -7738,16 +4622,16 @@ This Master Build Framework pairs with the **North Star Blueprint v5.0** for com
 | Skill manifest templates | Load balancing strategies |
 
 **Key NS Sections for MBF Users:**
-- **NS Section 0:** Agentic Bootstrap Protocol  -  How to start
-- **NS Section 17:** Confidence Calibration  -  When to escalate
-- **NS Section 18:** Autonomy Dial  -  Setting control level
-- **NS Section 23:** Handoff Protocols  -  Session continuity
-- **NS Part IV:** AI Orchestration  -  Complete agent methodology
+- **NS Section 0:** Agentic Bootstrap Protocol — How to start
+- **NS Section 17:** Confidence Calibration — When to escalate
+- **NS Section 18:** Autonomy Dial — Setting control level
+- **NS Section 23:** Handoff Protocols — Session continuity
+- **NS Part IV:** AI Orchestration — Complete agent methodology
 
 **Navigation:** Use **BRIDGE.md** to route between frameworks efficiently.
 
 ---
 
-*End of Framework v1.1  -  January 2026*
+*End of Framework v1.1 — January 2026*
 *Patched with Skills, Reasoning, Prompts, Memory Architecture*
-*Part of the unified NS + MBF ecosystem  -  see BRIDGE.md for navigation*
+*Part of the unified NS + MBF ecosystem — see BRIDGE.md for navigation*

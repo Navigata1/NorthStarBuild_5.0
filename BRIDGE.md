@@ -1,774 +1,971 @@
-# BRIDGE.md â€” Navigation Layer
-## Connecting North Star Blueprint + Master Build Framework
+# BRIDGE.MD — Framework Navigation & Integration Guide
+
+## The Navigation Layer for NS + MBF
 
 ---
 
 ```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                                                                              â”‚
-â”‚                              BRIDGE.md v1.1                                  â”‚
-â”‚                                                                              â”‚
-â”‚                    The Navigation Layer for North Star                       â”‚
-â”‚                                                                              â”‚
-â”‚                          â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€                                    â”‚
-â”‚                                                                              â”‚
-â”‚           "Don't read everything. Navigate to what you need."                â”‚
-â”‚                                                                              â”‚
-â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”    â”‚
-â”‚  â”‚  North Star Blueprint v5.0  â†â€”â€”â€” BRIDGE.md â€”â€”â€”â†’  Master Build v1.1 â”‚    â”‚
-â”‚  â”‚       (HOW to build)        (Navigation)      (WHAT to build with)  â”‚    â”‚
-â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜    â”‚
-â”‚                                                                              â”‚
-â”‚  LICENSE: CC BY-NC-SA 4.0                                                   â”‚
-â”‚  For commercial licensing: See repository for contact information           â”‚
-â”‚                                                                              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                              BRIDGE.MD                                       ║
+║                                                                              ║
+║              Navigation Layer for the Unified Framework Ecosystem            ║
+║                                                                              ║
+║                          ────────────────                                    ║
+║                                                                              ║
+║         "Know where to look. Reference what you need. Build quality."        ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-# SECTION 1: DOCUMENT HIERARCHY & READING ORDER
+## 1. DOCUMENT HIERARCHY & READING ORDER
+
+### 1.1 The Documentation Ecosystem
 
 ```
-FOR A NEW PROJECT:
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-1. NORTH_STAR_BOOTSTRAP.md  â†’ Ignition key (start here)
-2. BRIDGE.md                â†’ Navigation (this document)
-3. NS Section 0             â†’ Bootstrap protocol
-4. Generate claude.md       â†’ Project-specific guide
-5. Reference NS/MBF on demand via this BRIDGE.md
-
-
-FOR AN EXISTING PROJECT:
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-1. claude.md       â†’ Current project state (entry point)
-2. BRIDGE.md       â†’ Navigate to what you need
-3. NS/MBF sections â†’ On demand
-
-
-FOR RETURNING TO A PAUSED SESSION:
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-1. claude.md       â†’ Check current state, handoff notes
-2. Continue work   â†’ Reference NS/MBF via BRIDGE.md as needed
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     DOCUMENTATION HIERARCHY                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  LAYER 1: ENTRY POINTS                                                       │
+│  ═══════════════════════════════════════════════════════════════════════    │
+│                                                                              │
+│      ┌─────────────┐         ┌─────────────┐                                │
+│      │  README.md  │────────►│  BRIDGE.md  │                                │
+│      │  "What is   │         │  "How do    │                                │
+│      │   this?"    │         │  pieces     │                                │
+│      └─────────────┘         │  connect?"  │                                │
+│                              └──────┬──────┘                                │
+│                                     │                                        │
+│  LAYER 2: CORE FRAMEWORKS           │                                        │
+│  ═══════════════════════════════════│════════════════════════════════════   │
+│                                     │                                        │
+│            ┌────────────────────────┴────────────────────────┐              │
+│            │                                                  │              │
+│            ▼                                                  ▼              │
+│  ┌─────────────────────┐                        ┌─────────────────────┐     │
+│  │  NORTH STAR v5.0    │                        │  MASTER BUILD v1.1  │     │
+│  │                     │                        │                     │     │
+│  │  HOW to build       │                        │  WHAT to build      │     │
+│  │  • Methodology      │                        │  • 60 categories    │     │
+│  │  • Orchestration    │                        │  • Technology stacks│     │
+│  │  • Quality gates    │                        │  • Tool matrices    │     │
+│  │  • Context mgmt     │                        │  • Build patterns   │     │
+│  │  • Handoffs         │                        │                     │     │
+│  └─────────────────────┘                        └─────────────────────┘     │
+│            │                                                  │              │
+│            └────────────────────────┬────────────────────────┘              │
+│                                     │                                        │
+│  LAYER 3: PROJECT-SPECIFIC          │                                        │
+│  ═══════════════════════════════════│════════════════════════════════════   │
+│                                     │                                        │
+│                                     ▼                                        │
+│                        ┌─────────────────────┐                              │
+│                        │     claude.md       │                              │
+│                        │                     │                              │
+│                        │  YOUR project's     │                              │
+│                        │  persistent guide   │                              │
+│                        │                     │                              │
+│                        │  Points back to:    │                              │
+│                        │  • BRIDGE.md        │                              │
+│                        │  • NS sections      │                              │
+│                        │  • MBF categories   │                              │
+│                        └─────────────────────┘                              │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
----
-
-# SECTION 2: PURPOSE & RELATIONSHIP
-
-## What This Document Is
-
-BRIDGE.md is the **navigation layer** between the two core framework documents. It tells you where to go based on what you need, without requiring you to read either document in full.
-
-## The HOW vs WHAT Distinction
-
-| Document | Provides | Size | When to Reference |
-|----------|----------|------|-------------------|
-| **North Star Blueprint v5.0** | HOW to build | ~910KB | Methodology, process, quality gates |
-| **Master Build Framework v1.1** | WHAT to build with | ~158KB | Technology selection, tool matrices |
-
-**Rule:** Reference on demand. Never load both fully into context simultaneously.
-
----
-
-# SECTION 3: QUICK DECISION TREE
+### 1.2 Reading Order by Scenario
 
 ```
-"I need to..." â†’ Go here
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+SCENARIO A: NEW USER / FIRST TIME
+─────────────────────────────────────────────────────────────────────────────
+1. README.md           → Understand what this framework ecosystem is
+2. BRIDGE.md           → Learn how pieces connect (you are here)
+3. NS Section 0        → Agentic Bootstrap Protocol (how to start)
+4. Generate claude.md  → Your project's persistent guide
+5. Reference NS/MBF    → On demand via BRIDGE.md routing
 
-START A PROJECT
-â”œâ”€ "How do I begin?"                    â†’ NS Section 0 (Bootstrap)
-â”œâ”€ "What tier is my project?"           â†’ NS Section 2 (Project Tiers)
-â””â”€ "What should my claude.md contain?"  â†’ NS Section 0.2 (Templates)
+SCENARIO B: STARTING A NEW PROJECT
+─────────────────────────────────────────────────────────────────────────────
+1. BRIDGE.md           → Navigate to what you need
+2. NS Section 0.2      → Generate claude.md from template
+3. NS Section 2        → Determine project tier (Space/Sky/Foundation)
+4. MBF Build Patterns  → Identify category combinations for your project
+5. NS Section 11       → Begin first vertical slice
 
-CHOOSE TECHNOLOGY
-â”œâ”€ "What database should I use?"        â†’ MBF Category 15-17
-â”œâ”€ "What frontend framework?"           â†’ MBF Category 1-2
-â”œâ”€ "What backend framework?"            â†’ MBF Category 7-8
-â”œâ”€ "What AI/LLM provider?"              â†’ MBF Category 33 + NS Section 13
-â”œâ”€ "What vector database?"              â†’ MBF Category 16
-â””â”€ "What auth provider?"                â†’ MBF Category 50
+SCENARIO C: RETURNING TO EXISTING PROJECT
+─────────────────────────────────────────────────────────────────────────────
+1. claude.md           → Check current state, recent work, next actions
+2. HANDOFF.md          → If exists, review session handoff notes
+3. Continue work       → Reference NS/MBF via BRIDGE.md as needed
 
-BUILD FEATURES
-â”œâ”€ "How do I structure my code?"        â†’ NS Part VIII (Code Architecture)
-â”œâ”€ "How do I design the UI?"            â†’ NS Part VII (Design System)
-â”œâ”€ "How do I add authentication?"       â†’ NS Part X + MBF Category 50
-â”œâ”€ "How do I build an API?"             â†’ NS Section 41 + MBF Category 8
-â””â”€ "How do I add payments?"             â†’ MBF Category 49
+SCENARIO D: PICKING UP PAUSED SESSION
+─────────────────────────────────────────────────────────────────────────────
+1. claude.md           → "Current State" section
+2. HANDOFF.md          → Detailed context from pause point
+3. NS Section 0.5      → Deviation & Pause Protocol if issues remain
+4. Resume execution    → From documented checkpoint
 
-WORK WITH AI/AGENTS
-â”œâ”€ "How do I build RAG?"                â†’ MBF Category 29 + NS Part IV
-â”œâ”€ "How do I build agents?"             â†’ MBF Categories 30-31 + NS Part V
-â”œâ”€ "How do I add guardrails?"           â†’ MBF Category 35
-â”œâ”€ "How do I evaluate LLM outputs?"     â†’ MBF Category 46 (AI Evaluation)
-â”œâ”€ "How do I manage prompts?"           â†’ MBF Category 44B (PromptOps)      â† v1.1
-â”œâ”€ "How do I manage long contexts?"     â†’ NS Section 19B (RLM Patterns)     â† v1.1
-â””â”€ "How do I prevent runaway loops?"    â†’ NS Section 19B (Confidence Cal.)  â† v1.1
-
-HUMAN-AI COLLABORATION                                                        â† v1.1
-â”œâ”€ "How do I build human-AI workflows?" â†’ MBF Category 44A (Kanban)
-â”œâ”€ "How do I add approval checkpoints?" â†’ MBF Category 44A + NS Section 19B
-â”œâ”€ "How do I route by confidence?"      â†’ MBF Category 44A + NS Section 17
-â””â”€ "What tools for HITL patterns?"      â†’ MBF Category 44A (Trigger.dev, LangGraph)
-
-TEST & QUALITY
-â”œâ”€ "How do I test?"                     â†’ NS Part IX + MBF Category 46
-â”œâ”€ "What testing tools?"                â†’ MBF Category 46
-â”œâ”€ "How do I test AI/LLM systems?"      â†’ MBF Category 46 (AI Evaluation)
-â””â”€ "What coverage should I target?"     â†’ NS Section 43
-
-SECURITY
-â”œâ”€ "How do I secure my app?"            â†’ NS Part X + MBF Categories 50-53
-â”œâ”€ "How do I handle secrets?"           â†’ MBF Category 53
-â””â”€ "What about compliance?"             â†’ MBF Category 56
-
-DEPLOY & OPERATE
-â”œâ”€ "How do I deploy?"                   â†’ NS Part XI + MBF Category 43
-â”œâ”€ "What hosting should I use?"         â†’ MBF Categories 9-10
-â”œâ”€ "How do I monitor?"                  â†’ MBF Category 55
-â””â”€ "How do I set up CI/CD?"             â†’ MBF Category 43
-
-WORKFLOW & ORCHESTRATION
-â”œâ”€ "How do I orchestrate workflows?"    â†’ MBF Category 44
-â”œâ”€ "How do I add human checkpoints?"    â†’ MBF Category 44A (Kanban)         â† v1.1
-â”œâ”€ "How do I version prompts?"          â†’ MBF Category 44B (PromptOps)      â† v1.1
-â””â”€ "What about browser automation?"     â†’ MBF Category 45
-
-GO-TO-MARKET                                                                  â† v1.1
-â”œâ”€ "How do I position this framework?"  â†’ BRIDGE Section 11 (GTM)
-â”œâ”€ "What communities should I target?"  â†’ BRIDGE Section 11 (GTM)
-â””â”€ "What's the launch checklist?"       â†’ BRIDGE Section 11 (GTM)
-
-STUCK OR LOST
-â”œâ”€ "I don't know where to start"        â†’ NS Section 0.5 (When Stuck)
-â”œâ”€ "I'm overwhelmed"                    â†’ NS Section 0.4 (Load Balancing)
-â””â”€ "Nothing is working"                 â†’ NS Section 0.5 + Part IX
+SCENARIO E: AI AGENT RECEIVING THESE DOCS
+─────────────────────────────────────────────────────────────────────────────
+1. BRIDGE.md           → Understand document relationships
+2. NS Section 0.1      → Quick-Start Directive (CRITICAL)
+3. NS Section 0.4      → Load Balancing (DON'T consume everything)
+4. Generate claude.md  → Project-specific lightweight guide
+5. Reference on demand → Use BRIDGE.md to find what you need
 ```
 
 ---
 
-# SECTION 4: THE TWO FRAMEWORKS AT A GLANCE
+## 2. PURPOSE & RELATIONSHIP
+
+### 2.1 What is BRIDGE.md?
+
+BRIDGE.md is the **navigation layer** that connects two comprehensive frameworks into a unified ecosystem. It doesn't duplicate content — it routes you to the right place. Think of it as the index, the map, and the traffic controller.
+
+**BRIDGE.md answers:** "Where do I look for X?" 
+**NS answers:** "How do I do X?"
+**MBF answers:** "What tools/options exist for X?"
+
+### 2.2 The Two Frameworks: HOW vs WHAT
 
 ```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                    NORTH STAR BLUEPRINT v5.0                                 â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                              â”‚
-â”‚  STRUCTURE: 14 Parts, ~65 Sections                                          â”‚
-â”‚                                                                              â”‚
-â”‚  Part I     â†’ Foundation & Philosophy                                       â”‚
-â”‚  Part II    â†’ Project Classification & Tiers                                â”‚
-â”‚  Part III   â†’ Context & Memory Architecture                                 â”‚
-â”‚  Part IV    â†’ Orchestration & Control Flow                                  â”‚
-â”‚  Part V     â†’ Agent Composition & Multi-Agent                               â”‚
-â”‚  Part VI    â†’ Tool Integration & MCP                                        â”‚
-â”‚  Part VII   â†’ Design System & UI/UX                                         â”‚
-â”‚  Part VIII  â†’ Code Architecture & Patterns                                  â”‚
-â”‚  Part IX    â†’ Testing & Verification                                        â”‚
-â”‚  Part X     â†’ Security & Authentication                                     â”‚
-â”‚  Part XI    â†’ DevOps & Deployment                                           â”‚
-â”‚  Part XII   â†’ Operational Excellence                                        â”‚
-â”‚  Part XIII  â†’ Special Domains                                               â”‚
-â”‚  Part XIV   â†’ Human-Agent Collaboration                                     â”‚
-â”‚                                                                              â”‚
-â”‚  FOCUS: Methodology, process, quality gates, decision frameworks            â”‚
-â”‚                                                                              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    THE FUNDAMENTAL DISTINCTION                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  NORTH STAR BLUEPRINT v5.0                MASTER BUILD FRAMEWORK v1.1       │
+│  ══════════════════════════               ═══════════════════════════       │
+│                                                                              │
+│  Answers: HOW to build                    Answers: WHAT to build with       │
+│                                                                              │
+│  Contains:                                Contains:                          │
+│  • Methodology & philosophy              • 60 technology categories          │
+│  • Quality gates & standards             • Exhaustive tool matrices          │
+│  • AI orchestration patterns             • Stack selection guides            │
+│  • Context engineering                   • Build pattern combinations        │
+│  • Confidence calibration                • Reasoning loop definitions        │
+│  • Handoff protocols                     • Skill manifest templates          │
+│  • Load balancing strategies             • Cross-category dependencies       │
+│                                                                              │
+│  Size: 883 KB, 59 sections               Size: ~180 KB, 60 categories       │
+│                                                                              │
+│  Use when you need:                      Use when you need:                  │
+│  • Process guidance                      • Technology options                │
+│  • Quality assurance                     • Tool comparisons                  │
+│  • Orchestration patterns                • Stack decisions                   │
+│  • Session management                    • Category combinations             │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                    MASTER BUILD FRAMEWORK v1.1                               â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                              â”‚
-â”‚  STRUCTURE: 9 Tiers, 60+ Categories                                         â”‚
-â”‚                                                                              â”‚
-â”‚  Tier 1 (1-6)    â†’ Frontend & UI                                           â”‚
-â”‚  Tier 2 (7-14)   â†’ Backend & Infrastructure                                â”‚
-â”‚  Tier 3 (15-22)  â†’ Data & Storage                                          â”‚
-â”‚  Tier 4 (23-28)  â†’ Integration & Processing                                â”‚
-â”‚  Tier 5 (29-35)  â†’ AI & Machine Learning                                   â”‚
-â”‚  Tier 6 (36-42)  â†’ Content Generation                                      â”‚
-â”‚  Tier 7 (43-49)  â†’ Operations & Business                                   â”‚
-â”‚  Tier 8 (50-56)  â†’ Security & Compliance                                   â”‚
-â”‚  Tier 9 (57-60)  â†’ Specialized & Niche                                     â”‚
-â”‚                                                                              â”‚
-â”‚  NEW in v1.1:                                                               â”‚
-â”‚  â€¢ Category 44A â†’ Kanban & Visual Task Management (HITL)                   â”‚
-â”‚  â€¢ Category 44B â†’ PromptOps (Prompt Versioning & Management)               â”‚
-â”‚                                                                              â”‚
-â”‚  FOCUS: Technology options, tool comparisons, stack selection               â”‚
-â”‚                                                                              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+### 2.3 Why Both?
+
+Neither framework is complete alone:
+
+- **NS without MBF:** Knows HOW to build but must guess WHAT tools exist
+- **MBF without NS:** Knows WHAT tools exist but lacks orchestration, handoffs, load balancing
+- **NS + MBF via BRIDGE:** Complete ecosystem — methodology meets technology
+
+---
+
+## 3. QUICK DECISION TREE
+
+### "I need to..." → Go here:
+
+```
+QUICK ROUTING — COMMON SCENARIOS
+─────────────────────────────────────────────────────────────────────────────
+
+STARTING & PLANNING
+─────────────────────────────────────────────────────────────────────────────
+"Start a new project"
+→ NS Section 0 (Agentic Bootstrap) + NS Section 2 (Tier System)
+
+"Figure out what technologies to use"
+→ MBF relevant tier (1-8) + NS Section 38 (Selection Principles)
+
+"Determine project complexity tier"
+→ NS Section 2 (Space/Sky/Foundation)
+
+"Create project documentation structure"
+→ NS Section 0.3 (Documentation Orchestration)
+
+"Generate a claude.md file"
+→ NS Section 0.2 (Template)
+
+
+BUILDING & IMPLEMENTING
+─────────────────────────────────────────────────────────────────────────────
+"Build my first feature"
+→ NS Section 11 (Vertical Slice Methodology)
+
+"Choose a frontend framework"
+→ MBF Category 1 (Web Applications)
+
+"Choose a database"
+→ MBF Categories 15-21 (Data Tier) + NS Section 40 (Database Patterns)
+
+"Implement authentication"
+→ NS Section 47 (Auth Patterns) + MBF Category 50 (Identity)
+
+"Set up CI/CD"
+→ NS Section 50 (Pipeline Architecture) + MBF Category 43 (CI/CD)
+
+
+AI & AGENT DEVELOPMENT
+─────────────────────────────────────────────────────────────────────────────
+"Work with AI models"
+→ NS Part IV (Sections 13-19) + MBF Categories 29-35
+
+"Choose a reasoning loop (RALPH, ReAct, etc.)"
+→ MBF Category 31C (Agentic Reasoning Loops)
+
+"Build an autonomous agent"
+→ MBF Category 30 (Autonomous Agents) + NS Part V (Agent Composition)
+
+"Implement RAG"
+→ MBF Category 29 (Agentic RAG) + MBF Category 16 (Vector DBs)
+
+"Define agent skills/capabilities"
+→ MBF Category 31B (Skills & Capability Packaging)
+
+
+QUALITY & PROCESS
+─────────────────────────────────────────────────────────────────────────────
+"Write tests"
+→ NS Part IX (Sections 42-45) + MBF Category 46
+
+"Implement security"
+→ NS Part X (Sections 46-49) + MBF Categories 50-53
+
+"Design UI/UX"
+→ NS Part VII (Sections 28-36) + MBF Categories 1-7
+
+"Handle deployment"
+→ NS Part XI (Sections 50-53) + MBF Categories 43-44
+
+
+ORCHESTRATION & MANAGEMENT
+─────────────────────────────────────────────────────────────────────────────
+"Manage context window"
+→ NS Section 16 (Context Engineering Protocol)
+
+"Calibrate confidence levels"
+→ NS Section 17 (Confidence Calibration Engine)
+
+"Set autonomy level"
+→ NS Section 18 (Autonomy Dial System)
+
+"Hand off a session"
+→ NS Section 23 + NS Section 0.6 (Handoff Protocols)
+
+"Work effectively with AI agents"
+→ NS Part XIV (Human-Agent Collaboration) — Complete operational guide
+
+"Optimize agent efficiency"
+→ NS Part XIV Section 14.5 (Tool Call Efficiency)
+
+"Enable agent self-healing"
+→ NS Part XIV Section 14.6 (Self-Healing Implementation)
+
+
+WHEN STUCK
+─────────────────────────────────────────────────────────────────────────────
+"Uncertain how to proceed"
+→ NS Section 0.5 (Deviation & Pause Protocol)
+
+"Need to pause/break"
+→ NS Section 0.5 (Scenario 3) + NS Section 0.6 (Handoff Format)
+
+"Want to deviate from recommendations"
+→ NS Section 0.5 (Scenario 2)
+
+"Something feels wrong"
+→ NS Section 0.5 (Scenario 4)
 ```
 
 ---
 
-# SECTION 5: CROSS-REFERENCE MATRIX
+## 4. THE TWO FRAMEWORKS AT A GLANCE
 
-## Complete NS â†” MBF Mapping
+### 4.1 Comparison Table
 
-### Foundation & Setup
+| Dimension | North Star v5.0 | Master Build v1.1 |
+|-----------|-----------------|-------------------|
+| **Core Question** | "How do I build this well?" | "What can I build this with?" |
+| **Structure** | 13 Parts, 59 Sections | 8 Tiers, 60 Categories |
+| **Size** | 883 KB | ~180 KB |
+| **Primary Content** | Methodology, orchestration, patterns | Technology matrices, tool options |
+| **Agent Readiness** | High (self-bootstrapping Section 0) | Medium (prompt hooks per category) |
+| **Load Balancing** | Built-in (Section 0.4) | Not addressed |
+| **Handoffs** | Comprehensive (Section 0.6, 23) | Not addressed |
+| **Confidence Calibration** | Yes (Section 17) | Not addressed |
+| **Technology Depth** | Principles, not exhaustive lists | Exhaustive tool matrices |
+| **Build Patterns** | Quality-focused | Category combinations |
 
-```
-NS Part I (Foundation)                â†â†’  MBF Overview
-â”œâ”€ NS Section 0: Bootstrap            â†â†’  MBF Build Patterns
-â”œâ”€ NS Section 1: Philosophy           â†â†’  (No MBF equivalent)
-â””â”€ NS Section 2: Project Tiers        â†â†’  MBF Tier Selection
-```
+### 4.2 Strengths of Each
 
-### AI & Agents
+**North Star v5.0 Excels At:**
+- Bootstrapping agents effectively
+- Managing cognitive/context load
+- Quality gates and standards
+- Session continuity and handoffs
+- Confidence and autonomy calibration
+- Design specifications (animation, UX)
 
-```
-NS Part III (Context/Memory)          â†â†’  MBF Tier 5 (AI/ML)
-â”œâ”€ NS Section 13: Model Intelligence  â†â†’  MBF 33: Model Providers
-â”œâ”€ NS Section 14: Prompt Engineering  â†â†’  MBF 34: Prompt Tools
-â”œâ”€ NS Section 15: Tool Schemas        â†â†’  MBF 31: Tool Frameworks
-â”œâ”€ NS Section 16: Context Engineering â†â†’  MBF 29: RAG Systems
-â”œâ”€ NS Section 17: Confidence          â†â†’  MBF 44A: Kanban (routing)      â† v1.1
-â”œâ”€ NS Section 19B: RLM Patterns       â†â†’  MBF 31, 44A (context mgmt)     â† v1.1
-â””â”€ NS Section 20: Memory Architecture â†â†’  MBF 31E: Memory Systems
+**Master Build v1.1 Excels At:**
+- Exhaustive technology coverage
+- Tool selection and comparison
+- Build target variety (mobile, desktop, embedded)
+- Content generation pipelines
+- Reasoning loop definitions
+- Skill manifest structures
 
-NS Part IV (Orchestration)            â†â†’  MBF Tier 5 + Tier 7
-â”œâ”€ NS Section 21: Control Flow        â†â†’  MBF 30: Agent Frameworks
-â”œâ”€ NS Section 22: Error Handling      â†â†’  MBF 30: Error patterns
-â””â”€ NS Section 23: State Management    â†â†’  MBF 44: Workflow Orchestration
+---
 
-NS Part V (Agent Composition)         â†â†’  MBF Categories 29-35
-â”œâ”€ NS Section 24: MCP Integration     â†â†’  MBF 31: MCP Tools
-â”œâ”€ NS Section 25: Multi-Agent         â†â†’  MBF 30: Multi-agent frameworks
-â””â”€ NS Section 26: Agent Patterns      â†â†’  MBF 30-31: Implementation
-```
+## 5. CROSS-REFERENCE MATRIX
 
-### Workflow & Human-AI Collaboration (v1.1)
-
-```
-WORKFLOW & ORCHESTRATION DOMAIN
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-NS Section 17 (Confidence)            â†â†’  MBF 44A: Confidence-based routing
-NS Section 19B (RLM Patterns)         â†â†’  MBF 44A: HITL checkpoints
-NS Part V (Agent Composition)         â†â†’  MBF 44A: Agent task contracts
-NS Part IV (Orchestration)            â†â†’  MBF 44: Workflow engines
-(Prompt Management)                   â†â†’  MBF 44B: PromptOps
-
-MBF 44A (Kanban) connects to:
-â”œâ”€ NS Section 17 (Confidence calibration)
-â”œâ”€ NS Section 19B (RLM context management)
-â”œâ”€ NS Part V (Agent execution layer)
-â””â”€ MBF 44 (Workflow orchestration layer)
-
-MBF 44B (PromptOps) connects to:
-â”œâ”€ NS Section 14 (Prompt engineering methodology)
-â”œâ”€ MBF 34 (Prompt tools)
-â”œâ”€ MBF 46 (Evaluation & regression testing)
-â””â”€ MBF 29-35 (AI systems using prompts)
-```
-
-### Data & Storage
+### 5.1 Complete NS ↔ MBF Mapping
 
 ```
-NS Part III (Context)                 â†â†’  MBF Tier 3 (Data)
-â”œâ”€ NS Section 16: Context Engineering â†â†’  MBF 15-17: Databases
-â”œâ”€ NS Section 20: Memory              â†â†’  MBF 16: Vector DBs
-â””â”€ NS Section 38: Tech Selection      â†â†’  MBF 15-22: All data categories
+CROSS-REFERENCE MATRIX — ORGANIZED BY DOMAIN
+─────────────────────────────────────────────────────────────────────────────
 
-DATA OPERATIONS (v1.1 Enhanced)
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-(Data Versioning)                     â†â†’  MBF 27: DVC, lakeFS integration
-(Data Quality)                        â†â†’  MBF 27: dbt, Great Expectations
-(Feature Stores)                      â†â†’  MBF 28: Feast, Tecton
-```
+AI & AGENTS
+─────────────────────────────────────────────────────────────────────────────
+NS Part IV: AI Orchestration          ←→  MBF Categories 29-35 (AI Systems)
+├─ NS Section 13: Model Intelligence  ←→  MBF 33: Model Serving
+├─ NS Section 14: Core 4 Primitives   ←→  MBF 31: MCPs & Tool Registries
+├─ NS Section 15: Tool Hierarchy      ←→  MBF 31: MCPs & Tool Registries
+├─ NS Section 16: Context Engineering ←→  MBF 31E: Memory Architecture
+├─ NS Section 17: Confidence          ←→  MBF 35: AI Safety & Guardrails
+├─ NS Section 18: Autonomy Dial       ←→  MBF 30: Autonomous Agents
+└─ NS Section 19: Multi-Model         ←→  MBF 34: LLM Routing & Orchestration
 
-### Frontend & Design
+NS Part V: Agent Composition          ←→  MBF Categories 31B-31E (v1.1)
+├─ NS Section 20: Memory Architecture ←→  MBF 31E: Memory Architecture
+├─ NS Section 21: Skills & Sub-Agents ←→  MBF 31B: Skills & Capability
+├─ NS Section 22: Verification        ←→  MBF 31C: Agentic Reasoning Loops
+└─ NS Section 23: Handoffs            ←→  (No MBF equivalent)
 
-```
-NS Part VII (Design System)           â†â†’  MBF Tier 1 (Frontend)
-â”œâ”€ NS Section 27: Visual Language     â†â†’  MBF 3: CSS Frameworks
-â”œâ”€ NS Section 28: Component Systems   â†â†’  MBF 5: Component Libraries
-â”œâ”€ NS Section 29: Interaction         â†â†’  MBF 4: Animation (GSAP, Framer)
-â”œâ”€ NS Section 30: Animation Specs     â†â†’  MBF 4: Animation libraries
-â””â”€ NS Section 35: Accessibility       â†â†’  MBF 56: Compliance (a11y)
-```
+NS Part VI: MCP & Tools               ←→  MBF Category 31 (MCPs)
+├─ NS Section 24: MCP Power Tools     ←→  MBF 31: MCPs & Tool Registries
+├─ NS Section 25: MCP-First           ←→  MBF 31: MCPs & Tool Registries
+├─ NS Section 26: Voice Workflows     ←→  MBF 47: Conversational & Voice
+└─ NS Section 27: IDE Routing         ←→  MBF 14: Platform Engineering
 
-### Testing & Quality
 
-```
-NS Part IX (Testing)                  â†â†’  MBF Category 46
-â”œâ”€ NS Section 42: Testing Philosophy  â†â†’  MBF 46: Testing strategies
-â”œâ”€ NS Section 43: Coverage            â†â†’  MBF 46: Testing tools
-â”œâ”€ NS Section 44: Testing Patterns    â†â†’  MBF 46: Testing patterns
-â””â”€ NS Section 45: Test Infrastructure â†â†’  MBF 46: Testing infrastructure
+DEVELOPMENT & CODE
+─────────────────────────────────────────────────────────────────────────────
+NS Part VIII: Code Architecture       ←→  MBF Tier 1-2 (Build Targets, Compute)
+├─ NS Section 37: Architecture        ←→  MBF 1-7: Build Target Selection
+├─ NS Section 38: Tech Stack          ←→  MBF 1-14: All technology matrices
+├─ NS Section 39: Code Organization   ←→  MBF 1: Web Applications (structure)
+├─ NS Section 40: Database Patterns   ←→  MBF 15-21: Data & Persistence Tier
+└─ NS Section 41: API Design          ←→  MBF 8: APIs & Backend Services
 
-AI/LLM EVALUATION (v1.1 Enhanced)
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-(LLM Evaluation)                      â†â†’  MBF 46: DeepEval, RAGAS metrics
-(Prompt Testing)                      â†â†’  MBF 46 + 44B: Regression testing
-(AI Quality Gates)                    â†â†’  MBF 46: Evaluation pipelines
-```
 
-### Security & Compliance
+DATA & PERSISTENCE
+─────────────────────────────────────────────────────────────────────────────
+NS Section 40: Database Patterns      ←→  MBF Tier 3: Data & Persistence
+                                      ├─  MBF 15: Relational Databases
+                                      ├─  MBF 16: Vector Databases
+                                      ├─  MBF 17: Document & NoSQL
+                                      ├─  MBF 18: Local-First & Offline
+                                      ├─  MBF 19: Object Storage
+                                      ├─  MBF 20: Data Warehousing
+                                      └─  MBF 21: Search Engines
 
-```
-NS Part X (Security)                  â†â†’  MBF Tier 8 (Security)
-â”œâ”€ NS Section 46: Security-First      â†â†’  MBF 52: Security & Encryption
-â”œâ”€ NS Section 47: Authentication      â†â†’  MBF 50: Auth Providers
-â”œâ”€ NS Section 48: Authorization       â†â†’  MBF 50: Auth Providers
-â””â”€ NS Section 49: Data Protection     â†â†’  MBF 53: Secrets Management
 
-AI SAFETY (v1.1 Enhanced)
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-(AI Guardrails)                       â†â†’  MBF 35: Guardrails deep dive
-(Input/Output validation)             â†â†’  MBF 35: NeMo, Guardrails AI
-(Adversarial defense)                 â†â†’  MBF 35: Prompt injection prevention
-```
+DESIGN & UX
+─────────────────────────────────────────────────────────────────────────────
+NS Part VII: Design Mastery           ←→  MBF Tier 1 (Build Targets)
+├─ NS Section 28: Design Philosophy   ←→  MBF 1-5: UI considerations
+├─ NS Section 29: Animation Pyramid   ←→  (No MBF equivalent - NS deeper)
+├─ NS Section 30: Animation Specs     ←→  (No MBF equivalent - NS deeper)
+├─ NS Section 31: Easings & Durations ←→  (No MBF equivalent - NS deeper)
+├─ NS Section 32: Micro-Interactions  ←→  (No MBF equivalent - NS deeper)
+├─ NS Section 33: Loading States      ←→  (No MBF equivalent - NS deeper)
+├─ NS Section 34: Space Tier UX       ←→  (No MBF equivalent - NS deeper)
+├─ NS Section 35: Accessibility       ←→  MBF 56: Compliance (a11y)
+└─ NS Section 36: Design Terminology  ←→  (No MBF equivalent)
 
-### DevOps & Deployment
 
-```
-NS Part XI (DevOps)                   â†â†’  MBF Tier 7 (Operations)
-â”œâ”€ NS Section 50: CI/CD Philosophy    â†â†’  MBF 43: CI/CD Pipelines
-â”œâ”€ NS Section 51: Deployment          â†â†’  MBF 43: Deployment strategies
-â”œâ”€ NS Section 52: Monitoring          â†â†’  MBF 55: Monitoring & Observability
-â””â”€ NS Section 53: Incident Response   â†â†’  MBF 55: Alerting
+TESTING & QUALITY
+─────────────────────────────────────────────────────────────────────────────
+NS Part IX: Testing Framework         ←→  MBF Category 46 (Testing & QA)
+├─ NS Section 42: Testing Philosophy  ←→  MBF 46: Testing strategies
+├─ NS Section 43: Coverage Strategies ←→  MBF 46: Testing tools
+├─ NS Section 44: Testing Patterns    ←→  MBF 46: Testing patterns
+└─ NS Section 45: Test Infrastructure ←→  MBF 46: Testing infrastructure
+
+
+SECURITY & COMPLIANCE
+─────────────────────────────────────────────────────────────────────────────
+NS Part X: Security                   ←→  MBF Tier 8 (Foundation)
+├─ NS Section 46: Security-First      ←→  MBF 52: Security & Encryption
+├─ NS Section 47: Authentication      ←→  MBF 50: Authentication & Identity
+├─ NS Section 48: Authorization       ←→  MBF 50: Authentication & Identity
+└─ NS Section 49: Data Protection     ←→  MBF 53: Secrets Management
+
+
+DEVOPS & DEPLOYMENT
+─────────────────────────────────────────────────────────────────────────────
+NS Part XI: DevOps & Deployment       ←→  MBF Tier 7 (Automation)
+├─ NS Section 50: CI/CD Pipelines     ←→  MBF 43: CI/CD Pipelines
+├─ NS Section 51: Environment Mgmt    ←→  MBF 13: Infrastructure as Code
+├─ NS Section 52: Monitoring          ←→  MBF 55: Monitoring & Observability
+└─ NS Section 53: Deployment Strategy ←→  MBF 44: Workflow Orchestration
+
+
+HUMAN-AGENT COLLABORATION
+─────────────────────────────────────────────────────────────────────────────
+NS Part XIV: Human-Agent Collaboration ←→  (Bootstrap Section 14 condensed)
+├─ NS Section 14.1: Autonomy Dial     ←→  Bootstrap S14.2 (Agent Operation)
+├─ NS Section 14.2: Confidence Calib  ←→  Bootstrap S5 (Confidence)
+├─ NS Section 14.3: Thread Management ←→  NS Part V (Agent Composition)
+├─ NS Section 14.4: Checkpoints       ←→  Bootstrap S7 (Handoffs)
+├─ NS Section 14.5: Tool Efficiency   ←→  NS Part VI (MCP & Tools)
+├─ NS Section 14.6: Self-Healing      ←→  Bootstrap S14.4 (Self-Healing)
+├─ NS Section 14.7: Operations        ←→  Bootstrap S13 (Deviation Protocol)
+└─ NS Section 14.8: Quick Reference   ←→  Bootstrap S4 (Emergency Reference)
+
+Note: Part XIV is HUMAN-FACING operational guidance.
+      Bootstrap Section 14 is AGENT-FACING condensed version.
+
+
+CONTENT GENERATION (MBF Only)
+─────────────────────────────────────────────────────────────────────────────
+(No NS equivalent)                    ←→  MBF Tier 6: Content Generation
+                                      ├─  MBF 36: Image Generation
+                                      ├─  MBF 37: Audio Generation
+                                      ├─  MBF 38: Video Generation
+                                      ├─  MBF 39: Document Generation
+                                      ├─  MBF 40: Code Generation
+                                      ├─  MBF 41: Data & Content Generation
+                                      └─  MBF 42: Translation & Localization
+
+
+DOCUMENTATION
+─────────────────────────────────────────────────────────────────────────────
+NS Part III: Documentation            ←→  MBF Category 48 (Documentation)
+├─ NS Section 9: Doc Hierarchy        ←→  MBF 48: Documentation Systems
+├─ NS Section 10: Superprompt         ←→  (No MBF equivalent - NS deeper)
+├─ NS Section 11: Vertical Slice      ←→  (No MBF equivalent - NS deeper)
+└─ NS Section 12: Fix Ledger          ←→  (No MBF equivalent - NS deeper)
 ```
 
 ---
 
-# SECTION 6: USE CASE ROUTING
+## 6. USE CASE ROUTING
 
-## 6.1 Starting a New Project
+### 6.1 Building a SaaS Application
 
 ```
-USE CASE: Starting a New Project
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+USE CASE: SaaS Web Application
+─────────────────────────────────────────────────────────────────────────────
 
 STEP 1: Bootstrap
-â”œâ”€ Read: NS Section 0.1 (Quick-Start Directive)
-â”œâ”€ Do: Generate claude.md using template from NS Section 0.2
-â””â”€ Set: Project tier using NS Section 2
+├─ Read: NS Section 0.1 (Quick-Start Directive)
+├─ Do: Generate claude.md using NS Section 0.2 template
+└─ Set: Project tier (likely Sky or Space) using NS Section 2
 
-STEP 2: Technology Selection
-â”œâ”€ Reference: MBF for each technology category needed
-â”œâ”€ Use: NS Section 38 for selection criteria
-â””â”€ Document: Choices in claude.md
+STEP 2: Architecture
+├─ Read: MBF Build Pattern → Categories 1 + 8 + 15 + 22 + 43 + 50 + 51 + 54 + 55
+├─ Decide: Frontend framework using MBF Category 1
+├─ Decide: Backend approach using MBF Category 8
+├─ Decide: Database using MBF Category 15 + NS Section 40
+└─ Document: Architecture decision in ADR
 
-STEP 3: Architecture
-â”œâ”€ Reference: NS Part VIII for code structure
-â”œâ”€ Choose: Patterns from MBF relevant categories
-â””â”€ Document: Key decisions as ADRs
+STEP 3: First Vertical Slice
+├─ Read: NS Section 11 (Vertical Slice Methodology)
+├─ Build: One complete feature end-to-end
+├─ Test: Using NS Part IX principles
+└─ Deploy: To staging using NS Section 50
 
-STEP 4: Begin Building
-â”œâ”€ Follow: NS quality gates at each step
-â”œâ”€ Reference: MBF for implementation details
-â””â”€ Update: claude.md as project evolves
+STEP 4: Expand
+├─ Reference: MBF categories as needed for each feature
+├─ Follow: NS quality gates (Section 3)
+└─ Maintain: claude.md current state
+
+STEP 5: Production
+├─ Security: NS Part X + MBF Categories 50-53
+├─ Monitoring: NS Section 52 + MBF Category 55
+├─ Payments: MBF Category 51
+└─ Compliance: MBF Category 56 + NS Section 35 (accessibility)
 ```
 
-## 6.2 Building an AI Agent System
+### 6.2 Building an Autonomous Agent System
 
 ```
-USE CASE: Building an AI Agent System
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+USE CASE: Autonomous Agent / AI System
+─────────────────────────────────────────────────────────────────────────────
 
 STEP 1: Bootstrap
-â”œâ”€ Read: NS Section 0.1 (Quick-Start Directive)
-â”œâ”€ Do: Generate claude.md
-â””â”€ Set: Likely "Sky" or "Space" tier
+├─ Read: NS Section 0.1 (Quick-Start Directive)
+├─ Do: Generate claude.md using NS Section 0.2 template
+└─ Set: Project tier (likely Space) using NS Section 2
 
 STEP 2: Agent Architecture
-â”œâ”€ Reference: NS Part V (Agent Composition)
-â”œâ”€ Choose: Framework from MBF Category 30
-â”œâ”€ Design: Tool schemas using NS Section 15
-â””â”€ Implement: MCP integration using NS Section 24 + MBF Category 31
+├─ Read: NS Part IV (AI Orchestration) - ALL of it for this use case
+├─ Read: NS Part V (Agent Composition) - ALL of it
+├─ Reference: MBF Build Pattern → Categories 29 + 30 + 31 + 32 + 33 + 34 + 35
+└─ Choose: Reasoning loop using MBF 31C (RALPH, ReAct, ReWOO, etc.)
 
 STEP 3: Memory & Context
-â”œâ”€ Design: Using NS Section 20 (Memory Architecture)
-â”œâ”€ Implement: Context engineering using NS Section 16
-â”œâ”€ Choose: Vector DB using MBF Category 16
-â”œâ”€ Add: RLM patterns using NS Section 19B                    â† v1.1
-â””â”€ Build: Knowledge graph if needed using MBF Category 26
+├─ Design: Using NS Section 20 (Memory Architecture) + MBF 31E
+├─ Implement: Context engineering using NS Section 16
+├─ Choose: Vector DB using MBF Category 16
+└─ Build: Knowledge graph if needed using MBF Category 26
 
 STEP 4: Skills & Tools
-â”œâ”€ Define: Skills using MBF 31B (Skill Manifests)
-â”œâ”€ Integrate: MCP tools using NS Section 24 + MBF Category 31
-â””â”€ Test: Using NS Part IX + MBF Category 46
+├─ Define: Skills using MBF 31B (Skill Manifests)
+├─ Integrate: MCP tools using NS Section 24 + MBF Category 31
+└─ Test: Using NS Part IX + MBF Category 46
 
 STEP 5: Safety & Deployment
-â”œâ”€ Implement: Guardrails using MBF Category 35
-â”œâ”€ Set: Autonomy level using NS Section 18
-â”œâ”€ Calibrate: Confidence thresholds using NS Section 17
-â”œâ”€ Add: HITL checkpoints using MBF Category 44A             â† v1.1
-â””â”€ Monitor: Using NS Section 52 + MBF Category 55
+├─ Implement: Guardrails using MBF Category 35
+├─ Set: Autonomy level using NS Section 18
+├─ Calibrate: Confidence thresholds using NS Section 17
+└─ Monitor: Using NS Section 52 + MBF Category 55
 ```
 
-## 6.3 Building a Human-AI Collaborative Workflow (v1.1)
+### 6.3 Building a Content Generation Pipeline
 
 ```
-USE CASE: Human-AI Collaborative Workflow
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+USE CASE: Content Generation Pipeline (Images, Video, Docs)
+─────────────────────────────────────────────────────────────────────────────
 
-STEP 1: Design Collaboration Contract
-â”œâ”€ Reference: MBF Category 44A (Kanban & Visual Task Management)
-â”œâ”€ Choose: Linear (dev-focused) or Notion (flexible) or GitHub Projects
-â”œâ”€ Define: What constitutes a "work request" vs "approval needed"
-â””â”€ Document: Confidence thresholds and routing rules
+STEP 1: Bootstrap
+├─ Read: NS Section 0.1 (Quick-Start Directive)
+├─ Do: Generate claude.md
+└─ Set: Project tier using NS Section 2
 
-STEP 2: Implement Orchestration Layer
-â”œâ”€ Reference: MBF Category 44 (Workflow Orchestration)
-â”œâ”€ Choose: Trigger.dev (Waitpoint Tokens) or LangGraph (interrupt)
-â”œâ”€ Connect: Kanban board via MCP or API
-â””â”€ Configure: Timeout and fallback behaviors
+STEP 2: Pipeline Architecture
+├─ Reference: MBF Build Pattern → Categories 36 + 37 + 38 + 39 + 11 + 19 + 44
+├─ Choose: Generation tools from MBF Tier 6 (Categories 36-42)
+├─ Design: Workflow using MBF Category 44 (Workflow Orchestration)
+└─ Plan: Storage using MBF Category 19 (Object Storage)
 
-STEP 3: Add Context Management
-â”œâ”€ Reference: NS Section 19B (RLM Patterns)
-â”œâ”€ Implement: Chunked retrieval for long sessions
-â”œâ”€ Add: Confidence calibration to prevent runaway loops
-â””â”€ Configure: State persistence for resumption
+STEP 3: Infrastructure
+├─ Compute: MBF Category 11 (GPU & ML Compute)
+├─ Queues: MBF Category 23 (Message Queues)
+├─ Caching: MBF Category 22 (Caching & Performance)
+└─ Deploy: NS Part XI + MBF Category 43
 
-STEP 4: Configure Confidence-Based Routing
-â”œâ”€ Reference: NS Section 17 (Confidence Calibration)
-â”œâ”€ Set: Thresholds (â‰¥0.85 auto, 0.65-0.84 review, <0.65 pause)
-â”œâ”€ Implement: Kanban status updates based on confidence
-â””â”€ Define: Escalation paths for low-confidence situations
-
-STEP 5: Test & Deploy
-â”œâ”€ Test: HITL flows with real approval scenarios
-â”œâ”€ Monitor: Agent comment patterns and human response times
-â””â”€ Iterate: Adjust thresholds based on observed behavior
+STEP 4: Quality & Monitoring
+├─ Testing: NS Part IX principles
+├─ Monitoring: NS Section 52 + MBF Category 55
+└─ Safety: MBF Category 35 (AI Safety)
 ```
 
-## 6.4 Adding AI Features to Existing Application
+### 6.4 Adding AI Features to Existing Application
 
 ```
 USE CASE: Adding AI to Existing App
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+─────────────────────────────────────────────────────────────────────────────
 
 STEP 1: Assessment
-â”œâ”€ Review: Existing claude.md (or create one)
-â”œâ”€ Identify: Integration points
-â””â”€ Determine: AI capability needed (chat, RAG, agents, generation)
+├─ Review: Existing claude.md (or create one)
+├─ Identify: Integration points
+└─ Determine: AI capability needed (chat, RAG, agents, generation)
 
 STEP 2: AI Architecture
-â”œâ”€ Read: NS Part IV Section 13 (Model Intelligence Matrix)
-â”œâ”€ Choose: Model(s) using NS Section 13 + MBF Category 33
-â”œâ”€ Decide: RAG if needed using MBF Category 29
-â””â”€ Plan: Memory using NS Section 20 + MBF 31E
+├─ Read: NS Part IV Section 13 (Model Intelligence Matrix)
+├─ Choose: Model(s) using NS Section 13 + MBF Category 33
+├─ Decide: RAG if needed using MBF Category 29
+└─ Plan: Memory using NS Section 20 + MBF 31E
 
 STEP 3: Integration
-â”œâ”€ API Design: NS Section 41 + MBF Category 8
-â”œâ”€ Tool Integration: NS Section 24 (MCP) + MBF Category 31
-â””â”€ Testing: NS Part IX with AI-specific considerations
+├─ API Design: NS Section 41 + MBF Category 8
+├─ Tool Integration: NS Section 24 (MCP) + MBF Category 31
+└─ Testing: NS Part IX with AI-specific considerations
 
 STEP 4: Production
-â”œâ”€ Safety: MBF Category 35 (Guardrails)
-â”œâ”€ Monitoring: AI-specific metrics (NS Section 52)
-â”œâ”€ Cost: Model routing considerations (NS Section 13)
-â””â”€ Iterate: Based on user feedback
-```
-
-## 6.5 Managing Prompts at Scale (v1.1)
-
-```
-USE CASE: PromptOps - Managing Prompts at Scale
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-STEP 1: Establish Prompt Management
-â”œâ”€ Reference: MBF Category 44B (PromptOps)
-â”œâ”€ Choose: PromptLayer, Langfuse, or Humanloop
-â”œâ”€ Set up: Version control for prompts
-â””â”€ Define: Naming conventions and ownership
-
-STEP 2: Implement Evaluation Pipeline
-â”œâ”€ Reference: MBF Category 46 (AI Evaluation)
-â”œâ”€ Create: Golden datasets for regression testing
-â”œâ”€ Configure: DeepEval or RAGAS metrics
-â””â”€ Automate: Pre-deployment prompt testing
-
-STEP 3: Production Deployment
-â”œâ”€ Implement: A/B testing for prompt variants
-â”œâ”€ Monitor: Performance metrics per prompt version
-â”œâ”€ Configure: Rollback procedures
-â””â”€ Document: Prompt changelog
-
-STEP 4: Continuous Improvement
-â”œâ”€ Analyze: User feedback and edge cases
-â”œâ”€ Iterate: Prompt versions based on data
-â”œâ”€ Consider: DSPy for programmatic optimization
-â””â”€ Track: Cost and latency per prompt version
+├─ Safety: MBF Category 35
+├─ Monitoring: AI-specific metrics (NS Section 52)
+├─ Cost: Model routing considerations (NS Section 13)
+└─ Iterate: Based on user feedback
 ```
 
 ---
 
-# SECTION 7: COMBINED WORKFLOW EXAMPLES
+## 7. COMBINED WORKFLOW EXAMPLES
 
-## Example 1: Building a SaaS with AI Features
-
-```
-SCENARIO: Building a B2B SaaS with AI-powered document analysis
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-PHASE 1: FOUNDATION
-â”œâ”€ Bootstrap: NS Section 0 â†’ Generate claude.md
-â”œâ”€ Tier: "Sky" (Production-bound SaaS)
-â”œâ”€ Core stack selection:
-â”‚   â”œâ”€ Frontend: MBF Cat 1 (Next.js) + Cat 3 (Tailwind)
-â”‚   â”œâ”€ Backend: MBF Cat 7 (Node.js/tRPC)
-â”‚   â”œâ”€ Database: MBF Cat 15 (PostgreSQL) + Cat 16 (Pinecone)
-â”‚   â””â”€ Auth: MBF Cat 50 (Clerk)
-
-PHASE 2: AI INTEGRATION
-â”œâ”€ RAG Pipeline: MBF Cat 29 (LlamaIndex)
-â”œâ”€ Model: MBF Cat 33 (Claude via Anthropic API)
-â”œâ”€ Document Processing: MBF Cat 29 (Unstructured)
-â”œâ”€ Chunking: MBF Cat 29 (Semantic, 512-1024 tokens)
-â”œâ”€ Guardrails: MBF Cat 35 (NeMo Guardrails)
-â””â”€ Evaluation: MBF Cat 46 (RAGAS metrics)
-
-PHASE 3: PRODUCTION
-â”œâ”€ Hosting: MBF Cat 9 (Vercel) + Cat 10 (serverless functions)
-â”œâ”€ CI/CD: MBF Cat 43 (GitHub Actions)
-â”œâ”€ Monitoring: MBF Cat 55 (Sentry + Langfuse)
-â”œâ”€ Testing: NS Part IX + MBF Cat 46
-â””â”€ Security: NS Part X + MBF Cats 50-53
-```
-
-## Example 2: Building an Autonomous Agent System with HITL (v1.1)
+### 7.1 Example: "Build a SaaS with AI-Powered Features"
 
 ```
-SCENARIO: Multi-agent system for automated code review with human oversight
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+CONCRETE EXAMPLE: AI-Powered Project Management SaaS
+─────────────────────────────────────────────────────────────────────────────
 
-PHASE 1: AGENT ARCHITECTURE
-â”œâ”€ Framework: MBF Cat 30 (LangGraph for orchestration)
-â”œâ”€ Memory: MBF Cat 31E (Redis for session state)
-â”œâ”€ Tools: MBF Cat 31 (MCP servers for GitHub, Linear)
-â”œâ”€ Context: NS Section 19B (RLM patterns for large PRs)          â† v1.1
-â””â”€ Models: MBF Cat 33 (Claude for analysis, Haiku for triage)
+PHASE 1: BOOTSTRAP (Day 1)
+─────────────────────────────────────────────────────────────────────────────
 
-PHASE 2: HUMAN-AI COLLABORATION                                   â† v1.1
-â”œâ”€ Kanban: MBF Cat 44A (Linear as collaboration contract)
-â”œâ”€ Orchestration: MBF Cat 44 (Trigger.dev with Waitpoints)
-â”œâ”€ Confidence routing:
-â”‚   â”œâ”€ High (â‰¥0.85): Auto-approve minor suggestions
-â”‚   â”œâ”€ Medium (0.65-0.84): Post for human review
-â”‚   â””â”€ Low (<0.65): Escalate with detailed context
-â””â”€ Prompts: MBF Cat 44B (version control via PromptLayer)
+Action: Read NS Section 0.1-0.3
+Result: Understand bootstrap protocol
 
-PHASE 3: SAFETY & MONITORING
-â”œâ”€ Guardrails: MBF Cat 35 (prevent destructive suggestions)
-â”œâ”€ Loop prevention: NS Section 19B (iteration bounds)
-â”œâ”€ Evaluation: MBF Cat 46 (track suggestion acceptance rate)
-â””â”€ Monitoring: MBF Cat 55 (agent traces via Langfuse)
+Action: Determine tier
+Reference: NS Section 2
+Decision: "Sky" tier (standard SaaS, not ultra-premium)
+
+Action: Generate claude.md
+Reference: NS Section 0.2 template
+Content:
+  - Project: "TaskAI" - AI-powered project management
+  - Tier: Sky
+  - Stack decisions pending
+  - Quality gates from NS Section 3 for Sky tier
+
+Action: Set up docs scaffold
+Reference: NS Section 0.3 Phase 0
+Created: README.md, CHANGELOG.md, .gitignore
+
+
+PHASE 2: ARCHITECTURE DECISIONS (Day 1-2)
+─────────────────────────────────────────────────────────────────────────────
+
+Question: "Which frontend framework?"
+Reference: MBF Category 1 → Next.js 15 (Server components, App Router)
+Document: ADR-001-frontend.md
+
+Question: "Which database?"
+Reference: MBF Category 15 + NS Section 40
+Decision: PostgreSQL (NS default recommendation confirmed by MBF)
+Document: ADR-002-database.md
+
+Question: "How to add AI?"
+Reference: NS Part IV + MBF Categories 29-35
+Decision: 
+  - OpenAI for task suggestions (MBF Category 33)
+  - RAG for project context (MBF Category 29)
+  - pgvector for embeddings (MBF Category 16)
+Document: ADR-003-ai-architecture.md
+
+
+PHASE 3: FIRST VERTICAL SLICE (Day 2-5)
+─────────────────────────────────────────────────────────────────────────────
+
+Reference: NS Section 11 (Vertical Slice Methodology)
+
+Slice: "User can create a task and get AI suggestions"
+├─ UI: Task creation form with AI suggestion panel
+├─ API: POST /tasks, GET /tasks/:id/suggestions
+├─ DB: tasks table, embeddings table
+├─ AI: OpenAI integration for suggestions
+└─ Test: E2E test of complete flow
+
+Quality Check: NS Section 3 (Sky tier gates)
+├─ ✓ TypeScript strict
+├─ ✓ Unit tests for business logic
+├─ ✓ Integration test for API
+├─ ✓ No security warnings
+
+Update: claude.md "Current State" section
+
+
+PHASE 4: EXPAND FEATURES (Day 5-20)
+─────────────────────────────────────────────────────────────────────────────
+
+Feature 2: Authentication
+├─ Reference: NS Section 47 + MBF Category 50
+├─ Decision: NextAuth.js with magic links
+└─ Document: ADR-004-auth.md
+
+Feature 3: Team collaboration
+├─ Reference: MBF Category 24 (Real-Time & WebSockets)
+├─ Decision: Liveblocks for presence
+└─ Implement per NS Section 11 methodology
+
+Feature 4: AI chat assistant
+├─ Reference: NS Section 20 (Memory) + MBF 31E
+├─ Decision: Conversation memory with vector storage
+├─ Implement: RAG using MBF Category 29 guidance
+└─ Safety: MBF Category 35 guardrails
+
+
+PHASE 5: PRODUCTION (Day 20-30)
+─────────────────────────────────────────────────────────────────────────────
+
+CI/CD: NS Section 50 + MBF Category 43
+├─ GitHub Actions workflow
+├─ Staging → Production pipeline
+└─ Quality gates enforced
+
+Security: NS Part X + MBF Categories 50-53
+├─ Auth hardening (NS Section 47)
+├─ Secrets management (MBF Category 53)
+└─ Security headers (NS Section 46)
+
+Payments: MBF Category 51
+├─ Stripe integration
+└─ Subscription tiers
+
+Monitoring: NS Section 52 + MBF Category 55
+├─ Error tracking (Sentry)
+├─ Analytics (PostHog)
+└─ AI cost tracking
+
+
+RESULT: Production SaaS with AI features
+─────────────────────────────────────────────────────────────────────────────
+Built using NS methodology, MBF technology selection.
+claude.md maintained throughout.
+All decisions documented in ADRs.
+Quality gates met for Sky tier.
 ```
 
----
-
-# SECTION 8: LOAD BALANCING REMINDER
+### 7.2 Example: "Build an Autonomous Coding Agent"
 
 ```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                         LOAD BALANCING PRINCIPLE                             â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                              â”‚
-â”‚  â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—  â”‚
-â”‚  â•‘                                                                       â•‘  â”‚
-â”‚  â•‘   DO NOT CONSUME ALL FRAMEWORK DOCUMENTS BEFORE STARTING             â•‘  â”‚
-â”‚  â•‘                                                                       â•‘  â”‚
-â”‚  â•‘   Combined framework size: ~1.1 MB                                   â•‘  â”‚
-â”‚  â•‘   This will overload any context window.                             â•‘  â”‚
-â”‚  â•‘                                                                       â•‘  â”‚
-â”‚  â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•  â”‚
-â”‚                                                                              â”‚
-â”‚  CORRECT APPROACH:                                                           â”‚
-â”‚                                                                              â”‚
-â”‚  1. Start with Bootstrap (this is the ignition key)                         â”‚
-â”‚  2. Use BRIDGE.md to navigate (this document)                               â”‚
-â”‚  3. Fetch ONLY the sections you need                                        â”‚
-â”‚  4. Unload sections when done                                               â”‚
-â”‚                                                                              â”‚
-â”‚  CONTEXT PRIORITY:                                                           â”‚
-â”‚  1. Project code (always highest)                                           â”‚
-â”‚  2. Project intelligence file (claude.md)                                   â”‚
-â”‚  3. Bootstrap (methodology essentials)                                      â”‚
-â”‚  4. Specific NS/MBF sections (on demand)                                    â”‚
-â”‚                                                                              â”‚
-â”‚  ANTI-PATTERN:                                                               â”‚
-â”‚  âœ— Loading NS v5.0 + MBF v1.1 + Bootstrap simultaneously                   â”‚
-â”‚  âœ— Reading entire framework before starting work                            â”‚
-â”‚  âœ— Keeping unused sections in context                                       â”‚
-â”‚                                                                              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-```
+CONCRETE EXAMPLE: Code Review Agent
+─────────────────────────────────────────────────────────────────────────────
 
----
+PHASE 1: BOOTSTRAP
+─────────────────────────────────────────────────────────────────────────────
 
-# SECTION 9: TEMPLATE REFERENCE
+Tier: Space (premium quality for autonomous system)
+Reference: NS Section 2 (Space tier criteria)
 
-## Available Templates
+claude.md created with:
+- Project: "ReviewBot" - Autonomous code review agent
+- Tier: Space
+- Special considerations: Autonomy level, confidence thresholds
 
-| Template | Location | Purpose |
-|----------|----------|---------|
-| **claude.md** | NS Section 0.2 | Project intelligence file |
-| **handoff.md** | NS Section 0.3 | Session handoff format |
-| **skill-manifest.json** | MBF 31B | Agent skill packaging |
-| **adr.md** | NS Part VIII | Architecture decision record |
 
-## When to Use Each
+PHASE 2: AGENT ARCHITECTURE
+─────────────────────────────────────────────────────────────────────────────
 
-```
-STARTING A PROJECT
-â””â”€ Generate: claude.md from NS Section 0.2 template
+Reasoning Loop Selection:
+Reference: MBF Category 31C
+Decision: RALPH loop (Reason→Act→Learn→Plan→Hypothesize)
+Rationale: Complex analysis needs hypothesis testing
 
-PAUSING WORK
-â””â”€ Create: handoff.md using NS Section 0.3 format
+Memory Architecture:
+Reference: NS Section 20 + MBF 31E
+Design:
+├─ Working: Current PR context in window
+├─ Episodic: Past reviews in vector DB
+├─ Semantic: Codebase knowledge graph
+└─ Procedural: Review skills and patterns
 
-DEFINING AGENT SKILLS
-â””â”€ Create: skill-manifest.json using MBF 31B schema
+Confidence Calibration:
+Reference: NS Section 17
+Thresholds:
+├─ >80%: Auto-approve/comment
+├─ 50-80%: Flag for human review
+└─ <50%: Do not act, escalate
 
-MAKING ARCHITECTURE DECISIONS
-â””â”€ Document: Using ADR template from NS Part VIII
-```
+Autonomy Level:
+Reference: NS Section 18
+Setting: Level 4 "Supervised Auto" (can act, human validates)
 
----
 
-# SECTION 10: VERSION INFORMATION
+PHASE 3: SKILL DEFINITION
+─────────────────────────────────────────────────────────────────────────────
 
-```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                         VERSION INFORMATION                                  â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                              â”‚
-â”‚  BRIDGE.md                                                                   â”‚
-â”‚  Version: 1.1                                                                â”‚
-â”‚  Updated: January 2026                                                       â”‚
-â”‚                                                                              â”‚
-â”‚  COMPATIBLE WITH:                                                            â”‚
-â”‚  â€¢ North Star Blueprint v5.0                                                â”‚
-â”‚  â€¢ Master Build Framework v1.1                                              â”‚
-â”‚  â€¢ North Star Bootstrap v1.1                                                â”‚
-â”‚                                                                              â”‚
-â”‚  CHANGELOG:                                                                  â”‚
-â”‚  v1.1 (January 2026)                                                        â”‚
-â”‚    â€¢ Added routing for Category 44A (Kanban & HITL)                         â”‚
-â”‚    â€¢ Added routing for Category 44B (PromptOps)                             â”‚
-â”‚    â€¢ Added routing for NS Section 19B (RLM Patterns)                        â”‚
-â”‚    â€¢ Added Section 11 (GTM/Community)                                       â”‚
-â”‚    â€¢ Added Use Case 6.3 (Human-AI Collaborative Workflow)                   â”‚
-â”‚    â€¢ Added Use Case 6.5 (PromptOps at Scale)                                â”‚
-â”‚    â€¢ Updated cross-reference matrix for new categories                      â”‚
-â”‚    â€¢ Updated Example 2 with HITL patterns                                   â”‚
-â”‚                                                                              â”‚
-â”‚  v1.0 (January 2025) â€” Initial release                                      â”‚
-â”‚    â€¢ Document hierarchy and reading order                                   â”‚
-â”‚    â€¢ Complete cross-reference matrix                                        â”‚
-â”‚    â€¢ Use case routing                                                        â”‚
-â”‚    â€¢ Combined workflow examples                                              â”‚
-â”‚                                                                              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-```
+Reference: MBF Category 31B (Skill Manifests)
 
----
+skill-code-review.json:
+{
+  "name": "code-review",
+  "version": "1.0.0",
+  "description": "Analyzes code changes for quality, security, performance",
+  "category": "reasoning",
+  "tools_required": ["read_file", "search_codebase", "git_diff"],
+  "quality_gates": ["no_false_positives_in_tests"],
+  "agentic_hooks": {
+    "invoke": "Analyze this PR for issues..."
+  }
+}
 
-# SECTION 11: COMMUNITY & GO-TO-MARKET (v1.1)
 
-## Framework Identity
+PHASE 4: SAFETY & GUARDRAILS
+─────────────────────────────────────────────────────────────────────────────
 
-| Element | Value |
-|---------|-------|
-| **Brand** | @NavigatingTruth |
-| **Framework** | North Star Blueprint |
-| **Tagline** | "The compass for AI-native development" |
+Reference: MBF Category 35 + NS Section 17
 
-## Competitive Positioning
+Implemented:
+├─ Cannot approve own PRs
+├─ Cannot merge without human
+├─ Rate limiting on comments
+├─ Confidence threshold enforcement
+└─ Escalation to human on uncertainty
 
-| Competitor | Their Focus | North Star Differentiation |
-|------------|-------------|---------------------------|
-| **Cursor** | AI code editor | Framework-agnostic, methodology-first |
-| **Claude Code** | CLI coding agent | Full lifecycle, not just code |
-| **Auto Claude** | Automation | Quality gates, confidence calibration |
-| **Aider** | Git-focused AI coding | Broader scope, human-AI collaboration |
 
-## Key Differentiators
-
-```
-NORTH STAR vs ALTERNATIVES
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-1. LOAD BALANCING vs TOKEN BURNING
-   â””â”€ Competitors: "Load everything into context"
-   â””â”€ North Star: "Fetch what you need, unload when done"
-
-2. CONFIDENCE CALIBRATION vs RUNAWAY EXECUTION
-   â””â”€ Competitors: "Execute until done or fail"
-   â””â”€ North Star: "Calibrate confidence, pause when uncertain"
-
-3. SELF-CLEANING vs PERMANENT BLOAT
-   â””â”€ Competitors: "Accumulate state indefinitely"
-   â””â”€ North Star: "Scaffolding that cleans up after itself"
-
-4. METHODOLOGY-FIRST vs TOOL-FIRST
-   â””â”€ Competitors: "Here's a tool, figure out the process"
-   â””â”€ North Star: "Here's the process, tools plug in"
-```
-
-## Target Communities
-
-**Primary (Launch):**
-- r/ClaudeAI (AI practitioners)
-- r/MachineLearning (ML engineers)
-- Anthropic Discord (Claude users)
-
-**Secondary (Growth):**
-- Hacker News (developers)
-- r/programming (general devs)
-- Twitter/X AI community
-
-## Launch Checklist
-
-```
-â–¡ README compelling and complete
-â–¡ Demo video or GIF created
-â–¡ Example projects included
-â–¡ Contributing guidelines written
-â–¡ Discord/community link active
-â–¡ Analytics tracking (stars, forks, clones)
-â–¡ License clearly stated (CC BY-NC-SA 4.0)
-â–¡ Commercial licensing path documented
+RESULT: Autonomous code review agent
+─────────────────────────────────────────────────────────────────────────────
+RALPH reasoning loop for thorough analysis.
+Memory architecture for learning from past reviews.
+Confidence-gated execution prevents bad actions.
+Space tier quality throughout.
 ```
 
 ---
 
-# QUICK REFERENCE CARD
+## 8. LOAD BALANCING REMINDER
+
+### 8.1 The Core Principle
 
 ```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                     BRIDGE.md QUICK REFERENCE                                â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                              â”‚
-â”‚  START HERE:           NORTH_STAR_BOOTSTRAP.md (ignition key)               â”‚
-â”‚  NAVIGATE WITH:        BRIDGE.md (this document)                            â”‚
-â”‚  HOW TO BUILD:         North Star Blueprint v5.0                            â”‚
-â”‚  WHAT TO BUILD WITH:   Master Build Framework v1.1                          â”‚
-â”‚  PROJECT STATE:        claude.md (your project's file)                      â”‚
-â”‚                                                                              â”‚
-â”‚  â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€  â”‚
-â”‚                                                                              â”‚
-â”‚  COMMON ROUTES:                                                              â”‚
-â”‚  â€¢ Starting project     â†’ NS 0 + NS 2 + MBF Build Patterns                  â”‚
-â”‚  â€¢ Choosing tech        â†’ MBF Categories + NS 38                            â”‚
-â”‚  â€¢ Building features    â†’ NS 11 + MBF relevant category                     â”‚
-â”‚  â€¢ AI/Agents            â†’ NS IV-V + MBF 29-35                               â”‚
-â”‚  â€¢ Human-AI workflows   â†’ MBF 44A + NS 19B + NS 17                â† v1.1    â”‚
-â”‚  â€¢ Prompt management    â†’ MBF 44B + MBF 46                        â† v1.1    â”‚
-â”‚  â€¢ Testing              â†’ NS IX + MBF 46                                    â”‚
-â”‚  â€¢ Security             â†’ NS X + MBF 50-53                                  â”‚
-â”‚  â€¢ Stuck                â†’ NS 0.5                                            â”‚
-â”‚                                                                              â”‚
-â”‚  â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€  â”‚
-â”‚                                                                              â”‚
-â”‚  REMEMBER: Reference on demand. Don't consume everything upfront.           â”‚
-â”‚                                                                              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         LOAD BALANCING PRINCIPLE                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ╔═══════════════════════════════════════════════════════════════════════╗  │
+│  ║                                                                       ║  │
+│  ║   DO NOT CONSUME BOTH FRAMEWORKS FULLY BEFORE STARTING               ║  │
+│  ║                                                                       ║  │
+│  ║   NS v5.0 = 883 KB                                                   ║  │
+│  ║   MBF v1.1 = ~180 KB                                                 ║  │
+│  ║   Combined = 1+ MB of content                                        ║  │
+│  ║                                                                       ║  │
+│  ║   This will overload any context window and any human brain.         ║  │
+│  ║                                                                       ║  │
+│  ╚═══════════════════════════════════════════════════════════════════════╝  │
+│                                                                              │
+│  INSTEAD:                                                                    │
+│                                                                              │
+│  1. Read BRIDGE.md (this document) to understand structure                  │
+│  2. Skim NS Section 0 to understand bootstrap protocol                      │
+│  3. Generate claude.md for your project                                     │
+│  4. Reference specific sections ON DEMAND using this BRIDGE                 │
+│                                                                              │
+│  The frameworks are REFERENCE DOCUMENTS, not READING ASSIGNMENTS.           │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 8.2 Load Balancing Tiers (from NS Section 0.4)
+
+```
+TIER 1: ALWAYS LOADED (Light)
+─────────────────────────────────────────────────────────────────────────────
+Keep in active memory:
+• BRIDGE.md structure (this document)
+• NS Section 0.4 Load Balancing concept
+• Your project's claude.md
+
+TIER 2: LOAD ON DEMAND (Medium)
+─────────────────────────────────────────────────────────────────────────────
+Reference when you hit the task:
+• NS specific sections for methodology
+• MBF specific categories for technology options
+• Use BRIDGE.md Section 3 to route
+
+TIER 3: DEEP REFERENCE (Heavy)
+─────────────────────────────────────────────────────────────────────────────
+Occasional deep dives:
+• NS Part VII (Design) - detailed specs
+• MBF technology matrices - exhaustive options
+• Only when making major decisions
 ```
 
 ---
 
-*End of BRIDGE.md v1.1*
+## 9. TEMPLATE REFERENCE
+
+### 9.1 Available Templates
+
+| Template | Source | Purpose | When to Use |
+|----------|--------|---------|-------------|
+| **claude.md** | NS Section 0.2 | Project intelligence file | Start of every project |
+| **handoff.md** | NS Section 0.6 | Session continuity | End of session, pausing work |
+| **adr.md** | NS Section 9 | Architecture decisions | Major technical choices |
+| **skill-manifest.json** | MBF 31B | Capability packaging | Defining agent skills |
+| **fix-ledger.md** | NS Section 12 | Bug pattern tracking | After fixing recurring issues |
+
+### 9.2 Template Locations
+
+```
+templates/
+├── claude.md.template        # From NS Section 0.2
+├── handoff.md.template       # From NS Section 0.6
+├── adr.md.template           # From NS Section 9
+├── skill-manifest.json       # From MBF Category 31B
+└── fix-ledger.md.template    # From NS Section 12
+```
+
+### 9.3 Quick Template: claude.md Header
+
+Every project's claude.md should start with:
+
+```markdown
+# CLAUDE.MD — Project Intelligence File
+
+> **READING ORDER:**
+> 1. You're reading this file (project-specific state)
+> 2. For navigation between frameworks → see BRIDGE.md
+> 3. For methodology (HOW) → see North Star Blueprint v5.0
+> 4. For technology options (WHAT) → see Master Build Framework v1.1
+
+---
+[Continue with NS Section 0.2 template...]
+```
+
+---
+
+## 10. VERSION INFORMATION
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         VERSION INFORMATION                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  BRIDGE.md                                                                   │
+│  Version: 1.0                                                                │
+│  Created: January 2025                                                       │
+│                                                                              │
+│  COMPATIBLE WITH:                                                            │
+│  • North Star Blueprint v5.0                                                │
+│  • Master Build Framework v1.1                                              │
+│                                                                              │
+│  CHANGELOG:                                                                  │
+│  v1.0 (January 2025) — Initial release                                      │
+│    • Document hierarchy and reading order                                   │
+│    • Complete cross-reference matrix                                        │
+│    • Use case routing                                                        │
+│    • Combined workflow examples                                              │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## QUICK REFERENCE CARD
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     BRIDGE.MD QUICK REFERENCE                                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  START HERE:           NS Section 0 (Bootstrap)                             │
+│  NAVIGATE WITH:        BRIDGE.md (this document)                            │
+│  HOW TO BUILD:         North Star Blueprint v5.0                            │
+│  WHAT TO BUILD WITH:   Master Build Framework v1.1                          │
+│  PROJECT STATE:        claude.md (your project's file)                      │
+│                                                                              │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  COMMON ROUTES:                                                              │
+│  • Starting project     → NS 0 + NS 2 + MBF Build Patterns                  │
+│  • Choosing tech        → MBF Categories + NS 38                            │
+│  • Building features    → NS 11 + MBF relevant category                     │
+│  • AI/Agents            → NS IV-V + MBF 29-35                               │
+│  • Testing              → NS IX + MBF 46                                    │
+│  • Security             → NS X + MBF 50-53                                  │
+│  • Stuck                → NS 0.5                                            │
+│                                                                              │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│                                                                              │
+│  REMEMBER: Reference on demand. Don't consume everything upfront.           │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+*End of BRIDGE.md v1.0*

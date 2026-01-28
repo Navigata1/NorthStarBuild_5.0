@@ -17,7 +17,7 @@
 ║                                                                              ║
 ║                          ────────────────                                    ║
 ║                                                                              ║
-║                    "Build with intention. Ship with confidence."             ║
+║                   "Build with intention. Ship with confidence."             ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -35,7 +35,7 @@
 ### Why North Star?
 
 | Traditional Approach | North Star Approach |
-|---------------------|--------------------|
+|---------------------|---------------------|
 | Load everything into context | **Load Balancing** — Fetch only what you need |
 | Execute until done or fail | **Confidence Calibration** — Pause when uncertain |
 | Accumulate state indefinitely | **Self-Cleaning** — Scaffolding removes itself |
@@ -156,6 +156,9 @@ https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/BRIDGE.md
 
 NORTH_STAR_BOOTSTRAP.md:
 https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/NORTH_STAR_BOOTSTRAP.md
+
+GLOBAL_IDE_RULES.md:
+https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/GLOBAL_IDE_RULES.md
 
 NORTH_STAR_BLUEPRINT_v5.0.md:
 https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/north-star-blueprint/NORTH_STAR_BLUEPRINT_v5.0.md

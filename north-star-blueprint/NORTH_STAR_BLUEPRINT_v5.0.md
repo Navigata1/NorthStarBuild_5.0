@@ -1,12 +1,3 @@
-# NORTH STAR BLUEPRINT v5.0 — SEGMENT 1 of 7
-## PART_1_FOUNDATION
-### Contents: Front Matter (Section 0) + Part I (Sections 1-4) + Part II (Sections 5-8)
-### Lines: 1-3819 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full Blueprint, merge all 7 parts.
-> For BRIDGE routing: Sections 0-8 are in this segment.
----
-
 # NORTH STAR BLUEPRINT v5.0
 
 ## The Comprehensive Development Framework
@@ -1211,120 +1202,6 @@ The goal is to reach the **Codebase Singularity**—the moment when:
 ```
 
 This is not science fiction. This is the trajectory. Every section of this blueprint moves toward this reality.
-
-### 1.7 Planning Quality = Output Quality
-
-> "If your plan sucks, you're just donating money to Anthropic."
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    PLANNING QUALITY PRINCIPLE                                │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  THE CORE 4 FRAMEWORK                                                        │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│  Quality output requires quality in four dimensions:                         │
-│                                                                              │
-│  DIMENSION      │ QUESTION                      │ IMPACT                    │
-│  ───────────────┼───────────────────────────────┼───────────────────────────│
-│  Context        │ Is the right info loaded?     │ Garbage in, garbage out   │
-│  Model          │ Is the right model selected?  │ Capability matching       │
-│  Prompt         │ Is the instruction clear?     │ Ambiguity = hallucination │
-│  Tools          │ Are right tools available?    │ Capability gaps = failure │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  THE PLANNING INVESTMENT RULE                                                │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  PLANNING TIME   │ EXECUTION QUALITY │ COST EFFICIENCY                      │
-│  ────────────────┼───────────────────┼─────────────────────────────────────  │
-│  < 5 minutes     │ Poor              │ Token burn (wasted spend)            │
-│  15-30 minutes   │ Good              │ Efficient                            │
-│  30-60 minutes   │ Excellent         │ Optimal ROI                          │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  WHY THIS MATTERS                                                            │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  Time spent planning:                                                        │
-│  • Reduces iteration loops                                                   │
-│  • Catches scope creep early                                                 │
-│  • Identifies missing context before execution                               │
-│  • Aligns expectations with capabilities                                     │
-│                                                                              │
-│  Time NOT spent planning:                                                    │
-│  • Burns tokens on wrong approaches                                          │
-│  • Creates rework cycles                                                     │
-│  • Leads to "close but not right" outputs                                    │
-│  • Frustrates both user and agent                                            │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  QUALITY GATES                                                               │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  □ All four dimensions (Context, Model, Prompt, Tools) addressed             │
-│  □ Plan reviewed before execution begins                                     │
-│  □ Confidence level stated for plan completeness                             │
-│  □ Ambiguities surfaced, not assumed                                         │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-**Cross-Reference:** NS Section 0.1 (Quick-Start Directive)
-
-
-### 1.8 Infrastructure vs Tool Mindset
-
-> "Tools solve problems. Infrastructure creates capabilities."
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                  INFRASTRUCTURE VS TOOL DISTINCTION                          │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  THE 30/300 RULE                                                             │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  TOOL: 30% better than doing it yourself                                    │
-│  • Point solution to specific problem                                        │
-│  • Value depletes as problem changes                                         │
-│  • Short-term productivity gain                                              │
-│                                                                              │
-│  INFRASTRUCTURE: 300% (3x) productivity multiplier                          │
-│  • Platform for solving many problems                                        │
-│  • Value compounds as you build more                                         │
-│  • Long-term capability investment                                           │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  MINDSET SHIFT                                                               │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  TOOL MINDSET               │ INFRASTRUCTURE MINDSET                        │
-│  ───────────────────────────┼─────────────────────────────────────────────  │
-│  "What tool solves this?"   │ "What capability do I need?"                  │
-│  Point solutions            │ Platform thinking                              │
-│  Buy/build for one problem  │ Build once, use many                          │
-│  Short-term fix             │ Long-term investment                           │
-│  Vendor lock-in acceptable  │ Composability required                        │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  THIS FRAMEWORK IS INFRASTRUCTURE                                            │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  • It does not solve one problem                                             │
-│  • It provides capability for solving many problems                          │
-│  • Investment pays off across projects                                       │
-│  • Value compounds with each use                                             │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-**Cross-Reference:** MBF Category 14 (Platform Engineering)
 
 ---
 
@@ -3940,15 +3817,6 @@ ALL BOXES MUST BE CHECKED BEFORE DEPLOYMENT
 ```
 
 ---
-# NORTH STAR BLUEPRINT v5.0 — SEGMENT 2 of 7
-## PART_2_DOCUMENTATION
-### Contents: Part III (Sections 9-12) + Part IV (Sections 13-19)
-### Lines: 3820-7150 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full Blueprint, merge all 7 parts.
-> For BRIDGE routing: Sections 9-19 are in this segment.
----
-
 # PART III: DOCUMENTATION & WORKFLOW
 
 ---
@@ -7232,67 +7100,6 @@ UNCERTAIN:
   "I'm not confident in any approach without more information."
 ```
 
-### 17.4 Agent Ownership Principle
-
-> "The agent that builds it, maintains it."
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                      AGENT OWNERSHIP PRINCIPLE                               │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  CORE RULE                                                                   │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│  When an agent creates something, that agent owns the maintenance burden.   │
-│  This creates accountability and preserves context.                          │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  OWNERSHIP PATTERNS                                                          │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  SCENARIO                  │ OWNERSHIP PATTERN                               │
-│  ─────────────────────────┼───────────────────────────────────────────────  │
-│  Agent creates a file      │ Agent responsible for updates                  │
-│  Agent implements feature  │ Agent handles bug fixes                        │
-│  Agent writes tests        │ Agent maintains test suite                     │
-│  Agent sets up config      │ Agent handles config changes                   │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  IMPLEMENTATION                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  1. TAGGING                                                                  │
-│     • Tag generated artifacts with agent identity                           │
-│     • Include timestamp and version                                          │
-│     • Document the "why" alongside the "what"                               │
-│                                                                              │
-│  2. ROUTING                                                                  │
-│     • Route maintenance requests to originating agent (if possible)         │
-│     • Preserve context chain when handing off                               │
-│     • Include original decision rationale in handoffs                       │
-│                                                                              │
-│  3. DOCUMENTATION                                                            │
-│     • Document agent decisions in code comments                              │
-│     • Maintain decision log for complex implementations                     │
-│     • Make "agent memory" of past decisions accessible                      │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  QUALITY GATES                                                               │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  □ Artifacts tagged with generation metadata                                 │
-│  □ Maintenance routing documented                                            │
-│  □ Agent "memory" of past decisions accessible                              │
-│  □ Handoff protocol includes ownership transfer                             │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-**Cross-Reference:** NS Section 23 (Handoffs)
-
 ---
 
 ## 18. AUTONOMY DIAL SYSTEM
@@ -7410,66 +7217,6 @@ AI SHOULD INCREASE AUTONOMY (proceed) WHEN:
 □ Making read-only operations
 □ Generating drafts (not final output)
 ```
-
-### 18.4 Plan Mode Mastery
-
-> "The right planning mode prevents both over-engineering and under-specification."
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                       PLAN MODE MASTERY                                      │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  TWO PLANNING MODES                                                          │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  MODE                 │ TRIGGER                  │ BEHAVIOR                  │
-│  ─────────────────────┼──────────────────────────┼───────────────────────────│
-│  General              │ Default mode             │ Quick PRD/to-do from idea │
-│  Ask User Question    │ "use ask user question"  │ Interviews on specifics   │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  WHEN TO USE EACH                                                            │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  SITUATION                    │ RECOMMENDED MODE                             │
-│  ─────────────────────────────┼─────────────────────────────────────────────│
-│  Quick prototype              │ General                                      │
-│  Complex feature              │ Ask User Question                            │
-│  Unclear requirements         │ Ask User Question                            │
-│  Time pressure                │ General                                      │
-│  Multiple stakeholders        │ Ask User Question                            │
-│  Exploratory work             │ General                                      │
-│  Production feature           │ Ask User Question                            │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  CONFIDENCE-TRIGGERED MODE SWITCHING                                         │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  When confidence < MEDIUM, Bootstrap can trigger Ask User Question mode:    │
-│  "Invoke ask user question for [specific detail needed]"                    │
-│                                                                              │
-│  EXAMPLE TRIGGERS:                                                           │
-│  • "I'm unsure about the authentication flow—let me ask."                   │
-│  • "Multiple valid approaches exist—need human decision."                   │
-│  • "Business requirement unclear—switching to interview mode."              │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  QUALITY GATES                                                               │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  □ Mode selection documented in plan                                         │
-│  □ Plan reviewed before execution                                            │
-│  □ Ambiguities surfaced via appropriate mode                                │
-│  □ Mode switch justified when changed mid-task                              │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-**Cross-Reference:** NS Section 0.1 (Quick-Start Directive), BRIDGE Section 3
 
 ---
 
@@ -7754,39 +7501,6 @@ Record:
 
 ---
 
-
-### Section 19B: RLM Context Management Patterns
-```
-#### The Load Balancing vs Token Burning Problem
-
-| Approach | Description | When to Use |
-|----------|-------------|-------------|
-| **Linear Consumption** | Standard prompt → response | Simple queries |
-| **Chunked Retrieval** | Break context into chunks | Long documents |
-| **Streaming Fetch** | Load on-demand from store | Unlimited context |
-| **Hierarchical Summary** | Summarize → detail when needed | Large codebases |
-
-#### Confidence Calibration
-
-```python
-CONFIDENCE_THRESHOLDS = {
-    "HIGH": 0.85,      # Auto-execute, notify
-    "MEDIUM": 0.65,    # Execute with review window
-    "LOW": 0.40,       # Pause, require approval
-    "ABORT": 0.25      # Stop, escalate
-}
-```
-
-#### Quality Gates for RLM
-
-```
-□ Context chunking strategy defined
-□ Confidence thresholds calibrated
-□ Runaway loop detection implemented
-□ State persistence verified
-```
-
----
 ## PART IV SUMMARY
 
 ```
@@ -7850,15 +7564,6 @@ CONFIDENCE_THRESHOLDS = {
 ```
 
 ---
-# NORTH STAR BLUEPRINT v5.0 — SEGMENT 3 of 7
-## PART_3_ORCHESTRATION
-### Contents: Part V (Sections 20-23) + Part VI (Sections 24-27)
-### Lines: 7151-8781 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full Blueprint, merge all 7 parts.
-> For BRIDGE routing: Sections 20-27 are in this segment.
----
-
 # PART V: AGENT COMPOSITION & ORCHESTRATION
 
 ---
@@ -8315,61 +8020,6 @@ External API calls            │ API MCP / Built-in fetch
 Cloud operations              │ Cloud-specific MCP (AWS, GCP, etc.)
 Version control               │ Git MCP or built-in
 ```
-
-### 21.5 Focused Agent Principle
-
-> "One agent = one responsibility. Avoid monolithic 'do everything' agents."
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                       FOCUSED AGENT PRINCIPLE                                │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│  CORE PHILOSOPHY                                                             │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│  Single-purpose agents with clear boundaries outperform monolithic agents.  │
-│  Complexity emerges from composition, not from bloated prompts.             │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  PRINCIPLES                                                                  │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  PRINCIPLE            │ DESCRIPTION                                         │
-│  ─────────────────────┼───────────────────────────────────────────────────  │
-│  Single Purpose       │ Each agent has ONE well-defined job                 │
-│  Clear Boundaries     │ Explicit scope prevents scope creep                 │
-│  Composability        │ Small agents compose into complex workflows         │
-│  Handoff Protocols    │ Clear contracts between specialized agents          │
-│  Confidence Gates     │ Pause when approaching boundary of expertise        │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  ANTI-PATTERNS TO AVOID                                                      │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  ❌ "Swiss Army Knife" agents that try to do everything                     │
-│  ❌ Implicit assumptions about agent capabilities                           │
-│  ❌ Chaining without confidence gates                                       │
-│  ❌ Monolithic prompts with multiple objectives                             │
-│  ❌ Agents that "help with anything"                                        │
-│  ❌ No defined scope or boundary documentation                              │
-│                                                                              │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  QUALITY GATES                                                               │
-│  ─────────────────────────────────────────────────────────────────────────  │
-│                                                                              │
-│  □ Agent has single, stated purpose in its definition                       │
-│  □ Boundaries documented in agent specification                             │
-│  □ Handoff protocol defined for multi-agent scenarios                       │
-│  □ Confidence thresholds set for each capability                            │
-│  □ Escalation path defined when out of scope                                │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-**Cross-Reference:** MBF Category 30 (Agent Frameworks)
 
 ---
 
@@ -9545,15 +9195,6 @@ Current implementation in src/services/user.ts has grown too complex."
 ```
 
 ---
-# NORTH STAR BLUEPRINT v5.0 — SEGMENT 4 of 7
-## PART_4_DESIGN
-### Contents: Part VII (Sections 28-36)
-### Lines: 8782-10286 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full Blueprint, merge all 7 parts.
-> For BRIDGE routing: Sections 28-36 are in this segment.
----
-
 # PART VII: DESIGN MASTERY SYSTEM
 
 ---
@@ -9957,30 +9598,6 @@ Use: Loading placeholders
 
 ---
 
-### Animation & Performance Patterns
-
-#### Recommended Animation Libraries
-| Library | Best For | Performance |
-|---------|----------|-------------|
-| **GSAP** | Complex timelines | Excellent |
-| **Framer Motion** | React | Very Good |
-| **Lenis** | Smooth scrolling | Excellent |
-
-#### UI Sniping Methodology
-1. **Identify**: Find exceptional UI (Apple, Linear, Vercel)
-2. **Analyze**: Understand the interaction pattern
-3. **Extract**: Document the core mechanic
-4. **Adapt**: Implement with your design system
-
-#### Speed Optimization Checklist
-```
-□ Core Web Vitals passing (LCP < 2.5s)
-□ Images optimized (WebP/AVIF)
-□ JS bundle < 200KB gzipped
-□ Animations GPU-accelerated
-```
-
----
 ## 31. STANDARD EASINGS, DURATIONS & MOTION
 
 ### 31.1 Standard Easings
@@ -11059,15 +10676,6 @@ FOCUS: Currently active element for keyboard interaction
 ```
 
 ---
-# NORTH STAR BLUEPRINT v5.0 — SEGMENT 5 of 7
-## PART_5_IMPLEMENTATION
-### Contents: Part VIII (Sections 37-41) + Part IX (Sections 42-45)
-### Lines: 10287-12378 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full Blueprint, merge all 7 parts.
-> For BRIDGE routing: Sections 37-45 are in this segment.
----
-
 # PART VIII: CODE ARCHITECTURE & PATTERNS
 
 ---
@@ -13160,15 +12768,6 @@ NPM SCRIPTS CONFIGURATION:
 ```
 
 ---
-# NORTH STAR BLUEPRINT v5.0 — SEGMENT 6 of 7
-## PART_6_QUALITY
-### Contents: Part X (Sections 46-49) + Part XI (Sections 50-53)
-### Lines: 12379-14427 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full Blueprint, merge all 7 parts.
-> For BRIDGE routing: Sections 46-53 are in this segment.
----
-
 # PART X: SECURITY & AUTHENTICATION
 
 ---
@@ -15218,15 +14817,6 @@ ALTER TABLE users DROP COLUMN user_name;
 ```
 
 ---
-# NORTH STAR BLUEPRINT v5.0 — SEGMENT 7 of 7
-## PART_7_ADVANCED
-### Contents: Part XII (Sections 54-56) + Part XIII (Sections 57-59) + Part XIV + Back Matter
-### Lines: 14428-16318 of original
----
-> **SEGMENT NAVIGATION:** This is a development segment. For full Blueprint, merge all 7 parts.
-> For BRIDGE routing: Sections 54-59 + Part XIV + Appendices are in this segment.
----
-
 # PART XII: FUTURE-PROOFING & EVOLUTION
 
 ---

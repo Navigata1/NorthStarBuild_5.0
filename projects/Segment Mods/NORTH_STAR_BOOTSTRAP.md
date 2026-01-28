@@ -1733,13 +1733,3 @@ To rebuild with same framework:
 *https://github.com/Navigata1/NorthStarBuild_5.0*
 *License: CC BY-NC-SA 4.0*
 *"North Star Build" is a trademark.*
-
-
-### “No RALPH until manual reps” (L5)
-
-Do not automate a workflow until humans have run it manually enough times to understand:
-- failure modes
-- edge cases
-- correct acceptance criteria
-
-Automation comes **after** competence and repetition.

@@ -2067,6 +2067,24 @@ Feature engineering, feature stores, training data, experiment tracking.
 
 ### Data Drift Detection
 
+### Data Drift Detection (Expanded) (GQ2)
+
+Detect and respond to:
+- **data drift** (inputs change)
+- **prediction drift** (outputs change)
+- **concept drift** (relationship changes)
+
+Operational pattern:
+- scheduled drift reports
+- alert thresholds
+- auto-create a retrain ticket
+- roll-forward vs rollback policy
+
+Tools:
+- Evidently / WhyLogs
+- integrate drift metrics into observability dashboards
+
+
 Monitor for distribution shifts between training and production data.
 
 | Drift Type | What Changes | Detection Tool |
@@ -2483,6 +2501,25 @@ LLM fine-tuning, LoRA adapters, RLHF, domain adaptation.
 
 
 ### Model Registry
+
+### Model Registry (Expanded) (GQ1)
+
+Add a registry when:
+- multiple models/versions exist
+- you need staged promotion (dev→staging→prod)
+- you require rollback and auditability
+
+Patterns:
+- semantic versioning for models
+- signed artifacts
+- promotion gates (eval scores + human approval)
+- registry links to datasets + prompts used
+
+Integrations:
+- CI/CD (MBF 43)
+- monitoring & drift (MBF 55)
+- data versioning (DVC)
+
 
 Central catalog for model artifacts, versions, and metadata.
 
@@ -7751,3 +7788,78 @@ This Master Build Framework pairs with the **North Star Blueprint v5.0** for com
 *End of Framework v1.1  -  January 2026*
 *Patched with Skills, Reasoning, Prompts, Memory Architecture*
 *Part of the unified NS + MBF ecosystem  -  see BRIDGE.md for navigation*
+
+
+## Category 54: Regulatory Compliance (L3)
+
+When you operate in regulated domains, treat compliance as **first‑class infrastructure**, not paperwork.
+
+Coverage:
+- GDPR (EU)
+- HIPAA (US healthcare)
+- SOC2 (security controls)
+- EU AI Act (risk classification, auditability)
+
+Patterns:
+- data classification labels (PII/PHI)
+- audit logging + immutable trails
+- retention & deletion policies
+- model/prompt change logs
+- documented risk assessments
+
+Deliverables:
+- compliance checklist per release
+- evidence artifacts stored with versioned releases
+
+
+### Prompt Regression Testing (GQ3)
+
+Treat prompts like code:
+- version prompts (PromptOps)
+- maintain a **golden prompt suite**
+- run regression in CI before deploy
+
+Recommended approach:
+- define canonical inputs
+- assert output constraints (format, safety, correctness)
+- track drift over time
+
+Tools:
+- DeepEval / RAGAS style evaluation harnesses
+- Langfuse / PromptLayer for prompt versioning + trace linking
+
+
+### Golden Dataset Management (GQ5)
+
+Your evaluation pipeline is only as good as your datasets.
+
+Best practices:
+- curate datasets by scenario (happy path, adversarial, long tail)
+- store dataset versions (DVC / Git LFS / object storage)
+- label provenance (source, date, policy)
+- define ownership + update cadence
+
+CI gate:
+- fail deploy if golden set performance drops beyond threshold.
+
+
+### Agent Session / Trace / Span Model (GQ6)
+
+Define observability primitives:
+- **Session**: a user-initiated run (contains many traces)
+- **Trace**: one workflow execution (contains many spans)
+- **Span**: one step (LLM call, tool call, retrieval, write)
+
+Minimum fields:
+- ids: session_id, trace_id, span_id
+- timestamps
+- model/provider used
+- token/cost estimates
+- tool name + args (redacted)
+- outcome + error
+
+This enables:
+- debugging
+- cost tracking
+- safety audits
+- regression detection

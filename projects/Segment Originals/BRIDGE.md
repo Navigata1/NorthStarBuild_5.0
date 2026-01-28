@@ -88,8 +88,6 @@ CHOOSE TECHNOLOGY
 ├─ "What backend framework?"            → MBF Category 7-8
 ├─ "What AI/LLM provider?"              → MBF Category 33 + NS Section 13
 ├─ "What vector database?"              → MBF Category 16
-├─ "What model registry?"               → MBF Category 32-33 (MLflow, Vertex)  ← v1.1
-├─ "What caching solution?"             → MBF Category 22 (Redis, Upstash)     ← v1.1
 └─ "What auth provider?"                → MBF Category 50
 
 BUILD FEATURES
@@ -106,8 +104,6 @@ WORK WITH AI/AGENTS
 ├─ "How do I evaluate LLM outputs?"     → MBF Category 46 (AI Evaluation)
 ├─ "How do I manage prompts?"           → MBF Category 44B (PromptOps)      ← v1.1
 ├─ "How do I manage long contexts?"     → NS Section 19B (RLM Patterns)     ← v1.1
-├─ "How do I design agent memory?"      → NS Section 20 + MBF 31E (Memory)  ← v1.1
-├─ "How do I compress context?"         → NS Section 20.5 + MBF 34          ← v1.1
 └─ "How do I prevent runaway loops?"    → NS Section 19B (Confidence Cal.)  ← v1.1
 
 HUMAN-AI COLLABORATION                                                        ← v1.1
@@ -498,46 +494,6 @@ STEP 4: Continuous Improvement
 ├─ Consider: DSPy for programmatic optimization
 └─ Track: Cost and latency per prompt version
 ```
-
-
----
-
-# SECTION 6.7: TOP-25 WORKFLOW PLAYBOOK (Secondary Routes + Default Questions)
-
-Use this when you want **high precision routing** and consistent **Ask-User-Questions** behavior.
-
-**Rule of thumb**
-- If requirements are missing → ask **2–4 questions** before routing deeply.
-- If user requests “fast” → use Utility model; if “mission critical” → use Primary.
-
-| ID | Primary Route | Secondary Route | Default Clarifying Questions (2–4) |
-|----|---------------|----------------|------------------------------------|
-| W01 | BRIDGE 6.1 → NS 0.1/0.2 | NS 2 (tiers) | What are we building? target users? deadline? preferred stack? |
-| W02 | BRIDGE 6.2 → NS Part V + MBF 30/31 | NS 15 (tool schemas) | What tasks? what tools/APIs? single vs multi-agent? autonomy level? |
-| W03 | BRIDGE 6.3 → MBF 44A + NS 17 | NS 19B | What needs approval? who approves? confidence thresholds? escalation path? |
-| W04 | BRIDGE 6.5 → MBF 44B + MBF 46 | NS 14 | Where are prompts stored? eval dataset? regression gate? rollback plan? |
-| W05 | BRIDGE 6.4 → NS Part IV + MBF 29/33 | NS 20 | Chat vs RAG vs agents? data source? latency/cost constraints? |
-| W06 | NS 19B + MBF 16/29 | MBF 46 | What corpus? update frequency? chunking strategy? eval metric? |
-| W07 | MBF 46 + NS Part IX | MBF 44B | What’s the golden set? success metric? CI gate? drift threshold? |
-| W08 | MBF 35 + NS Part X | NS 17 | Risk level? sensitive data? injection threat model? allowed actions? |
-| W09 | MBF 28/55 | MBF 46 | Ground truth source? drift type? alerting channel? retrain trigger? |
-| W10 | MBF 32/33 | MBF 43 | Who promotes models? staging vs prod? rollback method? signing? |
-| W11 | MBF 22 + MBF 34 | MBF 55 | What to cache (embeddings/prompt/results)? TTL? invalidation rules? |
-| W12 | MBF 30/35 + NS Part III | NS 22 | Which tools? pre/post hook behavior? retries? non-blocking hooks? |
-| W13 | NS 20.5 + MBF 34 | NS 19B | Token budget? must-keep context? compression strategy? retrieval plan? |
-| W14 | Bootstrap 0–3 | GLOBAL_IDE_RULES | Team conventions? repo standard? approval policy? default autonomy? |
-| W15 | NS Part VIII + MBF 8 | MBF 50 | REST vs GraphQL? auth method? rate limits? error handling? |
-| W16 | NS Part XI + MBF 43 | MBF 46 | Target platform? deploy frequency? test gates? secrets strategy? |
-| W17 | MBF 55 | MBF 46 | What traces? spans? PII rules? dashboards? oncall alerts? |
-| W18 | NS 17–18 + Bootstrap 12 | MBF 44A | Allowed actions? confidence thresholds? HITL points? rollback? |
-| W19 | NS 13 + MBF 33 | MBF 22 | Cost ceiling? latency target? accuracy bar? safety constraints? |
-| W20 | MBF 44 + NS Part IV | MBF 44A | Workflow steps? state storage? human interrupts? timeouts? |
-| W21 | GLOBAL_IDE_RULES | NS Part VIII | Language? formatter/linter? commit rules? test standard? |
-| W22 | NS Part IX + MBF 46 | MBF 44B | Baseline? regression gate? golden set ownership? reporting? |
-| W23 | Bootstrap 8 + NS 0.4 | BRIDGE load balancing | When to delete scaffolds? submission protocol? backups? |
-| W24 | NS 13 + MBF 33 | MBF 22 | What’s “cheap enough”? what failure rate ok? routing policy? |
-| W25 | Ask-User-Questions | BRIDGE 3 | Who is user? what outcomes? scope? constraints? acceptance criteria? |
-
 
 ---
 

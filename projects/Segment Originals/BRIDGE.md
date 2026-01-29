@@ -6,7 +6,7 @@
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                                                                              │
-│                              BRIDGE.md v1.1                                  │
+│                              BRIDGE.md v2.0                                  │
 │                                                                              │
 │                    The Navigation Layer for North Star                       │
 │                                                                              │
@@ -15,7 +15,7 @@
 │           "Don't read everything. Navigate to what you need."                │
 │                                                                              │
 │  ┌─────────────────────────────────────────────────────────────────────┐    │
-│  │  North Star Blueprint v5.0  ←——— BRIDGE.md ———→  Master Build v1.1 │    │
+│  │  North Star Blueprint v6.0  ←——— BRIDGE.md ———→  Master Build v2.0 │    │
 │  │       (HOW to build)        (Navigation)      (WHAT to build with)  │    │
 │  └─────────────────────────────────────────────────────────────────────┘    │
 │                                                                              │
@@ -64,8 +64,8 @@ BRIDGE.md is the **navigation layer** between the two core framework documents. 
 
 | Document | Provides | Size | When to Reference |
 |----------|----------|------|-------------------|
-| **North Star Blueprint v5.0** | HOW to build | ~910KB | Methodology, process, quality gates |
-| **Master Build Framework v1.1** | WHAT to build with | ~158KB | Technology selection, tool matrices |
+| **North Star Blueprint v6.0** | HOW to build | ~910KB | Methodology, process, quality gates |
+| **Master Build Framework v2.0** | WHAT to build with | ~158KB | Technology selection, tool matrices |
 
 **Rule:** Reference on demand. Never load both fully into context simultaneously.
 
@@ -102,11 +102,11 @@ WORK WITH AI/AGENTS
 ├─ "How do I build agents?"             → MBF Categories 30-31 + NS Part V
 ├─ "How do I add guardrails?"           → MBF Category 35
 ├─ "How do I evaluate LLM outputs?"     → MBF Category 46 (AI Evaluation)
-├─ "How do I manage prompts?"           → MBF Category 44B (PromptOps)      ← v1.1
-├─ "How do I manage long contexts?"     → NS Section 19B (RLM Patterns)     ← v1.1
-└─ "How do I prevent runaway loops?"    → NS Section 19B (Confidence Cal.)  ← v1.1
+├─ "How do I manage prompts?"           → MBF Category 44B (PromptOps)      ← v2.0
+├─ "How do I manage long contexts?"     → NS Section 19B (RLM Patterns)     ← v2.0
+└─ "How do I prevent runaway loops?"    → NS Section 19B (Confidence Cal.)  ← v2.0
 
-HUMAN-AI COLLABORATION                                                        ← v1.1
+HUMAN-AI COLLABORATION                                                        ← v2.0
 ├─ "How do I build human-AI workflows?" → MBF Category 44A (Kanban)
 ├─ "How do I add approval checkpoints?" → MBF Category 44A + NS Section 19B
 ├─ "How do I route by confidence?"      → MBF Category 44A + NS Section 17
@@ -131,11 +131,11 @@ DEPLOY & OPERATE
 
 WORKFLOW & ORCHESTRATION
 ├─ "How do I orchestrate workflows?"    → MBF Category 44
-├─ "How do I add human checkpoints?"    → MBF Category 44A (Kanban)         ← v1.1
-├─ "How do I version prompts?"          → MBF Category 44B (PromptOps)      ← v1.1
+├─ "How do I add human checkpoints?"    → MBF Category 44A (Kanban)         ← v2.0
+├─ "How do I version prompts?"          → MBF Category 44B (PromptOps)      ← v2.0
 └─ "What about browser automation?"     → MBF Category 45
 
-GO-TO-MARKET                                                                  ← v1.1
+GO-TO-MARKET                                                                  ← v2.0
 ├─ "How do I position this framework?"  → BRIDGE Section 11 (GTM)
 ├─ "What communities should I target?"  → BRIDGE Section 11 (GTM)
 └─ "What's the launch checklist?"       → BRIDGE Section 11 (GTM)
@@ -152,7 +152,7 @@ STUCK OR LOST
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    NORTH STAR BLUEPRINT v5.0                                 │
+│                    NORTH STAR BLUEPRINT v6.0                                 │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
 │  STRUCTURE: 14 Parts, ~65 Sections                                          │
@@ -177,7 +177,7 @@ STUCK OR LOST
 └─────────────────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    MASTER BUILD FRAMEWORK v1.1                               │
+│                    MASTER BUILD FRAMEWORK v2.0                               │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
 │  STRUCTURE: 9 Tiers, 60+ Categories                                         │
@@ -192,7 +192,7 @@ STUCK OR LOST
 │  Tier 8 (50-56)  → Security & Compliance                                   │
 │  Tier 9 (57-60)  → Specialized & Niche                                     │
 │                                                                              │
-│  NEW in v1.1:                                                               │
+│  NEW in v2.0:                                                               │
 │  • Category 44A → Kanban & Visual Task Management (HITL)                   │
 │  • Category 44B → PromptOps (Prompt Versioning & Management)               │
 │                                                                              │
@@ -224,8 +224,8 @@ NS Part III (Context/Memory)          ←→  MBF Tier 5 (AI/ML)
 ├─ NS Section 14: Prompt Engineering  ←→  MBF 34: Prompt Tools
 ├─ NS Section 15: Tool Schemas        ←→  MBF 31: Tool Frameworks
 ├─ NS Section 16: Context Engineering ←→  MBF 29: RAG Systems
-├─ NS Section 17: Confidence          ←→  MBF 44A: Kanban (routing)      ← v1.1
-├─ NS Section 19B: RLM Patterns       ←→  MBF 31, 44A (context mgmt)     ← v1.1
+├─ NS Section 17: Confidence          ←→  MBF 44A: Kanban (routing)      ← v2.0
+├─ NS Section 19B: RLM Patterns       ←→  MBF 31, 44A (context mgmt)     ← v2.0
 └─ NS Section 20: Memory Architecture ←→  MBF 31E: Memory Systems
 
 NS Part IV (Orchestration)            ←→  MBF Tier 5 + Tier 7
@@ -239,7 +239,7 @@ NS Part V (Agent Composition)         ←→  MBF Categories 29-35
 └─ NS Section 26: Agent Patterns      ←→  MBF 30-31: Implementation
 ```
 
-### Workflow & Human-AI Collaboration (v1.1)
+### Workflow & Human-AI Collaboration (v2.0)
 
 ```
 WORKFLOW & ORCHESTRATION DOMAIN
@@ -271,7 +271,7 @@ NS Part III (Context)                 ←→  MBF Tier 3 (Data)
 ├─ NS Section 20: Memory              ←→  MBF 16: Vector DBs
 └─ NS Section 38: Tech Selection      ←→  MBF 15-22: All data categories
 
-DATA OPERATIONS (v1.1 Enhanced)
+DATA OPERATIONS (v2.0 Enhanced)
 ─────────────────────────────────────────────────────────────────────────────
 (Data Versioning)                     ←→  MBF 27: DVC, lakeFS integration
 (Data Quality)                        ←→  MBF 27: dbt, Great Expectations
@@ -298,7 +298,7 @@ NS Part IX (Testing)                  ←→  MBF Category 46
 ├─ NS Section 44: Testing Patterns    ←→  MBF 46: Testing patterns
 └─ NS Section 45: Test Infrastructure ←→  MBF 46: Testing infrastructure
 
-AI/LLM EVALUATION (v1.1 Enhanced)
+AI/LLM EVALUATION (v2.0 Enhanced)
 ─────────────────────────────────────────────────────────────────────────────
 (LLM Evaluation)                      ←→  MBF 46: DeepEval, RAGAS metrics
 (Prompt Testing)                      ←→  MBF 46 + 44B: Regression testing
@@ -314,7 +314,7 @@ NS Part X (Security)                  ←→  MBF Tier 8 (Security)
 ├─ NS Section 48: Authorization       ←→  MBF 50: Auth Providers
 └─ NS Section 49: Data Protection     ←→  MBF 53: Secrets Management
 
-AI SAFETY (v1.1 Enhanced)
+AI SAFETY (v2.0 Enhanced)
 ─────────────────────────────────────────────────────────────────────────────
 (AI Guardrails)                       ←→  MBF 35: Guardrails deep dive
 (Input/Output validation)             ←→  MBF 35: NeMo, Guardrails AI
@@ -383,7 +383,7 @@ STEP 3: Memory & Context
 ├─ Design: Using NS Section 20 (Memory Architecture)
 ├─ Implement: Context engineering using NS Section 16
 ├─ Choose: Vector DB using MBF Category 16
-├─ Add: RLM patterns using NS Section 19B                    ← v1.1
+├─ Add: RLM patterns using NS Section 19B                    ← v2.0
 └─ Build: Knowledge graph if needed using MBF Category 26
 
 STEP 4: Skills & Tools
@@ -395,11 +395,11 @@ STEP 5: Safety & Deployment
 ├─ Implement: Guardrails using MBF Category 35
 ├─ Set: Autonomy level using NS Section 18
 ├─ Calibrate: Confidence thresholds using NS Section 17
-├─ Add: HITL checkpoints using MBF Category 44A             ← v1.1
+├─ Add: HITL checkpoints using MBF Category 44A             ← v2.0
 └─ Monitor: Using NS Section 52 + MBF Category 55
 ```
 
-## 6.3 Building a Human-AI Collaborative Workflow (v1.1)
+## 6.3 Building a Human-AI Collaborative Workflow (v2.0)
 
 ```
 USE CASE: Human-AI Collaborative Workflow
@@ -464,7 +464,7 @@ STEP 4: Production
 └─ Iterate: Based on user feedback
 ```
 
-## 6.5 Managing Prompts at Scale (v1.1)
+## 6.5 Managing Prompts at Scale (v2.0)
 
 ```
 USE CASE: PromptOps - Managing Prompts at Scale
@@ -530,7 +530,7 @@ PHASE 3: PRODUCTION
 └─ Security: NS Part X + MBF Cats 50-53
 ```
 
-## Example 2: Building an Autonomous Agent System with HITL (v1.1)
+## Example 2: Building an Autonomous Agent System with HITL (v2.0)
 
 ```
 SCENARIO: Multi-agent system for automated code review with human oversight
@@ -540,10 +540,10 @@ PHASE 1: AGENT ARCHITECTURE
 ├─ Framework: MBF Cat 30 (LangGraph for orchestration)
 ├─ Memory: MBF Cat 31E (Redis for session state)
 ├─ Tools: MBF Cat 31 (MCP servers for GitHub, Linear)
-├─ Context: NS Section 19B (RLM patterns for large PRs)          ← v1.1
+├─ Context: NS Section 19B (RLM patterns for large PRs)          ← v2.0
 └─ Models: MBF Cat 33 (Claude for analysis, Haiku for triage)
 
-PHASE 2: HUMAN-AI COLLABORATION                                   ← v1.1
+PHASE 2: HUMAN-AI COLLABORATION                                   ← v2.0
 ├─ Kanban: MBF Cat 44A (Linear as collaboration contract)
 ├─ Orchestration: MBF Cat 44 (Trigger.dev with Waitpoints)
 ├─ Confidence routing:
@@ -572,7 +572,7 @@ PHASE 3: SAFETY & MONITORING
 │  ║                                                                       ║  │
 │  ║   DO NOT CONSUME ALL FRAMEWORK DOCUMENTS BEFORE STARTING             ║  │
 │  ║                                                                       ║  │
-│  ║   Combined framework size: ~1.1 MB                                   ║  │
+│  ║   Combined framework size: ~2.0 MB                                   ║  │
 │  ║   This will overload any context window.                             ║  │
 │  ║                                                                       ║  │
 │  ╚═══════════════════════════════════════════════════════════════════════╝  │
@@ -591,7 +591,7 @@ PHASE 3: SAFETY & MONITORING
 │  4. Specific NS/MBF sections (on demand)                                    │
 │                                                                              │
 │  ANTI-PATTERN:                                                               │
-│  ✗ Loading NS v5.0 + MBF v1.1 + Bootstrap simultaneously                   │
+│  ✗ Loading NS v6.0 + MBF v2.0 + Bootstrap simultaneously                   │
 │  ✗ Reading entire framework before starting work                            │
 │  ✗ Keeping unused sections in context                                       │
 │                                                                              │
@@ -637,16 +637,16 @@ MAKING ARCHITECTURE DECISIONS
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
 │  BRIDGE.md                                                                   │
-│  Version: 1.1                                                                │
+│  Version: 2.0                                                                │
 │  Updated: January 2026                                                       │
 │                                                                              │
 │  COMPATIBLE WITH:                                                            │
-│  • North Star Blueprint v5.0                                                │
-│  • Master Build Framework v1.1                                              │
-│  • North Star Bootstrap v1.1                                                │
+│  • North Star Blueprint v6.0                                                │
+│  • Master Build Framework v2.0                                              │
+│  • North Star Bootstrap v2.0                                                │
 │                                                                              │
 │  CHANGELOG:                                                                  │
-│  v1.1 (January 2026)                                                        │
+│  v2.0 (January 2026)                                                        │
 │    • Added routing for Category 44A (Kanban & HITL)                         │
 │    • Added routing for Category 44B (PromptOps)                             │
 │    • Added routing for NS Section 19B (RLM Patterns)                        │
@@ -667,7 +667,7 @@ MAKING ARCHITECTURE DECISIONS
 
 ---
 
-# SECTION 11: COMMUNITY & GO-TO-MARKET (v1.1)
+# SECTION 11: COMMUNITY & GO-TO-MARKET (v2.0)
 
 ## Framework Identity
 
@@ -745,8 +745,8 @@ NORTH STAR vs ALTERNATIVES
 │                                                                              │
 │  START HERE:           NORTH_STAR_BOOTSTRAP.md (ignition key)               │
 │  NAVIGATE WITH:        BRIDGE.md (this document)                            │
-│  HOW TO BUILD:         North Star Blueprint v5.0                            │
-│  WHAT TO BUILD WITH:   Master Build Framework v1.1                          │
+│  HOW TO BUILD:         North Star Blueprint v6.0                            │
+│  WHAT TO BUILD WITH:   Master Build Framework v2.0                          │
 │  PROJECT STATE:        claude.md (your project's file)                      │
 │                                                                              │
 │  ─────────────────────────────────────────────────────────────────────────  │
@@ -756,8 +756,8 @@ NORTH STAR vs ALTERNATIVES
 │  • Choosing tech        → MBF Categories + NS 38                            │
 │  • Building features    → NS 11 + MBF relevant category                     │
 │  • AI/Agents            → NS IV-V + MBF 29-35                               │
-│  • Human-AI workflows   → MBF 44A + NS 19B + NS 17                ← v1.1    │
-│  • Prompt management    → MBF 44B + MBF 46                        ← v1.1    │
+│  • Human-AI workflows   → MBF 44A + NS 19B + NS 17                ← v2.0    │
+│  • Prompt management    → MBF 44B + MBF 46                        ← v2.0    │
 │  • Testing              → NS IX + MBF 46                                    │
 │  • Security             → NS X + MBF 50-53                                  │
 │  • Stuck                → NS 0.5                                            │
@@ -771,4 +771,4 @@ NORTH STAR vs ALTERNATIVES
 
 ---
 
-*End of BRIDGE.md v1.1*
+*End of BRIDGE.md v2.0*

@@ -66,8 +66,8 @@ This Bootstrap provides:
 
 Full framework documents are fetched on-demand from:
 • BRIDGE.md — Navigation layer
-• NORTH_STAR_BLUEPRINT_v5.0.md — HOW to build (methodology)
-• MASTER_BUILD_FRAMEWORK_v1.1.md — WHAT to build with (technology)
+• NORTH_STAR_BLUEPRINT_v6.0.md — HOW to build (methodology)
+• MASTER_BUILD_FRAMEWORK_v2.0.md — WHAT to build with (technology)
 • GLOBAL_IDE_RULES.md — Persistent cross-project rules (optional)
 
 ┌─────────────────────┐
@@ -80,7 +80,7 @@ Full framework documents are fetched on-demand from:
 ┌─────────────────────────────────────────────────────────────────┐
 │                        /build SCAFFOLDING                        │
 │  ┌─────────────┐  ┌──────────────────┐  ┌────────────────────┐  │
-│  │  BRIDGE.md  │  │  NORTH STAR v5.0 │  │  MASTER BUILD v1.1 │  │
+│  │  BRIDGE.md  │  │  NORTH STAR v6.0 │  │  MASTER BUILD v2.0 │  │
 │  │  Navigation │  │  Methodology     │  │  Technology        │  │
 │  └─────────────┘  └──────────────────┘  └────────────────────┘  │
 │                                                                  │
@@ -108,16 +108,16 @@ SCAFFOLDING FETCH URLS
 ─────────────────────────────────────────────────────────────────────────────
 
 BRIDGE.md (Navigation):
-https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/BRIDGE.md
+https://raw.githubusercontent.com/Navigata1/NorthStarBuild_6.0/main/BRIDGE.md
 
-NORTH STAR BLUEPRINT v5.0 (Methodology):
-https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/north-star-blueprint/NORTH_STAR_BLUEPRINT_v5.0.md
+NORTH STAR BLUEPRINT v6.0 (Methodology):
+https://raw.githubusercontent.com/Navigata1/NorthStarBuild_6.0/main/north-star-blueprint/NORTH_STAR_BLUEPRINT_v6.0.md
 
-MASTER BUILD FRAMEWORK v1.1 (Technology):
-https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/master-build-framework/MASTER_BUILD_FRAMEWORK_v1.1.md
+MASTER BUILD FRAMEWORK v2.0 (Technology):
+https://raw.githubusercontent.com/Navigata1/NorthStarBuild_6.0/main/master-build-framework/MASTER_BUILD_FRAMEWORK_v2.0.md
 
 GLOBAL IDE RULES (Optional - for persistent cross-project rules):
-https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/GLOBAL_IDE_RULES.md
+https://raw.githubusercontent.com/Navigata1/NorthStarBuild_6.0/main/GLOBAL_IDE_RULES.md
 ```
 
 ### Local Path (After Scaffolding Setup)
@@ -126,8 +126,8 @@ https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/GLOBAL_IDE_R
 project/
 └── build/
     ├── BRIDGE.md
-    ├── NORTH_STAR_BLUEPRINT_v5.0.md
-    └── MASTER_BUILD_FRAMEWORK_v1.1.md
+    ├── NORTH_STAR_BLUEPRINT_v6.0.md
+    └── MASTER_BUILD_FRAMEWORK_v2.0.md
 ```
 
 ---
@@ -356,7 +356,7 @@ If no existing global rules are detected:
      
   2. FETCH NS Build global rules
      Download from:
-     https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/GLOBAL_IDE_RULES.md
+     https://raw.githubusercontent.com/Navigata1/NorthStarBuild_6.0/main/GLOBAL_IDE_RULES.md
      
   3. SAVE to appropriate path
      Save as: ~/.claude/CLAUDE.md
@@ -440,8 +440,8 @@ STEP 2: FETCH FRAMEWORK DOCUMENTS
 STEP 3: VERIFY SCAFFOLDING
   ./build/
   ├── BRIDGE.md               ✓
-  ├── NORTH_STAR_BLUEPRINT_v5.0.md  ✓
-  └── MASTER_BUILD_FRAMEWORK_v1.1.md  ✓
+  ├── NORTH_STAR_BLUEPRINT_v6.0.md  ✓
+  └── MASTER_BUILD_FRAMEWORK_v2.0.md  ✓
 
 STEP 4: GENERATE PROJECT INTELLIGENCE FILE
   Use template in Section 3 below
@@ -686,8 +686,8 @@ Use this template for ALL instruction files. Only the filename changes:
 > **FRAMEWORK REFERENCE:**
 > • Scaffolding: ./build/ (temporary, removed on completion)
 > • Navigation: ./build/BRIDGE.md
-> • Methodology: ./build/NORTH_STAR_BLUEPRINT_v5.0.md
-> • Technology: ./build/MASTER_BUILD_FRAMEWORK_v1.1.md
+> • Methodology: ./build/NORTH_STAR_BLUEPRINT_v6.0.md
+> • Technology: ./build/MASTER_BUILD_FRAMEWORK_v2.0.md
 
 > This file provides guidance for AI agents working on this project.
 > The ./build folder contains full framework reference — consult via BRIDGE.md routing.
@@ -1019,12 +1019,12 @@ REMOVAL STEPS:
     Please submit via ONE of these methods:
     
     OPTION A: GitHub Pull Request
-    1. Fork: https://github.com/Navigata1/NorthStarBuild_5.0
+    1. Fork: https://github.com/Navigata1/NorthStarBuild_6.0
     2. Add file: projects/[your-project-name].md
     3. Submit PR with title: 'Project Intelligence: [Project Name]'
     
     OPTION B: GitHub Issue
-    1. Go to: https://github.com/Navigata1/NorthStarBuild_5.0/issues
+    1. Go to: https://github.com/Navigata1/NorthStarBuild_6.0/issues
     2. Create new issue with label: 'project-intelligence'
     3. Paste your project intelligence summary
     
@@ -1045,8 +1045,8 @@ REMOVAL STEPS:
    
    This removes:
    • BRIDGE.md
-   • NORTH_STAR_BLUEPRINT_v5.0.md
-   • MASTER_BUILD_FRAMEWORK_v1.1.md
+   • NORTH_STAR_BLUEPRINT_v6.0.md
+   • MASTER_BUILD_FRAMEWORK_v2.0.md
    
 3.5 CODE CLEANUP (Claude Code Users)
 	If using Claude Code, run the code-simplifier agent before final commit:
@@ -1584,7 +1584,7 @@ Global rules provide baseline behavior across ALL projects.
 They ensure consistency without repeating configuration in every project.
 
 GITHUB RAW URL:
-https://raw.githubusercontent.com/Navigata1/NorthStarBuild_5.0/main/GLOBAL_IDE_RULES.md
+https://raw.githubusercontent.com/Navigata1/NorthStarBuild_6.0/main/GLOBAL_IDE_RULES.md
 
 ─────────────────────────────────────────────────────────────────────────────
 
@@ -1681,9 +1681,9 @@ Create as `.north-star-provenance` in project root on completion:
 Built with North Star Framework Ecosystem
 
 FRAMEWORK VERSIONS:
-  Bootstrap: 1.1
-  North Star Blueprint: 5.0
-  Master Build Framework: 1.1
+  Bootstrap: 2.0
+  North Star Blueprint: 6.0
+  Master Build Framework: 2.0
 
 PROJECT DETAILS:
   Name: [Project Name]
@@ -1694,7 +1694,7 @@ PROJECT DETAILS:
 LICENSE:
   Framework: CC BY-NC-SA 4.0
   Attribution: North Star Build
-  Repository: https://github.com/Navigata1/NorthStarBuild_5.0
+  Repository: https://github.com/Navigata1/NorthStarBuild_6.0
 
 PURPOSE:
   This file serves as provenance for reproducibility.
@@ -1730,6 +1730,6 @@ To rebuild with same framework:
 ---
 
 *North Star Bootstrap v1.3*
-*https://github.com/Navigata1/NorthStarBuild_5.0*
+*https://github.com/Navigata1/NorthStarBuild_6.0*
 *License: CC BY-NC-SA 4.0*
 *"North Star Build" is a trademark.*
